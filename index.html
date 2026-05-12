@@ -486,19 +486,75 @@ section { padding: 80px 0; }
 .how {
   background: var(--bg-soft);
 }
+.how .section-head h2 {
+  position: relative;
+  padding-bottom: 20px;
+}
+.how .section-head h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 3px;
+  background: var(--maroon);
+  border-radius: 2px;
+}
 .steps-row {
   display: grid;
-  grid-template-columns: 1fr auto 1fr auto 1fr auto 1fr;
-  gap: 16px;
-  align-items: start;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
   max-width: 1100px;
-  margin: 0 auto;
+  margin: 0 auto 60px;
+  position: relative;
 }
 .step {
   text-align: center;
-  padding: 0 12px;
+  padding: 0 20px;
+  position: relative;
 }
-.step-num-circle {
+/* Dotted connector lines between steps */
+.step:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  top: 70px;
+  left: calc(50% + 70px);
+  right: calc(-50% + 70px);
+  height: 2px;
+  background-image: linear-gradient(to right, #c0c0c0 50%, transparent 50%);
+  background-size: 12px 2px;
+  background-repeat: repeat-x;
+  z-index: 1;
+}
+.step-circle {
+  position: relative;
+  width: 140px;
+  height: 140px;
+  margin: 0 auto 24px;
+  z-index: 2;
+}
+.step-circle-bg {
+  width: 140px;
+  height: 140px;
+  background: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.07);
+}
+.step-circle .step-icon {
+  width: 56px;
+  height: 56px;
+  color: var(--maroon);
+  margin: 0;
+}
+.step-num-badge {
+  position: absolute;
+  top: -4px;
+  left: 50%;
+  transform: translateX(-50%);
   width: 36px;
   height: 36px;
   background: var(--maroon);
@@ -509,29 +565,64 @@ section { padding: 80px 0; }
   justify-content: center;
   font-weight: 700;
   font-family: 'Poppins', sans-serif;
-  font-size: 16px;
-  margin: 0 auto 14px;
-}
-.step-icon {
-  width: 44px; height: 44px;
-  color: var(--maroon);
-  margin: 0 auto 16px;
+  font-size: 15px;
+  z-index: 3;
+  border: 3px solid var(--bg-soft);
 }
 .step h4 {
-  font-size: 16px;
-  font-weight: 600;
-  margin-bottom: 8px;
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 12px;
   color: #1a1a1a;
 }
 .step p {
   font-size: 14px;
   color: var(--text-muted);
-  line-height: 1.5;
+  line-height: 1.55;
+  max-width: 220px;
+  margin: 0 auto;
 }
-.step-arrow {
-  color: #d1d5db;
-  margin-top: 28px;
-  font-size: 24px;
+
+/* Trust strip at bottom of How It Works */
+.how-trust-strip {
+  background: #fff;
+  border-radius: 8px;
+  padding: 28px 32px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  max-width: 1100px;
+  margin: 0 auto;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+.how-trust-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.how-trust-icon {
+  width: 54px;
+  height: 54px;
+  background: #f5e6e8;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--maroon);
+  flex-shrink: 0;
+}
+.how-trust-icon svg { width: 26px; height: 26px; }
+.how-trust-item strong {
+  display: block;
+  font-size: 15px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 3px;
+}
+.how-trust-item span {
+  font-size: 13px;
+  color: var(--text-muted);
+  line-height: 1.4;
 }
 
 /* ============ COVERAGE ============ */
@@ -849,13 +940,13 @@ footer {
 @media (max-width: 1024px) {
   .services-grid { grid-template-columns: repeat(2, 1fr); }
   .vehicles-row { grid-template-columns: repeat(4, 1fr); }
-  .steps-row { grid-template-columns: 1fr 1fr; gap: 32px; }
-  .step-arrow { display: none; }
+  .steps-row { grid-template-columns: 1fr 1fr; gap: 40px 16px; }
+  .step:not(:last-child)::after { display: none; }
+  .how-trust-strip { grid-template-columns: 1fr 1fr; }
   .coverage-grid, .why-grid, .test-grid { grid-template-columns: 1fr; gap: 40px; }
   .trust-bar { grid-template-columns: repeat(2, 1fr); }
   .trust-item + .trust-item { border-left: none; padding-left: 0; }
   .foot-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
-  .hero::after { opacity: 0.3; }
 }
 @media (max-width: 720px) {
   nav.main ul, .phone-btn span.txt { display: none; }
@@ -866,6 +957,7 @@ footer {
   .services-grid, .test-grid { grid-template-columns: 1fr; }
   .vehicles-row { grid-template-columns: repeat(2, 1fr); }
   .steps-row { grid-template-columns: 1fr; }
+  .how-trust-strip { grid-template-columns: 1fr; }
   .trust-bar { grid-template-columns: 1fr; }
   .foot-grid { grid-template-columns: 1fr; }
   .foot-bottom { flex-direction: column; gap: 12px; }
@@ -1120,49 +1212,120 @@ footer {
     </div>
     <div class="steps-row">
       <div class="step">
-        <div class="step-num-circle">1</div>
-        <svg class="step-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.5">
-          <rect x="8" y="6" width="32" height="38" rx="2"/>
-          <line x1="14" y1="14" x2="34" y2="14"/>
-          <line x1="14" y1="22" x2="34" y2="22"/>
-          <line x1="14" y1="30" x2="28" y2="30"/>
-          <line x1="14" y1="38" x2="24" y2="38"/>
-        </svg>
+        <div class="step-circle">
+          <div class="step-circle-bg">
+            <svg class="step-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="10" y="6" width="28" height="36" rx="2"/>
+              <line x1="16" y1="16" x2="32" y2="16"/>
+              <line x1="16" y1="24" x2="32" y2="24"/>
+              <line x1="16" y1="32" x2="26" y2="32"/>
+            </svg>
+          </div>
+          <div class="step-num-badge">1</div>
+        </div>
         <h4>Request a Quote</h4>
         <p>Fill out our quick form or call us. It's 100% free with no obligation.</p>
       </div>
-      <div class="step-arrow">›</div>
+
       <div class="step">
-        <div class="step-num-circle">2</div>
-        <svg class="step-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.5">
-          <path d="M24 4C16 4 10 10 10 18c0 10 14 26 14 26s14-16 14-26c0-8-6-14-14-14z"/>
-          <circle cx="24" cy="18" r="5"/>
-        </svg>
+        <div class="step-circle">
+          <div class="step-circle-bg">
+            <svg class="step-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M24 4C16 4 10 10 10 18c0 10 14 26 14 26s14-16 14-26c0-8-6-14-14-14z"/>
+              <circle cx="24" cy="18" r="5"/>
+            </svg>
+          </div>
+          <div class="step-num-badge">2</div>
+        </div>
         <h4>We Pick Up Your Vehicle</h4>
         <p>We'll pick up your vehicle at your preferred location, on your schedule.</p>
       </div>
-      <div class="step-arrow">›</div>
+
       <div class="step">
-        <div class="step-num-circle">3</div>
-        <svg class="step-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.5">
-          <rect x="4" y="18" width="28" height="16" rx="2"/>
-          <path d="M32 22h8l4 6v6h-12"/>
-          <circle cx="14" cy="38" r="4"/>
-          <circle cx="36" cy="38" r="4"/>
-          <polyline points="10 26 14 30 22 22"/>
-        </svg>
+        <div class="step-circle">
+          <div class="step-circle-bg">
+            <svg class="step-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M6 28h22V14H6z"/>
+              <path d="M28 18h8l6 8v4h-14"/>
+              <circle cx="14" cy="36" r="3.5"/>
+              <circle cx="34" cy="36" r="3.5"/>
+              <line x1="2" y1="20" x2="6" y2="20"/>
+              <line x1="1" y1="24" x2="6" y2="24"/>
+            </svg>
+          </div>
+          <div class="step-num-badge">3</div>
+        </div>
         <h4>Safe Transport</h4>
         <p>Your vehicle is carefully transported by our trusted carriers.</p>
       </div>
-      <div class="step-arrow">›</div>
+
       <div class="step">
-        <div class="step-num-circle">4</div>
-        <svg class="step-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.5">
-          <circle cx="24" cy="24" r="20"/>
-          <polyline points="14 24 21 31 34 18"/>
-        </svg>
+        <div class="step-circle">
+          <div class="step-circle-bg">
+            <svg class="step-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="24" cy="24" r="18"/>
+              <polyline points="16 24 22 30 32 18"/>
+            </svg>
+          </div>
+          <div class="step-num-badge">4</div>
+        </div>
         <h4>Delivered to You</h4>
         <p>We deliver your vehicle safely to your destination. Simple as that.</p>
+      </div>
+    </div>
+
+    <!-- Trust strip below steps -->
+    <div class="how-trust-strip">
+      <div class="how-trust-item">
+        <div class="how-trust-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+          </svg>
+        </div>
+        <div>
+          <strong>Fully Insured</strong>
+          <span>Your vehicle is protected every step of the way.</span>
+        </div>
+      </div>
+      <div class="how-trust-item">
+        <div class="how-trust-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 12a9 9 0 0 1 18 0v7a2 2 0 0 1-2 2h-2v-7h4M3 12v7a2 2 0 0 0 2 2h2v-7H3"/>
+          </svg>
+        </div>
+        <div>
+          <strong>24/7 Support</strong>
+          <span>Our team is here to help anytime, anywhere.</span>
+        </div>
+      </div>
+      <div class="how-trust-item">
+        <div class="how-trust-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="9"/>
+            <ellipse cx="12" cy="12" rx="9" ry="4"/>
+            <line x1="12" y1="3" x2="12" y2="21"/>
+            <path d="M4 8 Q 12 6 20 8"/>
+            <path d="M4 16 Q 12 18 20 16"/>
+          </svg>
+        </div>
+        <div>
+          <strong>Nationwide Service</strong>
+          <span>Reliable auto transport across all 50 states.</span>
+        </div>
+      </div>
+      <div class="how-trust-item">
+        <div class="how-trust-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+            <circle cx="9" cy="7" r="4"/>
+            <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+            <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+          </svg>
+        </div>
+        <div>
+          <strong>Trusted Professionals</strong>
+          <span>Experienced carriers you can count on.</span>
+        </div>
       </div>
     </div>
   </div>
