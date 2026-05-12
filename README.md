@@ -1,130 +1,84 @@
-# Heartland Auto Transport — Website
+# Heartland Auto Transport — Complete Website
 
-Alabama-based auto transport company website. Static HTML site, ready to deploy.
+Alabama-based auto transport company website. Production-ready static site.
 
-## Site Stats
+## What's Inside (45 pages)
 
-- **25 total pages** (1 homepage + 24 service pages)
-- **All pages SEO-optimized** with unique titles, meta, schema markup
-- **1,044 - 1,656 words** per service page (all original content)
-- **One shared `styles.css`** — edit once, applies everywhere
-- **Mobile responsive**, fast-loading static HTML
+### Core Pages (6)
+- `index.html` — Homepage with hero, services, coverage, FAQ
+- `how-it-works.html` — Step-by-step process page (HowTo schema)
+- `about.html` — Company story, values, Alabama roots
+- `faq.html` — Comprehensive FAQ across 6 categories (FAQPage schema)
+- `contact.html` — Contact form, phone, email, service areas (ContactPage schema)
+- `blog.html` — Blog landing page
 
-## Structure
+### Service Pages (24) — in `/services/`
+**9 Shipping Methods:**
+- open-auto-transport, enclosed-auto-transport, door-to-door-auto-transport
+- expedited-auto-transport, cross-country-car-shipping, state-to-state-car-shipping
+- nationwide-auto-transport, terminal-to-terminal-shipping, guaranteed-pickup-services
 
-```
-heartland-site/
-├── index.html
-├── styles.css
-├── sitemap.xml                            ← submit to Google Search Console
-├── robots.txt
-├── README.md
-├── images/
-│   ├── logo.png
-│   ├── hero-truck.jpg
-│   ├── usa-map.jpg
-│   ├── service-open.jpg
-│   ├── service-enclosed.jpg
-│   ├── service-nationwide.jpg
-│   └── service-expedited.jpg
-└── services/                              ← 24 service pages
-    │
-    │   ── Shipping Methods (9) ──
-    ├── open-auto-transport.html               1,461 words
-    ├── enclosed-auto-transport.html           1,385 words
-    ├── door-to-door-auto-transport.html       1,404 words
-    ├── expedited-auto-transport.html          1,437 words
-    ├── cross-country-car-shipping.html        1,436 words
-    ├── state-to-state-car-shipping.html       1,597 words
-    ├── nationwide-auto-transport.html         1,375 words
-    ├── terminal-to-terminal-shipping.html     1,501 words
-    ├── guaranteed-pickup-services.html        1,656 words
-    │
-    │   ── Vehicle Types (15) ──
-    ├── car-shipping.html                      1,188 words
-    ├── suv-transport.html                     1,116 words
-    ├── truck-shipping.html                    1,059 words
-    ├── motorcycle-shipping.html               1,044 words
-    ├── electric-vehicle-shipping.html         1,172 words
-    ├── luxury-car-transport.html              1,079 words
-    ├── exotic-car-transport.html              1,131 words
-    ├── classic-car-transport.html             1,173 words
-    ├── antique-vehicle-shipping.html          1,187 words
-    ├── rv-transport.html                      1,284 words
-    ├── boat-transport.html                    1,358 words
-    ├── atv-utv-shipping.html                  1,160 words
-    ├── golf-cart-shipping.html                1,281 words
-    ├── van-transport.html                     1,204 words
-    └── heavy-equipment-transport.html         1,356 words
-```
+**15 Vehicle Types:**
+- car-shipping, suv-transport, truck-shipping, motorcycle-shipping
+- electric-vehicle-shipping, luxury-car-transport, exotic-car-transport
+- classic-car-transport, antique-vehicle-shipping, rv-transport, boat-transport
+- atv-utv-shipping, golf-cart-shipping, van-transport, heavy-equipment-transport
 
-## SEO Setup (every page)
+### Blog Articles (6) — in `/blog/`
+- how-much-does-auto-transport-cost.html (1,369 words)
+- how-to-prepare-your-car-for-shipping.html (1,507 words)
+- open-vs-enclosed-auto-transport.html (1,130 words)
+- snowbird-car-shipping-guide.html (1,108 words)
+- shipping-a-car-bought-online.html (1,327 words)
+- military-pcs-auto-transport.html (1,098 words)
 
-- Unique `<title>` and meta description targeting the page's primary keyword
-- Canonical URL, Open Graph and Twitter Card meta
-- Schema markup: Service, FAQPage, BreadcrumbList (gets Google rich snippets)
-- Geo-targeting Alabama (`geo.region=US-AL`)
-- Proper semantic HTML (one H1, multiple H2s/H3s)
-- Internal links between related service pages
-- Mobile-responsive layout
+### Assets
+- `styles.css` — Single stylesheet for all pages (~60KB)
+- `images/` — Logo, hero, services, map, vehicle photos
+- `sitemap.xml` — 36 URLs for Google Search Console
+- `robots.txt` — Allows all crawlers
 
-After your site is live, submit `sitemap.xml` to Google Search Console:
-https://search.google.com/search-console
+## SEO Features
+- Unique title + meta description on every page
+- Schema.org markup (LocalBusiness, Service, FAQPage, BlogPosting, HowTo, BreadcrumbList, ContactPage, AboutPage)
+- Canonical URLs
+- Open Graph + Twitter cards
+- Geo-targeting (US-AL)
+- Sitemap with priority signals
+- Internal linking throughout
 
-## How to Deploy
+## Before Going Live — Replace These Placeholders
+1. **Phone number** — Find/replace `(888) 123-4567` and `tel:8881234567`
+2. **Email** — Find/replace `info@heartlandautotransport.com`
+3. **Quote button URL** — Search for `id="instant-pricing-btn"` and `href="#"` — connect to your quote tool/form processor
+4. **Contact form handler** — `contact.html` has placeholder JS `handleContactSubmit()` — connect to Formspree, Netlify Forms, or similar
+5. **Privacy Policy / Terms** — Footer links go to `href="#"` — add real pages or remove
+6. **USDOT/MC numbers** — Footer says "FMCSA Licensed Broker" — add specific numbers if desired
 
-This is a static site — no build step, no server needed.
+## Deployment to Cloudflare Pages
 
-**Cloudflare Pages (recommended, free):**
-1. Workers & Pages → Create → Pages tab → Upload assets
-2. Project name: `heartlandautotransport` → URL becomes heartlandautotransport.pages.dev
-3. Drag the contents of this folder into the upload area
-4. Click Deploy site
+1. Go to dash.cloudflare.com → Workers & Pages → Create → Pages → Upload assets
+2. Project name: `heartlandautotransport` (gives you heartlandautotransport.pages.dev)
+3. Drag the entire `heartland-site` folder contents into the upload area
+4. Click Deploy
+5. Once live, add your custom domain in the Custom Domains tab
+6. Submit `sitemap.xml` to Google Search Console for indexing
 
-Works equally well on Netlify, Vercel, GitHub Pages, or any traditional host.
+## File Count Summary
+- 6 core pages
+- 24 service pages
+- 6 blog articles
+- 1 stylesheet
+- 7 images
+- sitemap.xml + robots.txt
+- **Total: 45 HTML pages + assets**
 
-## Updating
+## Tech Stack
+- Pure static HTML/CSS — no build process needed
+- Single shared stylesheet for fast loading
+- Mobile-responsive throughout
+- Works on any static host (Cloudflare Pages, Netlify, Vercel, GitHub Pages, S3, etc.)
+- No JavaScript dependencies except the contact form placeholder
 
-- **CSS changes** — edit `styles.css`, applies to all 25 pages
-- **Replace a photo** — drop a new file in `images/` with the same filename
-- **Edit text** — open the relevant `.html` file in any text editor
-
-## Placeholders to Replace Before Launch
-
-- Phone number `(888) 123-4567` — search & replace across all files
-- Email `info@heartlandautotransport.com` — same
-- "Get Instant Pricing" button has `id="instant-pricing-btn"` with `href="#"` — swap with your real pricing tool URL
-- USDOT/MC number — currently just "FMCSA Licensed Broker"; append your actual number if desired
-
-## Service Page Keywords Targeted
-
-Each page targets a different specific keyword, so all 24 pages can rank separately in Google for their own search terms:
-
-| Page | Primary Keyword |
-|------|----------------|
-| Open Auto Transport | "open auto transport" |
-| Enclosed Auto Transport | "enclosed auto transport" + classic/exotic |
-| Door-to-Door | "door-to-door auto transport" |
-| Expedited | "expedited auto transport" |
-| Cross Country | "cross country car shipping" |
-| State-to-State | "state to state car shipping" |
-| Nationwide | "nationwide auto transport" |
-| Terminal-to-Terminal | "terminal to terminal shipping" |
-| Guaranteed Pickup | "guaranteed pickup services" |
-| Car Shipping | "car shipping" / "ship my car" |
-| SUV Transport | "SUV transport" / "SUV shipping" |
-| Truck Shipping | "truck shipping" / "pickup truck transport" |
-| Motorcycle Shipping | "motorcycle shipping" / "Harley shipping" |
-| EV Shipping | "Tesla shipping" / "EV transport" |
-| Luxury Cars | "luxury car transport" |
-| Exotic Cars | "exotic car transport" / "Ferrari shipping" |
-| Classic Cars | "classic car transport" / "muscle car shipping" |
-| Antique Vehicles | "antique car shipping" / "pre-war car transport" |
-| RV Transport | "RV transport" / "motorhome shipping" |
-| Boat Transport | "boat transport" / "yacht shipping" |
-| ATV/UTV | "ATV shipping" / "side by side transport" |
-| Golf Carts | "golf cart shipping" |
-| Vans | "van transport" / "Sprinter shipping" |
-| Heavy Equipment | "heavy equipment transport" / "bulldozer shipping" |
-
-All content is unique per page (no duplicate content penalty). Each page has its own FAQ schema, giving you 24 separate opportunities for Google rich-snippet FAQ displays in search results.
+---
+Built for Heartland Auto Transport · Trusted. Reliable. On the Road with Care.

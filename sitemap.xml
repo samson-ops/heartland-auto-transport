@@ -1,153 +1,74 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- HOMEPAGE -->
   <url>
     <loc>https://heartlandautotransport.com/</loc>
-    <lastmod>2026-05-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
+
+  <!-- CORE PAGES -->
   <url>
-    <loc>https://heartlandautotransport.com/services/open-auto-transport.html</loc>
-    <lastmod>2026-05-12</lastmod>
+    <loc>https://heartlandautotransport.com/how-it-works.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://heartlandautotransport.com/services/enclosed-auto-transport.html</loc>
-    <lastmod>2026-05-12</lastmod>
+    <loc>https://heartlandautotransport.com/about.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://heartlandautotransport.com/faq.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://heartlandautotransport.com/services/door-to-door-auto-transport.html</loc>
-    <lastmod>2026-05-12</lastmod>
+    <loc>https://heartlandautotransport.com/contact.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://heartlandautotransport.com/services/expedited-auto-transport.html</loc>
-    <lastmod>2026-05-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <loc>https://heartlandautotransport.com/blog.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
-  <url>
-    <loc>https://heartlandautotransport.com/services/cross-country-car-shipping.html</loc>
-    <lastmod>2026-05-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://heartlandautotransport.com/services/state-to-state-car-shipping.html</loc>
-    <lastmod>2026-05-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://heartlandautotransport.com/services/nationwide-auto-transport.html</loc>
-    <lastmod>2026-05-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://heartlandautotransport.com/services/terminal-to-terminal-shipping.html</loc>
-    <lastmod>2026-05-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://heartlandautotransport.com/services/guaranteed-pickup-services.html</loc>
-    <lastmod>2026-05-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://heartlandautotransport.com/services/car-shipping.html</loc>
-    <lastmod>2026-05-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://heartlandautotransport.com/services/suv-transport.html</loc>
-    <lastmod>2026-05-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://heartlandautotransport.com/services/truck-shipping.html</loc>
-    <lastmod>2026-05-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://heartlandautotransport.com/services/motorcycle-shipping.html</loc>
-    <lastmod>2026-05-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://heartlandautotransport.com/services/electric-vehicle-shipping.html</loc>
-    <lastmod>2026-05-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://heartlandautotransport.com/services/luxury-car-transport.html</loc>
-    <lastmod>2026-05-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://heartlandautotransport.com/services/exotic-car-transport.html</loc>
-    <lastmod>2026-05-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://heartlandautotransport.com/services/classic-car-transport.html</loc>
-    <lastmod>2026-05-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://heartlandautotransport.com/services/antique-vehicle-shipping.html</loc>
-    <lastmod>2026-05-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://heartlandautotransport.com/services/rv-transport.html</loc>
-    <lastmod>2026-05-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://heartlandautotransport.com/services/boat-transport.html</loc>
-    <lastmod>2026-05-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://heartlandautotransport.com/services/atv-utv-shipping.html</loc>
-    <lastmod>2026-05-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://heartlandautotransport.com/services/golf-cart-shipping.html</loc>
-    <lastmod>2026-05-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://heartlandautotransport.com/services/van-transport.html</loc>
-    <lastmod>2026-05-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://heartlandautotransport.com/services/heavy-equipment-transport.html</loc>
-    <lastmod>2026-05-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
+
+  <!-- SHIPPING METHOD PAGES -->
+  <url><loc>https://heartlandautotransport.com/services/open-auto-transport.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://heartlandautotransport.com/services/enclosed-auto-transport.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://heartlandautotransport.com/services/door-to-door-auto-transport.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://heartlandautotransport.com/services/expedited-auto-transport.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://heartlandautotransport.com/services/cross-country-car-shipping.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://heartlandautotransport.com/services/state-to-state-car-shipping.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://heartlandautotransport.com/services/nationwide-auto-transport.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://heartlandautotransport.com/services/terminal-to-terminal-shipping.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://heartlandautotransport.com/services/guaranteed-pickup-services.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+
+  <!-- VEHICLE TYPE PAGES -->
+  <url><loc>https://heartlandautotransport.com/services/car-shipping.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://heartlandautotransport.com/services/suv-transport.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://heartlandautotransport.com/services/truck-shipping.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://heartlandautotransport.com/services/motorcycle-shipping.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://heartlandautotransport.com/services/electric-vehicle-shipping.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://heartlandautotransport.com/services/luxury-car-transport.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://heartlandautotransport.com/services/exotic-car-transport.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://heartlandautotransport.com/services/classic-car-transport.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://heartlandautotransport.com/services/antique-vehicle-shipping.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://heartlandautotransport.com/services/rv-transport.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://heartlandautotransport.com/services/boat-transport.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://heartlandautotransport.com/services/atv-utv-shipping.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://heartlandautotransport.com/services/golf-cart-shipping.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://heartlandautotransport.com/services/van-transport.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://heartlandautotransport.com/services/heavy-equipment-transport.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+
+  <!-- BLOG ARTICLES -->
+  <url><loc>https://heartlandautotransport.com/blog/how-much-does-auto-transport-cost.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://heartlandautotransport.com/blog/how-to-prepare-your-car-for-shipping.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://heartlandautotransport.com/blog/open-vs-enclosed-auto-transport.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://heartlandautotransport.com/blog/snowbird-car-shipping-guide.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://heartlandautotransport.com/blog/shipping-a-car-bought-online.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://heartlandautotransport.com/blog/military-pcs-auto-transport.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+
 </urlset>
