@@ -117,13 +117,13 @@ header {
 .nav {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 14px 24px;
+  padding: 18px 24px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 24px;
 }
-.logo { height: 52px; width: auto; }
+.logo { height: 80px; width: auto; }
 nav.main ul {
   display: flex;
   list-style: none;
@@ -442,35 +442,76 @@ section { padding: 80px 0; }
 /* ============ VEHICLES WE SHIP ============ */
 .vehicles {
   background: #fff;
-  padding-top: 20px;
+  padding: 90px 0 90px;
+}
+.vehicles .section-head {
+  text-align: center;
+  margin-bottom: 56px;
+}
+.vehicles .section-head h2 {
+  font-size: clamp(30px, 4vw, 42px);
+  font-weight: 700;
+  color: var(--maroon);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: 18px;
+  position: relative;
+  padding-bottom: 16px;
+}
+.vehicles .section-head h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 3px;
+  background: var(--maroon);
+  border-radius: 2px;
+}
+.vehicles .section-head p {
+  font-size: 16px;
+  color: var(--text-muted);
+  max-width: 540px;
+  margin: 0 auto;
+  line-height: 1.55;
 }
 .vehicles-row {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
-  gap: 16px;
-  margin-bottom: 24px;
+  gap: 18px;
+  margin-bottom: 30px;
 }
-.vehicle-item {
+.vehicle-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 30px 16px 24px;
   text-align: center;
-  padding: 16px 8px;
-  border-radius: 8px;
-  transition: background 0.2s;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+  transition: all 0.3s ease;
+  cursor: default;
 }
-.vehicle-item:hover { background: var(--bg-soft); }
-.vehicle-item svg {
-  width: 80px;
+.vehicle-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 28px rgba(122,31,43,0.15);
+}
+.vehicle-card svg {
+  width: 70px;
   height: 60px;
-  margin: 0 auto 10px;
+  margin: 0 auto 16px;
   display: block;
-  color: #444;
+  color: var(--maroon);
+  stroke-width: 1.5;
 }
-.vehicle-item .label {
+.vehicle-card .label {
   font-size: 14px;
-  font-weight: 500;
+  font-weight: 600;
   color: var(--text);
+  font-family: 'Poppins', sans-serif;
 }
 .view-all {
   text-align: center;
+  margin-top: 32px;
 }
 .view-all a {
   color: var(--maroon);
@@ -479,6 +520,7 @@ section { padding: 80px 0; }
   display: inline-flex;
   align-items: center;
   gap: 6px;
+  transition: gap 0.2s;
 }
 .view-all a:hover { gap: 10px; }
 
@@ -631,28 +673,148 @@ section { padding: 80px 0; }
 }
 .coverage-grid {
   display: grid;
-  grid-template-columns: 1fr 1.3fr;
-  gap: 60px;
+  grid-template-columns: 0.85fr 1.4fr;
+  gap: 70px;
   align-items: center;
 }
-.coverage-text h2 {
-  font-size: clamp(26px, 3vw, 34px);
+.coverage-text .eyebrow {
+  font-size: 13px;
   font-weight: 700;
-  margin-bottom: 16px;
-  line-height: 1.2;
+  color: var(--maroon);
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  margin-bottom: 14px;
+  position: relative;
+  padding-bottom: 14px;
 }
-.coverage-text p {
+.coverage-text .eyebrow::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50px;
+  height: 3px;
+  background: var(--maroon);
+  border-radius: 2px;
+}
+.coverage-text h2 {
+  font-size: clamp(36px, 4.5vw, 56px);
+  font-weight: 800;
+  margin-bottom: 28px;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  color: #1a1a1a;
+}
+.coverage-text h2 .accent { color: var(--maroon); }
+.coverage-text > p {
   font-size: 16px;
   color: var(--text-muted);
-  margin-bottom: 28px;
-  line-height: 1.6;
+  margin-bottom: 24px;
+  line-height: 1.65;
+  max-width: 480px;
 }
+.routes-box {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 20px 0;
+  margin-bottom: 32px;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+.routes-icon {
+  width: 48px;
+  height: 48px;
+  background: #f5e6e8;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--maroon);
+  flex-shrink: 0;
+}
+.routes-text {
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--text-muted);
+}
+.routes-text strong {
+  color: var(--text);
+  font-weight: 700;
+}
+
+/* US Map */
 .us-map-wrap {
   background: var(--bg-soft);
-  border-radius: 8px;
-  padding: 32px;
+  border-radius: 16px;
+  padding: 40px 32px 24px;
+  position: relative;
 }
-.us-map { width: 100%; height: auto; }
+.us-map {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.us-map .state {
+  fill: #d8d8d8;
+  stroke: #fff;
+  stroke-width: 1;
+  transition: fill 0.2s;
+}
+.us-map .state.alabama {
+  fill: #7a1f2b;
+}
+.map-legend {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border);
+  font-size: 14px;
+  color: var(--text-muted);
+}
+.map-legend .item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.map-legend .dot-gold {
+  width: 14px;
+  height: 14px;
+  background: #f4c430;
+  border-radius: 50%;
+  display: inline-block;
+}
+.map-legend .pin-icon {
+  display: inline-flex;
+  color: var(--maroon);
+}
+
+/* Alabama callout card */
+.alabama-callout {
+  position: absolute;
+  background: #fff;
+  border-radius: 6px;
+  padding: 10px 16px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.12);
+  font-family: 'Poppins', sans-serif;
+  z-index: 5;
+  pointer-events: none;
+}
+.alabama-callout strong {
+  display: block;
+  color: var(--maroon);
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+.alabama-callout span {
+  font-size: 11px;
+  color: var(--text-muted);
+  letter-spacing: 0.05em;
+  font-weight: 500;
+}
 
 /* ============ WHY US ============ */
 .why-us {
@@ -900,7 +1062,7 @@ footer {
   display: inline-block;
   margin-bottom: 18px;
 }
-.foot-brand .foot-logo img { height: 38px; }
+.foot-brand .foot-logo img { height: 58px; }
 .foot-brand p {
   font-size: 14px;
   line-height: 1.6;
@@ -1119,81 +1281,114 @@ footer {
   <div class="container">
     <div class="section-head">
       <h2>We Transport It All</h2>
+      <p>From everyday vehicles to heavy-duty equipment, we deliver with care and expertise.</p>
     </div>
     <div class="vehicles-row">
-      <div class="vehicle-item">
-        <svg viewBox="0 0 100 60" fill="none">
-          <path d="M10 42 Q10 32 18 30 L28 22 Q32 18 38 18 L62 18 Q68 18 72 22 L82 30 Q90 32 90 42 L90 48 L10 48 Z" fill="#d4d4d4" stroke="#666" stroke-width="1.5"/>
-          <path d="M28 22 L38 18 L62 18 L72 22 L70 30 L30 30 Z" fill="#bce4f5" opacity="0.7"/>
-          <circle cx="26" cy="48" r="7" fill="#222"/>
-          <circle cx="74" cy="48" r="7" fill="#222"/>
-          <circle cx="26" cy="48" r="3" fill="#888"/>
-          <circle cx="74" cy="48" r="3" fill="#888"/>
+      <div class="vehicle-card">
+        <svg viewBox="0 0 90 60" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+          <!-- Sedan/Car -->
+          <path d="M 10 42 L 10 36 Q 12 30 18 28 L 28 22 Q 32 18 38 18 L 56 18 Q 62 18 66 22 L 74 28 Q 80 30 82 36 L 82 42"/>
+          <path d="M 10 42 L 82 42 L 82 46 L 10 46 Z"/>
+          <path d="M 28 28 L 36 22 L 56 22 L 64 28"/>
+          <line x1="46" y1="22" x2="46" y2="28"/>
+          <circle cx="22" cy="46" r="5"/>
+          <circle cx="68" cy="46" r="5"/>
         </svg>
         <div class="label">Cars</div>
       </div>
-      <div class="vehicle-item">
-        <svg viewBox="0 0 100 60" fill="none">
-          <path d="M8 44 L8 28 Q8 22 14 22 L30 18 Q34 14 40 14 L66 14 Q72 14 76 18 L86 22 Q92 24 92 32 L92 48 L8 48 Z" fill="#c8c8c8" stroke="#666" stroke-width="1.5"/>
-          <path d="M30 18 L40 14 L66 14 L76 22 L72 30 L28 30 Z" fill="#bce4f5" opacity="0.7"/>
-          <circle cx="24" cy="48" r="7" fill="#222"/>
-          <circle cx="76" cy="48" r="7" fill="#222"/>
+
+      <div class="vehicle-card">
+        <svg viewBox="0 0 90 60" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+          <!-- SUV -->
+          <path d="M 8 44 L 8 30 Q 10 24 16 22 L 26 16 Q 30 14 36 14 L 60 14 Q 66 14 70 18 L 78 24 Q 84 26 84 32 L 84 44"/>
+          <path d="M 8 44 L 84 44 L 84 48 L 8 48 Z"/>
+          <path d="M 24 24 L 32 16 L 46 16 L 46 24"/>
+          <path d="M 46 16 L 60 16 L 68 24 L 46 24"/>
+          <circle cx="22" cy="48" r="5"/>
+          <circle cx="70" cy="48" r="5"/>
         </svg>
         <div class="label">SUVs</div>
       </div>
-      <div class="vehicle-item">
-        <svg viewBox="0 0 100 60" fill="none">
-          <rect x="8" y="22" width="44" height="22" fill="#d4d4d4" stroke="#666" stroke-width="1.5"/>
-          <path d="M52 28 L66 28 Q72 28 76 32 L84 38 L92 38 L92 44 L52 44 Z" fill="#bcbcbc" stroke="#666" stroke-width="1.5"/>
-          <path d="M56 32 L66 30 L72 34" fill="#bce4f5" opacity="0.7"/>
-          <circle cx="22" cy="48" r="7" fill="#222"/>
-          <circle cx="80" cy="48" r="7" fill="#222"/>
+
+      <div class="vehicle-card">
+        <svg viewBox="0 0 90 60" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+          <!-- Truck (box truck) -->
+          <rect x="8" y="20" width="42" height="22" rx="2"/>
+          <path d="M 50 26 L 64 26 Q 70 26 72 30 L 78 36 L 82 36 L 82 42 L 50 42 Z"/>
+          <line x1="50" y1="36" x2="82" y2="36"/>
+          <rect x="56" y="30" width="14" height="6"/>
+          <circle cx="22" cy="46" r="5"/>
+          <circle cx="68" cy="46" r="5"/>
         </svg>
         <div class="label">Trucks</div>
       </div>
-      <div class="vehicle-item">
-        <svg viewBox="0 0 100 60" fill="none">
-          <circle cx="22" cy="42" r="12" fill="#222"/>
-          <circle cx="78" cy="42" r="12" fill="#222"/>
-          <circle cx="22" cy="42" r="5" fill="#888"/>
-          <circle cx="78" cy="42" r="5" fill="#888"/>
-          <path d="M30 40 L48 22 L72 22 L82 38" stroke="#7a1f2b" stroke-width="3" fill="#7a1f2b" fill-opacity="0.7"/>
-          <path d="M48 22 L42 14 L52 12" stroke="#7a1f2b" stroke-width="2.5"/>
-          <rect x="40" y="34" width="20" height="8" rx="2" fill="#7a1f2b"/>
+
+      <div class="vehicle-card">
+        <svg viewBox="0 0 90 60" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+          <!-- Motorcycle - cleaner side view -->
+          <circle cx="18" cy="44" r="10"/>
+          <circle cx="72" cy="44" r="10"/>
+          <path d="M 28 44 L 38 32 L 56 32"/>
+          <path d="M 38 32 L 46 22 L 60 22"/>
+          <path d="M 60 22 L 64 28 L 72 44"/>
+          <path d="M 56 32 L 60 36 L 64 32"/>
+          <line x1="46" y1="22" x2="42" y2="18"/>
+          <line x1="42" y1="18" x2="48" y2="16"/>
+          <path d="M 56 32 L 60 28"/>
         </svg>
         <div class="label">Motorcycles</div>
       </div>
-      <div class="vehicle-item">
-        <svg viewBox="0 0 100 60" fill="none">
-          <rect x="8" y="14" width="68" height="32" rx="3" fill="#e8e8e8" stroke="#666" stroke-width="1.5"/>
-          <path d="M76 22 L88 24 Q92 26 92 30 L92 46 L76 46 Z" fill="#d0d0d0" stroke="#666" stroke-width="1.5"/>
-          <rect x="14" y="20" width="14" height="10" fill="#bce4f5" opacity="0.7"/>
-          <rect x="32" y="20" width="14" height="10" fill="#bce4f5" opacity="0.7"/>
-          <rect x="50" y="20" width="20" height="14" fill="#bce4f5" opacity="0.7"/>
-          <circle cx="22" cy="50" r="6" fill="#222"/>
-          <circle cx="82" cy="50" r="6" fill="#222"/>
+
+      <div class="vehicle-card">
+        <svg viewBox="0 0 90 60" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+          <!-- RV -->
+          <rect x="10" y="14" width="56" height="30" rx="2"/>
+          <path d="M 66 22 L 76 22 Q 80 22 80 26 L 80 44 L 66 44 Z"/>
+          <line x1="10" y1="22" x2="66" y2="22"/>
+          <rect x="14" y="26" width="10" height="8"/>
+          <rect x="28" y="26" width="10" height="8"/>
+          <rect x="42" y="26" width="10" height="8"/>
+          <rect x="56" y="26" width="8" height="14"/>
+          <line x1="56" y1="30" x2="56" y2="36" stroke-width="1"/>
+          <circle cx="22" cy="48" r="5"/>
+          <circle cx="68" cy="48" r="5"/>
         </svg>
         <div class="label">RVs</div>
       </div>
-      <div class="vehicle-item">
-        <svg viewBox="0 0 100 60" fill="none">
-          <path d="M10 44 Q15 50 50 50 Q85 50 90 44 L86 36 L14 36 Z" fill="#e8e8e8" stroke="#666" stroke-width="1.5"/>
-          <path d="M20 36 L25 22 L75 22 L80 36 Z" fill="#d0d0d0" stroke="#666" stroke-width="1.5"/>
-          <rect x="30" y="26" width="8" height="6" fill="#bce4f5"/>
-          <rect x="44" y="26" width="8" height="6" fill="#bce4f5"/>
-          <rect x="58" y="26" width="8" height="6" fill="#bce4f5"/>
-          <path d="M50 22 L50 10 L62 22" fill="#888"/>
+
+      <div class="vehicle-card">
+        <svg viewBox="0 0 90 60" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+          <!-- Boat with flag -->
+          <path d="M 8 38 Q 14 46 45 46 Q 76 46 82 38 L 78 32 L 12 32 Z"/>
+          <path d="M 18 32 L 22 22 L 70 22 L 74 32"/>
+          <rect x="28" y="26" width="6" height="4"/>
+          <rect x="40" y="26" width="6" height="4"/>
+          <rect x="52" y="26" width="6" height="4"/>
+          <line x1="46" y1="22" x2="46" y2="10"/>
+          <path d="M 46 10 L 56 14 L 46 18 Z"/>
+          <path d="M 4 42 Q 8 44 12 42 M 78 42 Q 82 44 86 42"/>
         </svg>
         <div class="label">Boats</div>
       </div>
-      <div class="vehicle-item">
-        <svg viewBox="0 0 100 60" fill="none">
-          <path d="M10 46 L10 38 L20 30 L40 30 L40 22 L60 22 L66 32 L80 32 L88 38 L88 46 Z" fill="#f4c430" stroke="#8a6500" stroke-width="1.5"/>
-          <rect x="44" y="14" width="14" height="8" fill="#f4c430" stroke="#8a6500" stroke-width="1.5"/>
-          <rect x="46" y="16" width="10" height="6" fill="#bce4f5" opacity="0.8"/>
-          <circle cx="24" cy="50" r="7" fill="#222"/>
-          <circle cx="74" cy="50" r="7" fill="#222"/>
-          <path d="M10 38 L18 44 L18 50 L10 50 Z" fill="#888"/>
+
+      <div class="vehicle-card">
+        <svg viewBox="0 0 90 60" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+          <!-- Bulldozer -->
+          <!-- Cab -->
+          <path d="M 30 30 L 30 16 L 50 16 L 56 30"/>
+          <line x1="35" y1="20" x2="48" y2="20"/>
+          <!-- Body -->
+          <path d="M 22 40 L 22 30 L 60 30 L 60 40"/>
+          <!-- Arm to blade -->
+          <line x1="60" y1="32" x2="76" y2="22"/>
+          <!-- Blade -->
+          <path d="M 76 16 L 84 16 L 84 36 L 76 36 Z"/>
+          <line x1="76" y1="22" x2="76" y2="30"/>
+          <!-- Tracks (treads) -->
+          <ellipse cx="38" cy="46" rx="22" ry="6"/>
+          <circle cx="26" cy="46" r="3"/>
+          <circle cx="38" cy="46" r="2"/>
+          <circle cx="50" cy="46" r="2"/>
         </svg>
         <div class="label">Heavy Equipment</div>
       </div>
@@ -1336,62 +1531,156 @@ footer {
   <div class="container">
     <div class="coverage-grid">
       <div class="coverage-text">
-        <h2>Based in Alabama. Shipping Nationwide.</h2>
+        <div class="eyebrow">Based in Alabama</div>
+        <h2>Shipping <span class="accent">Nationwide.</span></h2>
         <p>We service every city in Alabama — Birmingham, Huntsville, Mobile, Montgomery, Tuscaloosa, Auburn, Dothan, Decatur, and beyond — with door-to-door pickup and delivery. From there, we ship to all 50 states.</p>
-        <p style="font-size: 14px; color: var(--text-muted); margin-bottom: 28px;"><strong style="color: var(--text);">Popular routes:</strong> Birmingham → Atlanta · Huntsville → Nashville · Mobile → Houston · Montgomery → Dallas · Tuscaloosa → Memphis · Statewide AL → California, Texas, Florida, New York &amp; more.</p>
+
+        <div class="routes-box">
+          <div class="routes-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="1" y="6" width="14" height="10" rx="1"/>
+              <path d="M15 9h4l3 4v3h-7"/>
+              <circle cx="6" cy="18" r="2"/>
+              <circle cx="18" cy="18" r="2"/>
+            </svg>
+          </div>
+          <div class="routes-text">
+            <strong>Popular routes:</strong> Birmingham → Atlanta · Huntsville → Nashville · Mobile → Houston · Montgomery → Dallas · Tuscaloosa → Memphis · Statewide AL → California, Texas, Florida, New York &amp; more.
+          </div>
+        </div>
+
         <a href="#contact" class="btn-primary">
           Get a Quote
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
         </a>
       </div>
+
       <div class="us-map-wrap">
-        <svg class="us-map" viewBox="0 0 600 380" xmlns="http://www.w3.org/2000/svg" aria-label="United States coverage map with Alabama highlighted">
-          <!-- Simplified US silhouette -->
-          <path d="M 70 120
-                   L 90 80 L 130 70 L 180 60 L 240 55 L 300 50 L 360 52 L 420 58 L 480 70 L 520 90 L 550 130
-                   L 555 170 L 550 210 L 545 245 L 540 270 L 520 285 L 490 290 L 460 295 L 430 300 L 410 320
-                   L 390 335 L 360 330 L 330 320 L 300 315 L 280 325 L 260 320 L 240 310 L 220 305 L 200 310
-                   L 180 305 L 160 295 L 145 285 L 130 270 L 115 250 L 100 225 L 85 195 L 75 165 L 70 140 Z"
-                fill="#e5e7eb" stroke="#9ca3af" stroke-width="1.5"/>
-          <!-- Florida -->
-          <path d="M 430 300 L 445 320 L 455 345 L 465 360 L 470 340 L 465 320 L 455 305 Z"
-                fill="#e5e7eb" stroke="#9ca3af" stroke-width="1.5"/>
-          <!-- Alabama highlight (approximate position) -->
-          <path d="M 385 235 L 410 233 L 412 270 L 415 295 L 405 305 L 388 303 L 385 270 Z"
-                fill="#7a1f2b" stroke="#5e1620" stroke-width="1.5"/>
-          <!-- HOME pin on Alabama (larger, gold) -->
-          <g transform="translate(398,260)">
-            <path d="M0 0 C-10 -14 -10 -30 0 -38 C10 -30 10 -14 0 0 Z" fill="#f4c430" stroke="#fff" stroke-width="2"/>
-            <circle cx="0" cy="-25" r="5" fill="#7a1f2b"/>
-          </g>
-          <text x="445" y="265" fill="#7a1f2b" font-family="Poppins" font-weight="700" font-size="13">ALABAMA</text>
-          <text x="445" y="280" fill="#7a1f2b" font-family="Open Sans" font-weight="600" font-size="10">OUR HOME BASE</text>
-          <!-- Delivery pins across the country (smaller, maroon) -->
+        <svg class="us-map" viewBox="0 0 959 593" xmlns="http://www.w3.org/2000/svg" aria-label="United States coverage map with Alabama highlighted">
+          <!-- Accurate US states (Albers projection, public domain) -->
           <g>
-            <g transform="translate(110,150)"><path d="M0 0 C-7 -10 -7 -22 0 -28 C7 -22 7 -10 0 0 Z" fill="#7a1f2b"/><circle cx="0" cy="-19" r="3" fill="#fff"/></g>
-            <g transform="translate(160,110)"><path d="M0 0 C-7 -10 -7 -22 0 -28 C7 -22 7 -10 0 0 Z" fill="#7a1f2b"/><circle cx="0" cy="-19" r="3" fill="#fff"/></g>
-            <g transform="translate(220,90)"><path d="M0 0 C-7 -10 -7 -22 0 -28 C7 -22 7 -10 0 0 Z" fill="#7a1f2b"/><circle cx="0" cy="-19" r="3" fill="#fff"/></g>
-            <g transform="translate(280,100)"><path d="M0 0 C-7 -10 -7 -22 0 -28 C7 -22 7 -10 0 0 Z" fill="#7a1f2b"/><circle cx="0" cy="-19" r="3" fill="#fff"/></g>
-            <g transform="translate(340,85)"><path d="M0 0 C-7 -10 -7 -22 0 -28 C7 -22 7 -10 0 0 Z" fill="#7a1f2b"/><circle cx="0" cy="-19" r="3" fill="#fff"/></g>
-            <g transform="translate(420,95)"><path d="M0 0 C-7 -10 -7 -22 0 -28 C7 -22 7 -10 0 0 Z" fill="#7a1f2b"/><circle cx="0" cy="-19" r="3" fill="#fff"/></g>
-            <g transform="translate(490,115)"><path d="M0 0 C-7 -10 -7 -22 0 -28 C7 -22 7 -10 0 0 Z" fill="#7a1f2b"/><circle cx="0" cy="-19" r="3" fill="#fff"/></g>
-            <g transform="translate(130,200)"><path d="M0 0 C-7 -10 -7 -22 0 -28 C7 -22 7 -10 0 0 Z" fill="#7a1f2b"/><circle cx="0" cy="-19" r="3" fill="#fff"/></g>
-            <g transform="translate(200,170)"><path d="M0 0 C-7 -10 -7 -22 0 -28 C7 -22 7 -10 0 0 Z" fill="#7a1f2b"/><circle cx="0" cy="-19" r="3" fill="#fff"/></g>
-            <g transform="translate(280,160)"><path d="M0 0 C-7 -10 -7 -22 0 -28 C7 -22 7 -10 0 0 Z" fill="#7a1f2b"/><circle cx="0" cy="-19" r="3" fill="#fff"/></g>
-            <g transform="translate(360,150)"><path d="M0 0 C-7 -10 -7 -22 0 -28 C7 -22 7 -10 0 0 Z" fill="#7a1f2b"/><circle cx="0" cy="-19" r="3" fill="#fff"/></g>
-            <g transform="translate(510,180)"><path d="M0 0 C-7 -10 -7 -22 0 -28 C7 -22 7 -10 0 0 Z" fill="#7a1f2b"/><circle cx="0" cy="-19" r="3" fill="#fff"/></g>
-            <g transform="translate(150,250)"><path d="M0 0 C-7 -10 -7 -22 0 -28 C7 -22 7 -10 0 0 Z" fill="#7a1f2b"/><circle cx="0" cy="-19" r="3" fill="#fff"/></g>
-            <g transform="translate(230,230)"><path d="M0 0 C-7 -10 -7 -22 0 -28 C7 -22 7 -10 0 0 Z" fill="#7a1f2b"/><circle cx="0" cy="-19" r="3" fill="#fff"/></g>
-            <g transform="translate(310,220)"><path d="M0 0 C-7 -10 -7 -22 0 -28 C7 -22 7 -10 0 0 Z" fill="#7a1f2b"/><circle cx="0" cy="-19" r="3" fill="#fff"/></g>
-            <g transform="translate(470,240)"><path d="M0 0 C-7 -10 -7 -22 0 -28 C7 -22 7 -10 0 0 Z" fill="#7a1f2b"/><circle cx="0" cy="-19" r="3" fill="#fff"/></g>
-            <g transform="translate(260,290)"><path d="M0 0 C-7 -10 -7 -22 0 -28 C7 -22 7 -10 0 0 Z" fill="#7a1f2b"/><circle cx="0" cy="-19" r="3" fill="#fff"/></g>
-            <g transform="translate(330,300)"><path d="M0 0 C-7 -10 -7 -22 0 -28 C7 -22 7 -10 0 0 Z" fill="#7a1f2b"/><circle cx="0" cy="-19" r="3" fill="#fff"/></g>
-            <g transform="translate(450,330)"><path d="M0 0 C-7 -10 -7 -22 0 -28 C7 -22 7 -10 0 0 Z" fill="#7a1f2b"/><circle cx="0" cy="-19" r="3" fill="#fff"/></g>
+            <!-- Alabama (highlighted) -->
+            <path class="state alabama" id="AL" d="M628.5,433.7l-1.4,5.1l1.4,18.6l3.5,18.1l3,9.3l7.4,11.6l4.9,4.4l1.4,3.5l-1.6,4.2l0.7,4.4l5.6,4.4 l-0.5,3.5l-1.9,3.7l0.5,4.4l-22.7,2.6l-29.4,2.6l-2.6-30.1l-3.5-32.5l-1.6-18.6l27.1-1.6L628.5,433.7z"/>
+            <!-- Other states -->
+            <path class="state" id="AR" d="M557.7,422l3,11.4l25.5-1.6l16,0.5l-0.5,11.6l-3,16.5l-3.7,17.4l-4.2,15.1l-4.7,9.3l-21.6,0.5l-23.2,1.4 l-21.6,2.6l-2.3-14.2l-3-15.6l-1.9-13l-2.6-9.5l-3.5-6.3l-1.4-5.1l-1.9-7.4l3.5-3.7l1.9,2.1l2.6,0.2l3-1.4l1.4-2.1l5.6-1.4 l4.2,1.4l1.4,1.6l4.4,0.2l4.7-2.1l1.6-1.9l2.6-0.5l1.4,0.9l3.5-1.4l2.3-2.6L557.7,422z"/>
+            <path class="state" id="AZ" d="M227.8,439.5l78.2,15.6l-1.4,4.7l-0.9,7l1.4,1.9l-0.5,3l-7.7,28.5l-11.4,42.2l-13.2-2.8l-17.6-4.4 l-20.6-6.5l-19.9-7l-13-5.1l-8.4-2.8l4.7-12.3l3.5-7.4l2.3-9.5l4.7-13.7L227.8,439.5z"/>
+            <path class="state" id="CA" d="M122.8,479.4l5.1,2.8l3.5,1.9l1.6-1.4l0.5-3.7l4.2-0.7l1.4,2.6l4.4,3l4.4,1.6l3,3l1.4,3.5l-1.6,4.4 l4.9,5.6l2.3,1.9l1.4,5.1l2.1,8.6l3.5,3.5l4.9,4.7l0.7,3l-1.6,3.5l-0.7,5.6l3.5,7l3.5,5.6l3,2.6l5.6,11.4l5.4,11.4l4.4,7 l-3.5,4.2l-2.3,9.3l-1.4,7.7l-2.1,3.5l-1.4,7l-3,3.5l-37.6-7L93.4,580l13.7-89.3L122.8,479.4z M93,388.2l8.6,3l5.4,2.1l2.6,8.4 l3.7,5.6l1.4,5.4l-0.5,7l-3,1.9l-1.6,3.5l2.6,4.4l3,5.6l4.7,7l4.4,3l2.6,3.5l1.6,7.4l-7,7.4l-3,2.1l-13.7,89.3l-4.2-0.5l-13-6.3 L82,547.2l-7.4-7l-7-9.3l-3.5-12.3l-2.1-2.6l-0.5-5.6l-3.5-7.4l-8.4-19.4l-9.5-16.5l1.4-2.3l-2.1-3.7l1.4-1.4l3.5-7.4l-1.6-3 l8.6-2.6l4.7-4.4l2.1-3.5l3-3l5.4-4.4l3.7-5.4l2.6-4.7l-1.6-3l-1.4-4.4l1.6-7.7l1.9-3l2.3-1.9l3.5,1.9l4.9-4.9l9.3-2.6L93,388.2z"/>
+            <path class="state" id="CO" d="M269.7,344l9.5,1.4l13.7,1.4l21.1,2.1l28,2.3l1.6,1.4l-0.2,7.4l0.2,15.6l-0.7,16.5l-1.6,17.4l-1.6,16.5 l-1.4,15.1l-1.4,8.4l-23-4.4l-25.5-4.4l-27.6-4.7l-2.1-0.5l1.6-9.5l1.4-14.4l1.4-15.4l1.4-15.1l1.4-15.6L269.7,344z"/>
+            <path class="state" id="CT" d="M876.5,225.6l11.4,2.6l13.5,3l11.4,2.3l-1.4,8.4l-1.9,15.1l-21.4-4.9l-15.1-3l1.9-12.3L876.5,225.6z"/>
+            <path class="state" id="DE" d="M858.2,310.9l-2.3,2.6l-2.8-2.3l-0.9-7l-2.3-3.7l-0.9-3.5l-1.4-4.2l3-0.7l3.5,8.6l3.5,7.4L858.2,310.9z"/>
+            <path class="state" id="FL" d="M683.4,520.8l1.4,7l5.4,3.5l5.4,1.9l9.3,1.6l8.4,2.1l9.3,4.2l5.6,2.8l3,4.4l4.4,3.7l5.4,1.9l4.9,0.7 l3.5,0.5l5.4-1.4l3.5-2.6l3.5-1.4l4.7,0.5l3.5,4.2l1.4,3l-0.5,4.4l0.5,3.5l3.5,2.6l-0.7,5.4l-1.9,3l1.4,3.5l1.4,2.3l-0.5,4.4 l-0.5,5.6l1.9,1.6l-0.5,2.6l-1.6,3l0.2,1.6l-2.6,0.2l-1.6-3l-3.5-7l-3.5-6.5l-1.4-3.5l-5.4-3.5l-13.7-8.4l-21.6-13l-18.6-7 l-15.1-7l-21.6-10.5l-10.5-3l-3-0.5l-9.3-4.4l-1.9-4.4l-3.5-1.4l-9.3-8.4l-7-7l-3.5-3.5l-7-9.3l-7.4-13l-2.1-7l-2.6-3.7l-1.4-4.4 l1.6-5.1l28.5-2.3l30.1-2.1l1.4,8.4L683.4,520.8z"/>
+            <path class="state" id="GA" d="M683.4,520.8l-1.6-15.6l-4.2-29l-2.1-15.6l-3.5-29l-4.2-29l-29.4,3l-15.1,2.3l-29.4,3.5l1.6,12.1l1.4,7 l1.9,15.1l3.5,28.5l1.6,12.3l2.6,15.6l3.5,17.4l3.7,16.5l1.6,8.4l1.4,9.3l1.4,4.9l4.2,1.9l2.6-1.4l3-2.6l3.5-0.5l4.7,1.4 l4.9,2.6l4.2,0.5l4.4-1.4l1.4-1.4l2.6,1.4l3.7,1.4l3-1.4l1.4-3l2.6-0.5l5.4-1.6l6.5-3.5l6.3-3.5l4.4-1.6l3.5,1.6l1.4,0.7 L683.4,520.8z"/>
+            <path class="state" id="IA" d="M433.7,247.4l3.5,28.5l1.4,11.4l3.5,28.5l1.6,17.4l-12.1,1.4l-14.4,1.4l-15.4,1.4l-17.6,2.1l-13,1.4 l-1.6-15.4l-3.5-29l-1.6-12.3l-2.6-23.5l11.6-1.4l15.1-1.6l13-1.4l16.5-2.1l14.4-1.6L433.7,247.4z"/>
+            <path class="state" id="ID" d="M203.9,107.5l5.1,2.1l3,8.6l3.5,3.7l3,2.1l4.4,0.2l-0.7,3.7l-2.6,2.6l-0.7,4.7l3.5,5.6l3.5,7l4.4,9.5 l3.7,7.7l4.4,7l3.5,7.4l3.5,7l1.4,3l-3.5,18.1l-2.3,12.3l-3.5,18.1l-2.6,15.4l-1.4,9.3l-1.4,7l-29-5.6l-29.6-5.4l-5.4-1.4 l5.6-21.6l7-26.7l7-26.4l5.1-19l3-12.1l3.7-15.4l3.5-13.7l2.3-9.5L203.9,107.5z"/>
+            <path class="state" id="IL" d="M507.4,256.6l5.6,28.5l3,16.5l5.6,28l5.6,28.5l1.4,8.6l-25.5,4.9l-26.4,4.7l-1.4-7l-1.4-1.9l-2.3-1.9 l-1.6-3.7l1.4-3l-1.4-2.6l-3.7-1.4l-0.5-3l-3-1.4l-1.4-3l1.6-2.3l-0.7-4.9l-2.6-2.1l-3.5-1.4l-3.5,1.4l-1.6-1.4l-3-1.4 l-1.9-3.5l1.6-2.6l3.5-2.6l-1.6-4.4l-0.7-3.7l-1.9-3l-3-0.5l-3.5-3.7l-3-0.5l-0.5-3.5l-3.7-1.4l-3-1.4l-2.6-4.7l-0.5-3l-2.3-1.4 l-1.9-1.4l-1.6-2.3l1.6-3l5.4,1.4l13-1.6l15.1-1.4l14.4-1.6l13-1.6L507.4,256.6z"/>
+            <path class="state" id="IN" d="M555.8,253.5l4.2,30.1l3.5,29l1.4,16.5l1.4,11.4l-15.1,2.1l-15.1,1.6l-26.4,2.6l-1.4-8.6l-5.6-28.5 l-5.6-28l-3-16.5l-1.6-12.3l13.7-1.6l16.5-1.4l16.5-2.1l13-1.4L555.8,253.5z"/>
+            <path class="state" id="KS" d="M364.7,378.7l25.5,4.4l25.5,3.5l-1.6,15.1l-3,30.6l-1.4,16.5l-1.4,8.6l-2.3-1.6l-2.1-1.4l-3-1.4 l-2.3-1.4l-2.3-0.5l-2.6-3.7l-2.3-1.4l-2.6-1.4l-2.6-2.1l-2.3-2.6l-1.4-3l-2.3-1.6l-3,0.5l-2.6,1.6l-1.4-1.6l-1.4-2.3l-3.5-1.4 l-1.4-2.6l-1.4-1.4l-1.4-2.3l-0.5-4.7l-0.5-3.5l-1.9-2.6l-1.6-3.5l-1.4-2.3l-2.1-2.3l-1.4-2.6l-0.5-2.3l-1.9-1.4l-1.6-3l-2.3-2.1 l-1.6-3l-1.9-3.5l-1.4-3l-1.4-4.4L364.7,378.7z"/>
+            <path class="state" id="KY" d="M591.5,344l1.6,8.6l3.5,28.5l1.4,7l-23.3,3l-15.1,2.1l-29.4,3l-16.5,2.1l-1.4-9.5l-5.6-28l-3.5-23.3 l1.6-1.6l29.4-3.5l16.5-2.1l30.1-3L591.5,344z"/>
+            <path class="state" id="LA" d="M557.7,422l1.4,9.5l-15.4,2.3l-14.4,2.1l-17.4,2.6l-13.7,2.1l-15.4,3l-1.4-7l4.4-1.9l-1.4-9.3 l-3.5-13.7l-3.5-15.6l1.4-2.3l-2.6-3l-2.6-2.6l1.4-2.3l-3.5-3.5l-1.9-3.7l1.6-1.6l-2.6-4.4l-2.6-3.5l-3-1.4l-3.5-3.5l-3.7-0.5 l-0.5-3.7l1.4-3l-2.3-7l1.4-2.6l1.6,1.4l3,1.4l1.4-1.4l-0.5-3.5l-1.6-3l-2.6-2.6l1.4-2.6l1.4-3.7l4.2,2.3l8.4,7l5.4,4.4l13.7,8.6 l16.5,9.5l1.4,11.6l3.5,28.5l3,16.5l1.4,7l3.5,16.5l3,16.5l2.6,16.5L557.7,422z"/>
+            <path class="state" id="MA" d="M876.5,225.6l1.4-3.5l-1.6-2.3l3-2.1l4.4-1.4l4.9,4.4l4.9-3.5l11.4-1.6l13-2.1l15.1-2.1l-7,16.5 l-2.3,1.6l-3.5,4.7l-4.4,3.5l-7,1.4l-2.6,1.4l-3-1.4l-2.6,3l-3.5,0.5l-9.5-1.4l-2.1-2.1l-2.3-1.4l-1.4-1.6l-3.5-1.6L876.5,225.6z"/>
+            <path class="state" id="MD" d="M853.6,278.4l1.4,4.2l3,3.7l-3,0.7l1.4,4.2l0.9,3.5l2.3,3.7l0.9,7l2.8,2.3l-7,0.9l-13.7,0.9l-17.4,0.9 l-30.1,0.9l-2.6-15.6l29.4-1.6l13-1.4l15.1-1.4L853.6,278.4z"/>
+            <path class="state" id="ME" d="M885.4,73l3.5,4.4l4.4,1.6l5.4-1.6l3.5,4.4l1.6,1.6l-2.1,5.6l-4.7,1.4l-2.6,8.4l-1.6,15.1l-1.9,12.3 l3.5,1.4l-1.6,7.4l-3.5,1.4l-2.1,12.3l-1.4,9.3l-3.7,1.6l-3.5,11.4l-2.6,7.4l-4.9,7l-3.5,5.4l-9.3-7l-3-5.4l-3.5-12.3l-1.6-12.3 l-3-1.4l-3.5,2.1l-1.6-12.3l-2.3-15.4l1.6-3l4.4-3.5l3.5-7.4l-1.6-8.4l3-3.5l4.4-1.4l3-4.7l3.7-1.6l4.4-1.4l4.7,2.3l7-1.4 L885.4,73z"/>
+            <path class="state" id="MI" d="M555.8,153.7l5.4,1.4l3-2.1l3-2.1l2.3,0.5l9.3-3.5l1.6,2.1l0.5,3.5l1.4,1.6l5.4,1.4l3.5,3.5l3.5,3 l3.5,11.6l3.5,12.3l1.4,12.3l-1.6,5.6l1.6,5.4l-1.6,7l-7,12.3l-2.6,15.1l-3.5,1.4l-1.4-1.4l-3.5,1.4l-1.6-3l-3.5,1.4l-2.6,3 l-3,0.5l-3.7-2.6l-1.4-2.3l-3-2.6l-3.5,0.7l-2.6-2.1l-3.5,2.1l-1.6-2.1l-2.6-3.5l-2.1,0.7l-3.5,2.1l-3.7-1.6l-1.4-2.6l-3-1.4 l-2.6-2.6l-3-2.3l-3-1.4l-7-1.6l-7,1.6l-5.6,2.6l-3,2.1l-2.3-2.1l-2.1-1.4l1.6-3.5l3.5-3.5l1.4-3.5l-1.4-2.6l1.4-2.3l3.5,1.4 l3-2.3l3-4.4l3-5.6l1.4-6.5l1.4-9.3l3.5-2.6l-1.6-3.5l-3.5-3.5l-1.4-3.5l-3.5-7.4l-4.7-7l-3.5-7l-1.6-7.4l-1.4-9.5l25.5-2.6 l30.1-1.6L555.8,153.7z M620.6,131.4l11.4,4.7l-2.6,3.5l-9.3,4.4l-13.7,5.6l-7,2.1l-3.5,0.7l-3.7-3l1.4-1.4l3.7-1.4l9.3-2.6 l3.5-1.4l3.5-3.5l3.5-2.6l3.5-3L620.6,131.4z"/>
+            <path class="state" id="MN" d="M450.4,121.5l-1.6,4.7l1.6,7.4l-1.6,3.5l-3,4.4l-2.1,3.5l-2.1,3.5l-2.3,3l-3,2.1l-3.5,3.5l-1.4,7 l-1.4,3.5l-1.4,4.4l1.6,5.4l-2.6,2.6l-1.6,4.4l-1.4,4.4l-1.6,5.6l-3.7,1.4l-3.5,3l1.4,3.5l3.5,5.6l3.5,1.6l3.5,5.4l1.4,8.6 l1.6,5.6l3.5,3.5l-25.5,3l-15.4,1.4l-15.1,1.6l-29.4,3l-1.4-12.3l-3-23.3l-3.5-30.1l-3.5-26.4l-3.5-25.5l-0.5-3.5l25.6-3 l24.4-3l5.4,1.6l16.5-1.6l17.5-1.4l24.4-2.3L450.4,121.5z"/>
+            <path class="state" id="MO" d="M468.5,392l-3.5-1.4l-2.6,2.3l-3.7,1.4l-3.5-1.4l-3,1.4l-2.6-1.4l-3-1.4l-3,3l-5.6,4.7l-2.6,2.1 l-1.6,5.6l-1.4,3.5l-3.5,3l-1.4,5.6l-2.6,3l-2.3-1.6l-26.7,4.2l-1.6-7.7l-3.5-28.5l-3-23.3l-3-29.4l-1.4-7l13-1.4l17.6-2.1 l15.4-1.4l14.4-1.4l12.1-1.4l-1.6,2.3l1.6,2.3l1.9,1.4l2.3,1.4l0.5,3l2.6,4.7l3,1.4l3.7,1.4l0.5,3.5l3,0.5l3.5,3.7l3,0.5 l1.9,3l0.7,3.7l1.6,4.4l-3.5,2.6l-1.6,2.6l1.9,3.5l3,1.4l1.6,1.4l3.5-1.4l3.5,1.4l2.6,2.1l0.7,4.9l-1.6,2.3l1.4,3l3,1.4l0.5,3 l3.7,1.4l1.4,2.6l-1.4,3l1.6,3.7l2.3,1.9l1.4,1.9l-1.4,2.6l-2.6,3.5l-3.7,1.4l-5.6,1.4l-1.4,2.1l-4.4-1.4L468.5,392z"/>
+            <path class="state" id="MS" d="M593.3,500.4l-29.6,4.9l1.6,8.6l-1.6,3l-30.1,3l-3-30.1l-2.6-16l-3.5-17.6l-3-16.5l-2.6-16.5l16-2.6 l28.7-3.5l3-0.5l4.4,3l3.5-1.4l3-3.5l3.5-1.4l3.5,4.4l3.5,1.6l3,3.5l1.6,3l3.5,2.1l1.4-2.1l-1.4-3l1.4-3l1.6-2.3l3.5-1.4 l1.4,7.4l3.5,29.4l3,23.5l3.5,28.5L593.3,500.4z"/>
+            <path class="state" id="MT" d="M229,134.4l5.4-1.4l5.6,1.4l3,4.7l3.5,2.6l5.6,1.4l7,1.6l5.4-1.6l3.5-3.5l3-7l1.6-7l11.6,1.4 l16.5,1.4l11.4,0.5l15.4,1.4l5.4-2.1l3,1.4l3.5-1.4l4.4,3.7l13.7,1.4l3.5-3.5l3,1.4l3,1.6l13,1.4l11.6,1.4l3.5-3l-0.7,9.5 l-1.4,12.1l-1.4,15.4l-1.6,17.4l-2.6,30.1l-1.4,11.6l-29.4-2.6l-30.1-3l-28-2.3l-25.5-3l-1.4-7l-2.6-23l-30.6-4.4l-25.5-4.4 l-7-1.4l1.4-9.3l1.4-7l2.6-15.4L229,134.4z M203.9,107.5l-2.6-1.4l-3.5,1.4l-3.5,3.5l-3-1.4l-3.5-1.6l-2.3-7l3-3.5l3.5-3.5 l3.5,3l3.5,3.7l3,3.5L203.9,107.5z"/>
+            <path class="state" id="NC" d="M729.6,422l-29.4,3.5l-30.1,3.5l-30.1,3l-15.1,2.1l-29.4,3l-1.4-7l-3.5-28.5l-1.6-8.6l13.7-1.6 l16.5-2.1l3.5,1.4l13.7-2.1l13-1.4l14.4-1.4l28.7-3l14.4-1.4l3.7,1.4l13-1.4l11.4-1.4l1.6,7l2.6,15.1l3,16.5L729.6,422z"/>
+            <path class="state" id="ND" d="M361,158.1l-3.5,3l-11.6-1.4l-13-1.4l-3-1.6l-3-1.4l-3.5,3.5l-13.7-1.4l-4.4-3.7l-3.5,1.4l-3-1.4 l-5.4,2.1l-15.4-1.4l-11.4-0.5l-16.5-1.4l-11.6-1.4l1.4-7l3-15.1l1.4-7l3-12.3l3-15.4l25.5,3l27.6,2.6l28,2.6l21.1,2.1l13.7,1.4 l5.4,0.5l-0.7,4.7l-1.6,11.4l-3,28.5L361,158.1z"/>
+            <path class="state" id="NE" d="M407.7,318.9l5.6,28l3,16.5l-23-4.4l-26.4-4.9l-21.6-3.5l-25.5-3l-3-1.4l1.4-8.4l1.4-15.1l1.6-16.5 l1.6-17.4l0.7-16.5l-0.2-15.6l0.2-7.4l3.5,0.5l28,2.3l30.1,2.6l21.1,2.1l3,28.5L407.7,318.9z"/>
+            <path class="state" id="NH" d="M885.4,73l-3.5,3.7l-5.6-1.4l-3.5,3.7l-3.5,4.4l-1.4,2.6l-1.6,3l-3,7l-1.4,1.4l-1.4,3.5l1.4,3.5 l-2.6,3.7l-1.4,8.4l-3,2.1l-1.6,4.4l1.4,15.4l1.4,5.6l-7,1.4l-3.5-1.4l-5.4-3.5l-3.5-3.7l5.4-21.4l-2.6-12.3l1.4-9.5l3-12.1 l3.5-12.3l3-12.3l3.5-13.7l3.5-13.7L885.4,73z"/>
+            <path class="state" id="NJ" d="M838.5,277l-13,1.6l-3.7-2.1l-1.4-2.1l-3-2.3l-3-5.6l-2.6-3l1.4-3.5l-2.6-3l-1.6-7l3-2.3l4.4-1.4 l1.6-3l4.4-3l4.4-3.5l3-1.4l11.6,3l-0.5,5.6L838.5,277z"/>
+            <path class="state" id="NM" d="M227.8,439.5l11.6-1.4l25.5,5.6l26.4,4.7l21.6,2.6l-1.6,17.4l-1.4,15.1l-1.4,15.4l-3,28.5l-0.5,4.7 l-25.5-3.5l-23.5-3.5l-23.2-3.5l-3.5-1.6l1.4-9.5l11.4-42.2L227.8,439.5z"/>
+            <path class="state" id="NV" d="M139,242.1l3.5,1.6l4.4,3l3.5,3.5l3.5,1.6l5.4,1.4l3,5.6l3.5,1.4l3,3.5l3,3.7l3,1.4l4.7,1.4l3,5.4 l-0.7,3.5l-3.5,2.6l-1.6,3.5l1.6,7.4l1.4,2.6l3,5.4l1.6,3.5l3,5.6l3,5.6l3,5.6l3,5.6l1.6,2.6l3,4.4l1.6,3l1.4,3.5l3,5.6 l-1.4,7.4l-1.6,3.5l-2.6,12.3l-3.7,11.6l-1.4,5.6l-2.1,3.5l-3,8.4l-5.4-2.1l-8.6-3l-9.3,2.6l-4.9,4.9l-3.5-1.9l-2.3,1.9 l-1.9,3l-1.6,7.7l1.4,4.4l1.6,3l-2.6,4.7l-2.1,3.5l-3.7,5.4l-5.4,4.4l-3,3l-2.1,3.5l-4.7,4.4l-8.6,2.6l-2.6-9.5l-3-7l-3.5-3.5 l-4.4-3l-2.1-1.4l1.4-12.3l3-25.5l3-27.6l3-26.4l3-23.5l3-23.3l1.4-9.5l3-25.5L139,242.1z"/>
+            <path class="state" id="NY" d="M810.9,170.2l9.5,1.4l11.4,1.6l11.6,1.4l15.1,1.4l8.4-1.4l3,2.6l7,3l9.5,5.4l5.4,3l3.5,5.6l-13,2.1 l-15.1,2.1l-13,2.1l-11.4,1.6l-4.9,3.5l-4.9-4.4l-4.4,1.4l-3,2.1l1.6,2.3l-1.4,3.5l-2.1,1.6l-15.1,3l-13,2.6l-14.4,2.6 l-29.6,4.9l-15.4-1.4l-13-1.6l-1.4-2.1l1.6-3.5l5.4-7l4.7-9.3l3.5-9.3l-5.6-9.3l4.4-3.5l3.5-2.6l3.5-3l3-3.7l8.4-2.6l1.6-5.6 l3.5-3l3.5-1.4l3.5-1.4l3.7,1.4l11.4,2.6l13.5,3l11.4,2.3L810.9,170.2z"/>
+            <path class="state" id="OH" d="M652.4,233.4l4.2,30.1l3.5,28.5l3.5,28.5l1.6,11.6l-21.4,3l-29.4,3l-15.1,1.6l-29.4,3.5l-13,1.4 l-1.6-11.4l-1.4-16.5l-3.5-29l-4.2-30.1l28.5-3.5l28-3.5l30.1-3l15.1-2.1L652.4,233.4z"/>
+            <path class="state" id="OK" d="M425.2,455.6l25.5-3.5l21.6-3l4.4,1.4l1.4-2.1l5.6-1.4l3.7-1.4l2.6-3.5l1.4-2.6l1.4,2.6l1.9,7.4 l1.4,5.1l3.5,6.3l2.6,9.5l1.9,13l3,15.6l2.3,14.2l-29.6,2.6l-30.6,3l-30.1,3l-23.3,3l-1.6-7l-3.5-29.4l-1.4-15.4l-1.6-9.3 l25.5-3.5L425.2,455.6z"/>
+            <path class="state" id="OR" d="M157.4,177.2l5.4,1.4l5.4-1.6l4.4,1.6l3.5-1.6l4.7-3.5l4.4-3.5l3,1.6l3.7,1.4l4.4,3.5l3.5,1.6 l3.5,3.5l4.4-1.4l-2.6,21.6l-3.5,28l-1.6,11.6l-3,21.6l-3,23.5l-1.4,9.5l-3-5.6l-3-3.5l-3.5-1.4l-4.7-1.4l-3-1.4l-3-3.7 l-3-3.5l-3.5-1.4l-3-5.6l-5.4-1.4l-3.5-1.6l-3.5-3.5l-4.4-3l-3.5-1.6l-9.3-2.1l-13.7-3.7l1.4-9.3l4.4-21.6l3.7-22.7l3-19l3.5-15.6 l3.5-21.6L157.4,177.2z"/>
+            <path class="state" id="PA" d="M810.9,170.2l-7,1.4l-3.7-1.4l-3.5,1.4l-3.5,1.4l-3.5,3l-1.6,5.6l-8.4,2.6l-3,3.7l-3.5,3l-3.5,2.6 l-4.4,3.5l5.6,9.3l-3.5,9.3l-4.7,9.3l-5.4,7l-1.6,3.5l1.4,2.1l-13.7,1.6l-13.7,1.6l-29.4,3l-1.4-14.4l-3-26.4l-1.6-15.1l-1.4-7 l11.4-2.1l16.5-2.1l28.5-3.5l11.6-1.4l29.4-3l4.7,3.5l11.4-1.6l13-2.1l15.1-2.1l13-2.1L810.9,170.2z"/>
+            <path class="state" id="RI" d="M928.5,247.4l-3.5,1.4l-2.6,3.5l-1.6-3l-1.4-3l1.6-1.4l3,1.4l1.6-1.4l1.4-1.4l1.4,1.4L928.5,247.4z"/>
+            <path class="state" id="SC" d="M729.6,422l1.6,11.6l3.5,28.5l1.4,7l-29.4,3l-30.1,3l-13,1.6l-1.4,8.4l-13,1.4l-9.3,1.4 l-1.6-11.6l-1.4-7l-3.5-28.5l-1.6-11.6l29.4-3l15.1-2.1l30.1-3l29.4-3.5L729.6,422z"/>
+            <path class="state" id="SD" d="M386.7,184l3,23.3l3,30.1l-21.1-2.1l-30.1-2.6l-28-2.3l-3.5-0.5l-1.6-1.4l1.4-11.6l2.6-30.1l1.6-17.4 l1.4-15.4l1.4-12.1l0.7-9.5l11.4,1.4l16.5,1.4l11.6,1.4l15.4,1.6l13-1.6l11.6-1.4l-1.4,11.6l-3,15.4l-3,21.6L386.7,184z"/>
+            <path class="state" id="TN" d="M591.5,344l3.5,29l1.6,11.4l-3.5,1.4l-1.6,2.3l-1.4,3l1.4,3l-1.4,2.1l-3.5-2.1l-1.6-3l-3-3.5 l-3.5-1.6l-3.5-4.4l-3.5,1.4l-3,3.5l-3.5,1.4l-4.4-3l-3-11.4l-16,1.6l-25.5,1.6l-3-11.4l-1.6-7l-26.4,4.7l1.4-2.1l5.6-1.4 l3.7-1.4l2.6-3.5l1.4-2.6l-1.4-1.9l-2.3-1.9l-1.6-3.7l1.4-3l-1.4-2.6l-3.7-1.4l-0.5-3l-3-1.4l-1.4-3l1.6-2.3l-0.7-4.9l3,1.4 l16.5-2.1l29.4-3l16.5-2.1l29.4-3.5l13-1.4l3.5,23.3L591.5,344z"/>
+            <path class="state" id="TX" d="M495.4,540l-1.6,7.7l-1.6,8.4l-1.6,6.5l-1.4,4.4l1.4,4.4l-3,5.6l-3,3l-7,1.4l-7,3.5l-7,2.6l-5.6,3.5 l-3,7l-2.6,8.4l-2.6,5.4l1.4,5.6l-1.6,3.5l-3.5,1.6l-2.3,1.4l-2.1,4.4l-3,1.6l-2.6,4.4l-3.5,1.6l-1.6,2.6l-3,2.6l-3.5,1.6 l-7-1.6l-5.6-1.4l-5.4,3l-9.3,1.4l-15.1,2.6l-1.6-7l-2.6-3.7l-3-2.1l-2.6,2.1l-3-1.4l-1.6-7l-3-3l-3.5,1.6l-1.6,3l-1.4,5.4 l-3.5,3.5l-3.5,1.6l-2.6-1.6l-1.6-3l-1.4-7l-1.4-3l-1.6-3l1.6-3.5l3-1.6l1.4-5.4l1.6-3.5l1.4-7l1.6-3l1.4-3.5l3-3.5l2.1-1.4 l1.4-3l-2.6-2.6l-1.4-5.6l-1.6-3.5l-3-1.4l-7-2.6l-2.6-3l-2.6-3.5l-7-2.6l-3-3.5l-2.6-3l-3.5-3.5l-3-3.5l-1.6-3.5l-1.4-3.5 l-3-3.5l-3.5-3l-7-4.4l-3.5-3l-1.4-3l-3-3.5l-2.1-3.5l-1.6-2.1l-3-3.5l-2.6-3.5l-3-3.5l-3-7l-3.5-7l-5.4-7l-3-7l-3-2.6 l-2.6-3.5l-3-2.6l-2.6-3.5l-1.6-3.5l-3-3.5l-2.6-3.5l-3.5-7l-3-3.5l-3-3.5l-3.5-3.5l-3-3.5l-1.4-3.5l13.2,2.8l11.4-42.2 l7.7-28.5l0.5-3l-1.4-1.9l0.9-7l1.4-4.7l9.5,2.1l4.4-2.6l5.6,2.1l4.4-2.1l3.5,1.6l1.4,3l5.4-1.4l3.5,1.4l4.7-2.6l3.5-1.4 l4.4-2.1l5.4-1.4l3.5,1.4l3.5-1.6l3,1.6l3,1.6l1.4,3l-1.4,3l1.4,3.5l3.5,1.4l3-1.4l3.5-2.6l-1.4-3.5l1.4-3.5l-1.4-3.5l1.4-7 l3-5.6l1.6-5.6l3.5-1.4l3-1.6l3.5-2.6l3-1.4l1.6,5.4l3,5.6l3.5,1.4l3-1.4l3.7,1.6l1.4,3l1.4,3.5l1.4,3l1.6,3l3,2.6l3,1.6 l3.5,1.6l3-1.6l3.5-1.4l3-2.6l3.5-3l3.5,1.4l3-1.4l3.5,1.4l3,1.6l3.5,1.6l3,1.4l3.5,2.1l1.4,5.4l1.6,5.4l3,5.6l1.4,3l1.6,3.5 l1.4,3l1.4,3l1.6,3.5l1.4,3.5l1.4,5.6l1.6,3l1.6,3.5l1.4,3l1.4,3.5l1.6,3l1.6,3.5l1.4,3.5l1.4,3.5l1.6,3l1.6,3.5l1.4,3.5l1.4,3.5 l1.6,3.5l1.4,3.5l1.6,3l1.4,3.5l1.4,3.5l1.6,3l1.6,3.5l1.4,3.5l1.4,3.5l1.6,3l1.4,3.5l1.4,3.5l1.6,3.5l1.4,3.5l1.4,3.5L495.4,540 z"/>
+            <path class="state" id="UT" d="M139,242.1l13.7,3.7l9.3,2.1l3.5,1.6l4.4,3l3.5,3.5l3.5,1.6l5.4,1.4l3,5.6l3.5,1.4l-1.4,9.5 l-3,23.3l-3,23.5l-3,26.4l-3,27.6l-3,25.5l-1.4,12.3l-9.3-1.6l-3-5.6l-5.6-2.1l-8.6-3l-3-1.6l-5.4-3l-13.7-3l-13-3.7l-9.5-2.1 l-1.4-7l3-15.6l3-15.1l3-15.4l3-15.4l3-15.4l3-15.4l3-15.6l3-15.4l3-15.1l3-15.4L139,242.1z"/>
+            <path class="state" id="VA" d="M768.6,353.6l5.4,1.4l1.6,5.6l3.5,7l3.5,5.6l3.5,5.6l1.6,7l-11.4,1.4l-13,1.4l-3.7-1.4l-14.4,1.4 l-28.7,3l-14.4,1.4l-13,1.4l-13.7,2.1l-3.5-1.4l-16.5,2.1l-13.7,1.6l-1.4-7l-3.5-28.5l-1.6-8.6l13-1.4l29.4-3l15.1-1.6l29.4-3 l28.5-3l13-1.4L768.6,353.6z"/>
+            <path class="state" id="VT" d="M829.9,127.1l3.5,1.4l3,3l-3.5,2.6l-3.5,3l-3.5,3.5l-3.5,3l-3.5,2.6l-1.6,5.6l-3.5,3l-3.5,1.4 l-3.5,1.4l-3.7-1.4l-1.6-5.6l1.4-12.3l-1.4-9.5l-3-12.1l-1.4-7l3-3.7l3.5-1.4l3.7,1.4l3.5,1.6l3.5,3.5l3.5,3l3,3.5l3.5,5.6 L829.9,127.1z"/>
+            <path class="state" id="WA" d="M157.4,177.2l1.6-7l3.5-12.3l1.6-7l3.5-12.3l3-15.4l3.5-13.7l3.5-12.3l3-9.3l1.4-7l3.5,1.6l3,1.4 l3.5,1.6l3.5,1.4l3,1.6l3.5,1.6l2.3,7l3.5,1.6l3,1.4l3.5-1.4l3.5-3.5l3.5,1.4l3,1.6l3.5,1.6l3.7,1.4l3,1.6l3.5,1.4l3,1.6 l3.5,1.6l1.4,3.5l-2.3,9.5l-3.5,13.7l-3.7,15.4l-3,12.1l-5.1,19l-7,26.4l-7,26.7l-5.6,21.6l-3.7-1.6l-4.4-1.4l-3.5-1.6l-3-1.6 l-4.4-3.5l-4.7,3.5l-3.5,1.6l-4.4-1.6l-5.4,1.6l-5.4-1.4L157.4,177.2z"/>
+            <path class="state" id="WI" d="M501.7,228.1l5.6,28.5l-13,1.6l-16.5,2.1l-14.4,1.6l-15.1,1.4l-13,1.6l-5.4-1.4l-3-3.7l-4.4-2.6 l-3.5-3.5l-3.5-3.5l-3.5-3.5l-3-3.5l-3.5-3.5l-3.5-2.6l-3.5-3.5l-3.5-2.6l-3.7-3.5l-3-2.6l-3.5-1.4l-1.6-3l-1.4-1.4l-3.5-1.4 l-3.5-3l-1.4-3.5l3.5-3l3.7-1.4l1.6-5.6l1.4-4.4l1.6-4.4l2.6-2.6l-1.6-5.4l1.4-4.4l1.4-3.5l1.4-7l3.5-3.5l3-2.1l2.3-3l2.1-3.5 l2.1-3.5l3-4.4l1.6-3.5l3-1.4l11.4,1.4l13,1.4l11.6,1.4l16.5,1.4l13,1.4l1.4,9.5l1.6,7.4l3.5,7l4.7,7l3.5,7.4l1.4,3.5l3.5,3.5 l1.6,3.5l-3.5,2.6l-1.4,9.3l-1.4,6.5l-1.4,5.6l-3,4.4l-3,2.3l-3.5-1.4l-1.4,2.3l1.4,2.6L501.7,228.1z"/>
+            <path class="state" id="WV" d="M696.7,378.7l-13,1.4l-1.6-8.4l-3-16.5l-2.6-15.1l-1.6-7l29.4-3l15.1-1.6l29.4-3l21.4-3l-2.6,4.7 l-4.2,7.4l-3.7,5.6l-3.5,5.4l-3.5,3l-3.5,5.6l-1.4,3.5l-3,3.5l-3.5,3l-1.6,3l-3.5,1.4l-1.4,3.5l-3,3l-3.5,3l-3.5,4.4l-3.5,1.6 l-1.6,3l-3,3.5L696.7,378.7z"/>
+            <path class="state" id="WY" d="M299.5,236.8l-1.4,7l-1.4,15.6l-1.4,15.1l-1.4,15.4l-1.4,14.4l-1.6,9.5l-13.7-1.4l-9.5-1.4l-3.5,3 l-3.5-1.4l-3-1.4l-2.6-1.4l-3.5,1.4l-2.6-2.6l-3,1.4l-3.5-1.4l-2.6,1.4l-3.5-1.4l-3-1.4l-2.6-2.6l1.6-7.4l-1.6-3.5l-3-5.4 l-1.4-2.6l-1.6-7.4l1.6-3.5l3.5-2.6l0.7-3.5l-3-5.4l-4.7-1.4l-3-1.4l-3-3.7l-3-3.5l-3.5-1.4l-3-5.6l-5.4-1.4l1.4-9.3l1.4-7 l2.6-15.4l1.4-9.3l2.6-23l30.6,4.4L299.5,236.8z"/>
+            <!-- Alaska (simplified, scaled-down inset in bottom-left) -->
+            <path class="state" id="AK" d="M 80 510 L 95 495 L 115 490 L 135 495 L 150 505 L 165 512 L 178 520 L 175 540 L 165 550 L 145 555 L 125 553 L 105 548 L 90 540 L 78 528 Z M 35 545 L 50 538 L 65 545 L 60 558 L 45 562 L 30 555 Z M 175 560 L 188 555 L 195 568 L 185 575 L 172 570 Z"/>
+            <!-- Hawaii (small islands) -->
+            <path class="state" id="HI" d="M 220 555 L 228 555 L 230 560 L 224 562 L 220 560 Z M 240 552 L 246 552 L 248 558 L 242 559 Z M 256 548 L 262 548 L 264 553 L 258 555 Z"/>
           </g>
+
+          <!-- Delivery pins distributed across the country (positioned for Albers projection 959x593) -->
+          <g class="pins">
+            <!-- West Coast -->
+            <g transform="translate(130,240)"><path d="M0 0 C-9 -13 -9 -27 0 -34 C9 -27 9 -13 0 0 Z" fill="#7a1f2b"/><circle cx="0" cy="-22" r="3.5" fill="#fff"/></g>
+            <g transform="translate(155,330)"><path d="M0 0 C-9 -13 -9 -27 0 -34 C9 -27 9 -13 0 0 Z" fill="#7a1f2b"/><circle cx="0" cy="-22" r="3.5" fill="#fff"/></g>
+            <g transform="translate(135,380)"><path d="M0 0 C-9 -13 -9 -27 0 -34 C9 -27 9 -13 0 0 Z" fill="#7a1f2b"/><circle cx="0" cy="-22" r="3.5" fill="#fff"/></g>
+            <g transform="translate(170,150)"><path d="M0 0 C-9 -13 -9 -27 0 -34 C9 -27 9 -13 0 0 Z" fill="#7a1f2b"/><circle cx="0" cy="-22" r="3.5" fill="#fff"/></g>
+            <!-- Mountain West -->
+            <g transform="translate(260,300)"><path d="M0 0 C-9 -13 -9 -27 0 -34 C9 -27 9 -13 0 0 Z" fill="#7a1f2b"/><circle cx="0" cy="-22" r="3.5" fill="#fff"/></g>
+            <g transform="translate(270,420)"><path d="M0 0 C-9 -13 -9 -27 0 -34 C9 -27 9 -13 0 0 Z" fill="#7a1f2b"/><circle cx="0" cy="-22" r="3.5" fill="#fff"/></g>
+            <g transform="translate(320,140)"><path d="M0 0 C-9 -13 -9 -27 0 -34 C9 -27 9 -13 0 0 Z" fill="#7a1f2b"/><circle cx="0" cy="-22" r="3.5" fill="#fff"/></g>
+            <g transform="translate(350,230)"><path d="M0 0 C-9 -13 -9 -27 0 -34 C9 -27 9 -13 0 0 Z" fill="#7a1f2b"/><circle cx="0" cy="-22" r="3.5" fill="#fff"/></g>
+            <!-- Plains -->
+            <g transform="translate(380,320)"><path d="M0 0 C-9 -13 -9 -27 0 -34 C9 -27 9 -13 0 0 Z" fill="#7a1f2b"/><circle cx="0" cy="-22" r="3.5" fill="#fff"/></g>
+            <g transform="translate(390,430)"><path d="M0 0 C-9 -13 -9 -27 0 -34 C9 -27 9 -13 0 0 Z" fill="#7a1f2b"/><circle cx="0" cy="-22" r="3.5" fill="#fff"/></g>
+            <g transform="translate(460,205)"><path d="M0 0 C-9 -13 -9 -27 0 -34 C9 -27 9 -13 0 0 Z" fill="#7a1f2b"/><circle cx="0" cy="-22" r="3.5" fill="#fff"/></g>
+            <g transform="translate(480,290)"><path d="M0 0 C-9 -13 -9 -27 0 -34 C9 -27 9 -13 0 0 Z" fill="#7a1f2b"/><circle cx="0" cy="-22" r="3.5" fill="#fff"/></g>
+            <g transform="translate(490,360)"><path d="M0 0 C-9 -13 -9 -27 0 -34 C9 -27 9 -13 0 0 Z" fill="#7a1f2b"/><circle cx="0" cy="-22" r="3.5" fill="#fff"/></g>
+            <g transform="translate(480,540)"><path d="M0 0 C-9 -13 -9 -27 0 -34 C9 -27 9 -13 0 0 Z" fill="#7a1f2b"/><circle cx="0" cy="-22" r="3.5" fill="#fff"/></g>
+            <!-- Midwest -->
+            <g transform="translate(540,150)"><path d="M0 0 C-9 -13 -9 -27 0 -34 C9 -27 9 -13 0 0 Z" fill="#7a1f2b"/><circle cx="0" cy="-22" r="3.5" fill="#fff"/></g>
+            <g transform="translate(560,280)"><path d="M0 0 C-9 -13 -9 -27 0 -34 C9 -27 9 -13 0 0 Z" fill="#7a1f2b"/><circle cx="0" cy="-22" r="3.5" fill="#fff"/></g>
+            <g transform="translate(595,200)"><path d="M0 0 C-9 -13 -9 -27 0 -34 C9 -27 9 -13 0 0 Z" fill="#7a1f2b"/><circle cx="0" cy="-22" r="3.5" fill="#fff"/></g>
+            <g transform="translate(625,315)"><path d="M0 0 C-9 -13 -9 -27 0 -34 C9 -27 9 -13 0 0 Z" fill="#7a1f2b"/><circle cx="0" cy="-22" r="3.5" fill="#fff"/></g>
+            <g transform="translate(660,210)"><path d="M0 0 C-9 -13 -9 -27 0 -34 C9 -27 9 -13 0 0 Z" fill="#7a1f2b"/><circle cx="0" cy="-22" r="3.5" fill="#fff"/></g>
+            <g transform="translate(670,310)"><path d="M0 0 C-9 -13 -9 -27 0 -34 C9 -27 9 -13 0 0 Z" fill="#7a1f2b"/><circle cx="0" cy="-22" r="3.5" fill="#fff"/></g>
+            <!-- South -->
+            <g transform="translate(595,440)"><path d="M0 0 C-9 -13 -9 -27 0 -34 C9 -27 9 -13 0 0 Z" fill="#7a1f2b"/><circle cx="0" cy="-22" r="3.5" fill="#fff"/></g>
+            <g transform="translate(700,470)"><path d="M0 0 C-9 -13 -9 -27 0 -34 C9 -27 9 -13 0 0 Z" fill="#7a1f2b"/><circle cx="0" cy="-22" r="3.5" fill="#fff"/></g>
+            <g transform="translate(760,535)"><path d="M0 0 C-9 -13 -9 -27 0 -34 C9 -27 9 -13 0 0 Z" fill="#7a1f2b"/><circle cx="0" cy="-22" r="3.5" fill="#fff"/></g>
+            <g transform="translate(660,410)"><path d="M0 0 C-9 -13 -9 -27 0 -34 C9 -27 9 -13 0 0 Z" fill="#7a1f2b"/><circle cx="0" cy="-22" r="3.5" fill="#fff"/></g>
+            <!-- Northeast -->
+            <g transform="translate(710,310)"><path d="M0 0 C-9 -13 -9 -27 0 -34 C9 -27 9 -13 0 0 Z" fill="#7a1f2b"/><circle cx="0" cy="-22" r="3.5" fill="#fff"/></g>
+            <g transform="translate(770,280)"><path d="M0 0 C-9 -13 -9 -27 0 -34 C9 -27 9 -13 0 0 Z" fill="#7a1f2b"/><circle cx="0" cy="-22" r="3.5" fill="#fff"/></g>
+            <g transform="translate(795,210)"><path d="M0 0 C-9 -13 -9 -27 0 -34 C9 -27 9 -13 0 0 Z" fill="#7a1f2b"/><circle cx="0" cy="-22" r="3.5" fill="#fff"/></g>
+            <g transform="translate(770,370)"><path d="M0 0 C-9 -13 -9 -27 0 -34 C9 -27 9 -13 0 0 Z" fill="#7a1f2b"/><circle cx="0" cy="-22" r="3.5" fill="#fff"/></g>
+            <g transform="translate(760,420)"><path d="M0 0 C-9 -13 -9 -27 0 -34 C9 -27 9 -13 0 0 Z" fill="#7a1f2b"/><circle cx="0" cy="-22" r="3.5" fill="#fff"/></g>
+            <g transform="translate(875,140)"><path d="M0 0 C-9 -13 -9 -27 0 -34 C9 -27 9 -13 0 0 Z" fill="#7a1f2b"/><circle cx="0" cy="-22" r="3.5" fill="#fff"/></g>
+            <g transform="translate(845,180)"><path d="M0 0 C-9 -13 -9 -27 0 -34 C9 -27 9 -13 0 0 Z" fill="#7a1f2b"/><circle cx="0" cy="-22" r="3.5" fill="#fff"/></g>
+            <g transform="translate(870,225)"><path d="M0 0 C-9 -13 -9 -27 0 -34 C9 -27 9 -13 0 0 Z" fill="#7a1f2b"/><circle cx="0" cy="-22" r="3.5" fill="#fff"/></g>
+            <!-- Alaska & Hawaii pins -->
+            <g transform="translate(120,525)"><path d="M0 0 C-9 -13 -9 -27 0 -34 C9 -27 9 -13 0 0 Z" fill="#7a1f2b"/><circle cx="0" cy="-22" r="3.5" fill="#fff"/></g>
+            <g transform="translate(243,558)"><path d="M0 0 C-9 -13 -9 -27 0 -34 C9 -27 9 -13 0 0 Z" fill="#7a1f2b"/><circle cx="0" cy="-22" r="3.5" fill="#fff"/></g>
+          </g>
+
+          <!-- Alabama gold home pin (at Alabama's center on the map) -->
+          <circle cx="660" cy="465" r="13" fill="#f4c430" stroke="#fff" stroke-width="3.5"/>
         </svg>
-        <div style="text-align:center; margin-top:14px; font-size:12px; color:var(--text-muted); letter-spacing:0.5px;">
-          <span style="display:inline-block; width:10px; height:10px; background:#f4c430; border-radius:50%; margin-right:6px; vertical-align:middle;"></span> Alabama HQ &nbsp;·&nbsp;
-          <span style="display:inline-block; width:8px; height:8px; background:#7a1f2b; border-radius:50%; margin-right:6px; vertical-align:middle;"></span> Delivery destinations
+
+        <!-- Alabama callout label (positioned next to Alabama on the map) -->
+        <div class="alabama-callout" style="right: 7%; top: 62%;">
+          <strong>ALABAMA</strong>
+          <span>OUR HOME BASE</span>
+        </div>
+
+        <div class="map-legend">
+          <div class="item">
+            <span class="dot-gold"></span>
+            <span>Alabama HQ</span>
+          </div>
+          <div class="item">
+            <span class="pin-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 C7 2 3 6 3 11 c0 7 9 11 9 11 s9 -4 9 -11 c0 -5 -4 -9 -9 -9 z M12 14 a3 3 0 1 1 0 -6 a3 3 0 0 1 0 6 z"/></svg>
+            </span>
+            <span>Delivery destinations</span>
+          </div>
         </div>
       </div>
     </div>
