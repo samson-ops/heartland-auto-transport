@@ -34,5 +34,5 @@ To edit text: open `index.html` in any text editor and find/replace.
 
 - The "Get Instant Pricing" button has `id="instant-pricing-btn"` with `href="#"` — swap the `#` for your real instant pricing URL when ready.
 - Phone number `(888) 123-4567` appears in 3 places — search and replace with your real number.
-- USDOT number `3981238` is a placeholder — update with your real number.
 - Email `info@heartlandautotransport.com` in the footer — update if different.
+- To add your real USDOT/MC number later: search for "FMCSA Licensed Broker" in `index.html` and append your number (e.g. "FMCSA Licensed Broker USDOT 1234567").
