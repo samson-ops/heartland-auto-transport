@@ -2413,3 +2413,82 @@ nav.main ul li a.active::after {
   .al-cities-grid { grid-template-columns: repeat(2, 1fr); }
   .form-row { grid-template-columns: 1fr; }
 }
+
+/* ============================================================
+   SERVICE AREAS / CITIES GRID (homepage)
+   ============================================================ */
+.service-areas {
+  padding: 70px 0;
+  background: var(--bg-soft);
+}
+.service-areas .section-head h2 {
+  font-size: clamp(28px, 3.5vw, 38px);
+  margin-bottom: 12px;
+}
+.service-areas .section-head p {
+  color: var(--text-muted);
+  font-size: 17px;
+}
+.cities-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.city-tile {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 16px 18px;
+  text-align: left;
+  text-decoration: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.2s;
+}
+.city-tile:hover {
+  border-color: var(--maroon);
+  background: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(122, 31, 43, 0.12);
+}
+.city-name {
+  font-weight: 700;
+  color: #1a1a1a;
+  font-size: 15px;
+}
+.city-tile:hover .city-name {
+  color: var(--maroon);
+}
+.city-pop {
+  font-size: 12.5px;
+  color: var(--text-muted);
+  font-variant-numeric: tabular-nums;
+}
+
+/* ============================================================
+   CITY PAGE — Routes list
+   ============================================================ */
+.routes-list {
+  list-style: none;
+  padding: 0;
+  margin: 18px 0 22px;
+}
+.routes-list li {
+  padding: 10px 16px;
+  background: var(--bg-soft);
+  border-left: 3px solid var(--maroon);
+  margin-bottom: 8px;
+  font-size: 14.5px;
+  line-height: 1.55;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .cities-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 500px) {
+  .cities-grid { grid-template-columns: 1fr; }
+}
