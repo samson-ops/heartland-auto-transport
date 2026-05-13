@@ -1,0 +1,30 @@
+# Cloudflare Pages redirects file
+# Format: source destination status_code
+#
+# Cloudflare Pages automatically serves /about for /about.html when present.
+# These rules ensure any old .html URLs (from search engines, links, bookmarks)
+# 301-redirect to the clean URL versions, preserving SEO value.
+
+# Redirect old .html URLs to clean URLs (preserves SEO link equity)
+/about.html /about 301
+/how-it-works.html /how-it-works 301
+/faq.html /faq 301
+/contact.html /contact 301
+/blog.html /blog 301
+/index.html / 301
+
+# City pages
+/cities/*.html /cities/:splat 301
+
+# Service pages
+/services/*.html /services/:splat 301
+
+# Blog posts
+/blog/*.html /blog/:splat 301
+
+# Handle trailing slash variations
+/about/ /about 301
+/how-it-works/ /how-it-works 301
+/faq/ /faq 301
+/contact/ /contact 301
+/blog/ /blog 301
