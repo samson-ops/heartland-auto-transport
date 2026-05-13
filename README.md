@@ -1,91 +1,84 @@
 # Heartland Auto Transport — Complete Website
 
-Alabama-based auto transport company website. Static HTML, ready to deploy.
+Alabama-based auto transport company website. Production-ready static site.
 
-## Site Stats
+## What's Inside (45 pages)
 
-- **40 total pages** — 1 homepage + 5 top-level pages + 24 service pages + 10 blog posts
-- **All pages SEO-optimized** with unique titles, meta descriptions, schema markup
-- **40,000+ words of original content** across the entire site
-- **One shared `styles.css`** — edit once, applies everywhere
-- **Mobile responsive**, fast-loading static HTML
+### Core Pages (6)
+- `index.html` — Homepage with hero, services, coverage, FAQ
+- `how-it-works.html` — Step-by-step process page (HowTo schema)
+- `about.html` — Company story, values, Alabama roots
+- `faq.html` — Comprehensive FAQ across 6 categories (FAQPage schema)
+- `contact.html` — Contact form, phone, email, service areas (ContactPage schema)
+- `blog.html` — Blog landing page
 
-## Top-Level Pages
+### Service Pages (24) — in `/services/`
+**9 Shipping Methods:**
+- open-auto-transport, enclosed-auto-transport, door-to-door-auto-transport
+- expedited-auto-transport, cross-country-car-shipping, state-to-state-car-shipping
+- nationwide-auto-transport, terminal-to-terminal-shipping, guaranteed-pickup-services
 
-| Page | Words | Purpose |
-|------|-------|---------|
-| `index.html` | Homepage | Hero, services, vehicles, coverage, FAQ |
-| `how-it-works.html` | 1,184 | 5-step process, why-Heartland, sub-FAQs |
-| `about.html` | 1,265 | Story, Alabama focus, values, credentials |
-| `faq.html` | 1,891 | 6-category FAQ with 30+ questions |
-| `contact.html` | 506 | Form, 3 contact methods, AL cities grid |
-| `blog.html` | Index | All 10 blog post cards |
+**15 Vehicle Types:**
+- car-shipping, suv-transport, truck-shipping, motorcycle-shipping
+- electric-vehicle-shipping, luxury-car-transport, exotic-car-transport
+- classic-car-transport, antique-vehicle-shipping, rv-transport, boat-transport
+- atv-utv-shipping, golf-cart-shipping, van-transport, heavy-equipment-transport
 
-## 10 Blog Posts (April–May 2026)
+### Blog Articles (6) — in `/blog/`
+- how-much-does-auto-transport-cost.html (1,369 words)
+- how-to-prepare-your-car-for-shipping.html (1,507 words)
+- open-vs-enclosed-auto-transport.html (1,130 words)
+- snowbird-car-shipping-guide.html (1,108 words)
+- shipping-a-car-bought-online.html (1,327 words)
+- military-pcs-auto-transport.html (1,098 words)
 
-| Date | Title | Category | Words |
-|------|-------|----------|-------|
-| May 10 | How Much Does Auto Transport Cost in 2026? | Cost Guide | 1,082 |
-| May 8 | How to Prepare Your Car for Shipping: 10 Steps | Preparation | 1,015 |
-| May 5 | Open vs. Enclosed Auto Transport | Comparison | 998 |
-| May 2 | Snowbird Car Shipping: AL to FL/AZ/TX | Snowbird Tips | 896 |
-| Apr 28 | Shipping a Car Bought Online (Carvana/Vroom/eBay) | Buying Online | 1,135 |
-| Apr 25 | Military PCS Auto Transport Guide | Military | 1,029 |
-| Apr 22 | Cost to Ship a Car Cross-Country | Cost Guide | 702 |
-| Apr 18 | Door-to-Door vs Terminal-to-Terminal | Comparison | 829 |
-| Apr 12 | Shipping a Car to College: Parent's Guide | Family | 1,055 |
-| Apr 5 | 10 Auto Transport Scams to Avoid in 2026 | Consumer Tips | 1,495 |
+### Assets
+- `styles.css` — Single stylesheet for all pages (~60KB)
+- `images/` — Logo, hero, services, map, vehicle photos
+- `sitemap.xml` — 36 URLs for Google Search Console
+- `robots.txt` — Allows all crawlers
 
-## 24 Service Pages
+## SEO Features
+- Unique title + meta description on every page
+- Schema.org markup (LocalBusiness, Service, FAQPage, BlogPosting, HowTo, BreadcrumbList, ContactPage, AboutPage)
+- Canonical URLs
+- Open Graph + Twitter cards
+- Geo-targeting (US-AL)
+- Sitemap with priority signals
+- Internal linking throughout
 
-**9 Shipping Methods:** open, enclosed, door-to-door, expedited, cross-country, state-to-state, nationwide, terminal-to-terminal, guaranteed-pickup
+## Before Going Live — Replace These Placeholders
+1. **Phone number** — Find/replace `(888) 123-4567` and `tel:8881234567`
+2. **Email** — Find/replace `info@heartlandautotransport.com`
+3. **Quote button URL** — Search for `id="instant-pricing-btn"` and `href="#"` — connect to your quote tool/form processor
+4. **Contact form handler** — `contact.html` has placeholder JS `handleContactSubmit()` — connect to Formspree, Netlify Forms, or similar
+5. **Privacy Policy / Terms** — Footer links go to `href="#"` — add real pages or remove
+6. **USDOT/MC numbers** — Footer says "FMCSA Licensed Broker" — add specific numbers if desired
 
-**15 Vehicle Types:** car, SUV, truck, motorcycle, EV, luxury, exotic, classic, antique, RV, boat, ATV/UTV, golf cart, van, heavy equipment
+## Deployment to Cloudflare Pages
 
-## SEO Setup (every page)
+1. Go to dash.cloudflare.com → Workers & Pages → Create → Pages → Upload assets
+2. Project name: `heartlandautotransport` (gives you heartlandautotransport.pages.dev)
+3. Drag the entire `heartland-site` folder contents into the upload area
+4. Click Deploy
+5. Once live, add your custom domain in the Custom Domains tab
+6. Submit `sitemap.xml` to Google Search Console for indexing
 
-- Unique `<title>` and meta description with target keyword
-- Canonical URL
-- Open Graph + Twitter Card meta tags
-- Schema markup:
-  - Service pages: Service + FAQPage + BreadcrumbList
-  - Blog posts: BlogPosting + BreadcrumbList
-  - All pages: geo-targeting for Alabama (US-AL)
-- Proper semantic HTML (one H1, hierarchical H2/H3)
-- Internal linking between related pages
+## File Count Summary
+- 6 core pages
+- 24 service pages
+- 6 blog articles
+- 1 stylesheet
+- 7 images
+- sitemap.xml + robots.txt
+- **Total: 45 HTML pages + assets**
 
-## Deploy to Cloudflare Pages (Recommended)
+## Tech Stack
+- Pure static HTML/CSS — no build process needed
+- Single shared stylesheet for fast loading
+- Mobile-responsive throughout
+- Works on any static host (Cloudflare Pages, Netlify, Vercel, GitHub Pages, S3, etc.)
+- No JavaScript dependencies except the contact form placeholder
 
-1. Cloudflare dashboard → **Workers & Pages** → **Create** → **Pages** tab → **Upload assets**
-2. Project name: `heartlandautotransport` → URL becomes heartlandautotransport.pages.dev
-3. Drag the contents of this folder into the upload area
-4. Click Deploy site
-
-**After deployment:**
-1. Submit `sitemap.xml` to Google Search Console: https://search.google.com/search-console
-2. Set up Google Business Profile for local SEO
-3. Set up Yelp business page
-
-## Customizing
-
-- **CSS changes** — edit `styles.css`, applies to all 40 pages instantly
-- **Replace a photo** — drop a new file in `images/` with the same filename
-- **Edit text** — open the relevant `.html` file in any text editor
-
-## Placeholders to Replace Before Launch
-
-- **Phone number `(888) 123-4567`** — search & replace across all files with your real number
-- **Email `info@heartlandautotransport.com`** — same
-- **"Get Instant Pricing" button** has `href="#"` — swap with your real quote tool URL when ready
-- **USDOT/MC number** — currently shown as just "FMCSA Licensed Broker"; append your actual number if desired
-- **Contact form action** — the form on contact.html needs a backend handler (Formspree, Netlify Forms, or similar) to actually send emails
-
-## SEO Strategy Summary
-
-**40 pages = 40 ranking opportunities in Google.** Each targets different keywords:
-
-- **Service pages** rank for shipping method/vehicle type searches ("open auto transport", "ship my motorcycle")
-- **Blog posts** rank for informational searches ("how much does auto transport cost", "PCS car shipping") capturing top-of-funnel traffic
-- **Top-level pages** capture branded searches and rank for trust signals
-
-All content is unique per page (no duplicate content penalty). FAQ and BlogPosting schema across the site means dozens of opportunities for Google rich-snippet displays in search results.
+---
+Built for Heartland Auto Transport · Trusted. Reliable. On the Road with Care.
