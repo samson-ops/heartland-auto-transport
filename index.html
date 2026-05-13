@@ -4,8 +4,8 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<title>Alabama Auto Transport — Shipping Cars Nationwide | Heartland Auto Transport</title>
-<meta name="description" content="Alabama's trusted auto transport company. Door-to-door car shipping from Alabama to all 50 states — and from anywhere in the country to Alabama. Fully insured, FMCSA licensed, 5-star rated on Yelp. Serving Birmingham, Huntsville, Mobile, Montgomery, Tuscaloosa, and every city in AL." />
+<title>Alabama Auto Transport | Heartland — Car Shipping Nationwide</title>
+<meta name="description" content="Alabama's trusted auto transport company. Door-to-door car shipping from Alabama to all 50 states — and from anywhere in the country to Alabama. Fully…" />
 <meta name="keywords" content="Alabama auto transport, car shipping Alabama, Birmingham auto transport, Huntsville car shipping, Mobile vehicle transport, Montgomery car shipping, Tuscaloosa auto transport, ship car from Alabama, enclosed auto transport Alabama, nationwide auto transport" />
 <meta name="robots" content="index, follow, max-image-preview:large" />
 <meta name="geo.region" content="US-AL" />
@@ -72,6 +72,11 @@
 </script>
 
 <link rel="stylesheet" href="styles.css" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Alabama Auto Transport | Heartland — Car Shipping Nationwide" />
+<meta name="twitter:description" content="Alabama-based auto transport. Door-to-door car shipping nationwide. Transparent pricing, FMCSA licensed carriers, real people. Get a free quote in 60 seconds." />
+<meta name="twitter:image" content="https://heartlandautotransport.com/images/hero-truck.jpg" />
+
 </head>
 
 <body>
@@ -989,5 +994,26 @@
   });
 </script>
 
+
+<script>
+(function() {
+  var ham = document.querySelector('.hamburger');
+  var navList = document.querySelector('nav.main ul');
+  if (!ham || !navList) return;
+  ham.addEventListener('click', function() {
+    var open = navList.classList.toggle('mobile-open');
+    ham.setAttribute('aria-expanded', open);
+    ham.classList.toggle('is-open', open);
+  });
+  // Close menu on link click
+  navList.querySelectorAll('a').forEach(function(a) {
+    a.addEventListener('click', function() {
+      navList.classList.remove('mobile-open');
+      ham.classList.remove('is-open');
+      ham.setAttribute('aria-expanded', 'false');
+    });
+  });
+})();
+</script>
 </body>
 </html>

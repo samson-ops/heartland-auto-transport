@@ -2571,3 +2571,179 @@ nav.main ul li a.active::after {
 @media (max-width: 900px) {
   .service-cat-grid { grid-template-columns: 1fr; }
 }
+
+/* ============================================================
+   MOBILE NAV / HAMBURGER MENU
+   ============================================================ */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  padding: 10px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  z-index: 1001;
+}
+.hamburger span {
+  width: 24px;
+  height: 2.5px;
+  background: var(--text);
+  border-radius: 2px;
+  transition: all 0.25s ease;
+  transform-origin: center;
+}
+.hamburger.is-open span:nth-child(1) {
+  transform: translateY(7.5px) rotate(45deg);
+}
+.hamburger.is-open span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.is-open span:nth-child(3) {
+  transform: translateY(-7.5px) rotate(-45deg);
+}
+
+@media (max-width: 880px) {
+  .hamburger { display: flex; }
+  
+  /* Hide desktop nav and shrink phone btn */
+  nav.main {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #fff;
+    border-top: 1px solid var(--border);
+    border-bottom: 2px solid var(--maroon);
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+    display: none;
+    z-index: 1000;
+  }
+  
+  nav.main ul.mobile-open,
+  nav.main:has(ul.mobile-open) {
+    display: block;
+  }
+  
+  nav.main ul {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 0 !important;
+    padding: 8px 0 !important;
+    display: none;
+  }
+  
+  nav.main ul.mobile-open {
+    display: flex !important;
+  }
+  
+  nav.main ul li {
+    width: 100%;
+    border-bottom: 1px solid #f1f1f1;
+  }
+  nav.main ul li:last-child { border-bottom: 0; }
+  
+  nav.main ul li a {
+    display: block;
+    padding: 14px 24px;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text);
+  }
+  
+  nav.main ul li a:hover,
+  nav.main ul li a.active {
+    background: var(--bg-soft);
+    color: var(--maroon);
+  }
+  
+  /* Dropdown handling on mobile */
+  .nav-dropdown-wide,
+  .nav-dropdown {
+    position: static !important;
+    box-shadow: none !important;
+    border-top: 1px solid #f1f1f1;
+    border-bottom: none;
+    background: var(--bg-soft);
+    display: none;
+    padding: 8px 0 !important;
+  }
+  
+  /* Header position needed for absolute nav */
+  header { position: relative; }
+  .nav { position: relative; }
+  
+  /* Trim phone btn text on mobile, just show icon + number */
+  .phone-btn { padding: 10px 14px; gap: 6px; }
+  .phone-btn .txt { font-size: 13px; }
+  
+  /* Trim hero a bit */
+  .page-hero { padding: 50px 0; }
+  .page-hero h1 { font-size: clamp(26px, 5vw, 34px); }
+}
+
+@media (max-width: 480px) {
+  .nav { padding: 14px 16px; gap: 8px; }
+  .logo { height: 58px; }
+  .phone-btn .txt { display: none; }
+  .phone-btn { padding: 10px 12px; }
+  .hamburger { padding: 8px; }
+}
+
+/* Hide phone-btn arrow/icon styling tweaks for mobile */
+@media (max-width: 880px) {
+  /* Hero CTAs stack on mobile */
+  .page-hero > .container > div[style*="display: flex"] {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .page-hero .btn-primary, .page-hero .btn-secondary {
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+  }
+}
+
+/* ============================================================
+   CONTACT PAGE HERO (was missing styles)
+   ============================================================ */
+.contact-hero {
+  background: linear-gradient(135deg, var(--maroon) 0%, var(--maroon-dark) 100%);
+  color: #fff;
+  padding: 70px 0 60px;
+  text-align: center;
+}
+.contact-hero .eyebrow {
+  display: inline-block;
+  background: rgba(255,255,255,0.15);
+  color: #f4c430;
+  padding: 6px 16px;
+  border-radius: 30px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+.contact-hero h1 {
+  font-size: clamp(28px, 4vw, 44px);
+  font-weight: 800;
+  color: #fff !important;
+  margin: 0 0 16px;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+}
+.contact-hero .lead {
+  font-size: 17px;
+  line-height: 1.55;
+  color: rgba(255,255,255,0.92);
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+@media (max-width: 720px) {
+  .contact-hero { padding: 50px 0 40px; }
+  .contact-hero h1 { font-size: 26px; }
+  .contact-hero .lead { font-size: 15px; padding: 0 8px; }
+}

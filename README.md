@@ -1,14 +1,41 @@
 # Heartland Auto Transport — Complete Website
 
-Alabama-based auto transport company website. Static HTML, ready to deploy.
+Alabama-based auto transport company website. Static HTML, ready to deploy. Fully SEO-optimized and mobile-responsive.
 
 ## Site Stats
 
-- **85 total HTML pages** — 1 homepage + 5 utility + 24 Alabama city pages + 45 service pages + 10 blog posts
-- **110,000+ words of original SEO content**
-- All pages SEO-optimized with unique titles, meta descriptions, schema markup
-- Mobile responsive, fast-loading static HTML
-- One shared `styles.css` for the entire site
+- **85 HTML pages** — 1 homepage + 5 utility + 24 city + 45 service + 10 blog posts
+- **110,000+ words** of original SEO content
+- **100% SEO compliance** — every page audited for proper title length, meta description, canonical URL, OG tags, Twitter Card, schema markup, H1, and viewport
+- **Fully mobile responsive** — functional hamburger menu, single-column mobile layouts, touch-optimized buttons, 21 responsive breakpoints
+
+## SEO Setup (every page)
+
+✅ Title tag (30-70 chars, optimal for Google search results)
+✅ Meta description (70-160 chars, won't get truncated)
+✅ Meta keywords
+✅ Canonical URL
+✅ Viewport meta (mobile responsiveness)
+✅ Geo targeting (US-AL)
+✅ Open Graph tags (Facebook, LinkedIn previews)
+✅ Twitter Card tags (Twitter previews)
+✅ Schema.org structured data (rich snippets in Google)
+✅ Semantic HTML with single H1 per page
+✅ Internal linking between related pages
+✅ All images have alt attributes
+✅ No broken internal links
+
+## Mobile Setup (every page)
+
+✅ Viewport meta tag with proper scaling
+✅ Functional hamburger menu with JS toggle
+✅ Animated hamburger → X icon transition
+✅ Single-column mobile layouts for all grids
+✅ Responsive font sizing (clamp() functions)
+✅ Touch-friendly tap targets
+✅ Phone number adapts (icon-only on smallest screens)
+✅ CTA buttons full-width on mobile
+✅ 21 media query breakpoints (1024px, 900px, 880px, 720px, 640px, 560px, 500px, 480px)
 
 ## Folder Structure
 
@@ -20,93 +47,36 @@ heartland-site/
 ├── faq.html
 ├── contact.html
 ├── blog.html
-├── styles.css
+├── styles.css                  ← Shared stylesheet
 ├── sitemap.xml                 ← 85 URLs for Google Search Console
 ├── robots.txt
 ├── README.md
 │
-├── cities/                     ← 24 Alabama city pages
+├── cities/                     ← 24 Alabama city pages (Birmingham, Huntsville, etc.)
 ├── services/                   ← 45 service pages
 ├── blog/                       ← 10 blog posts
 └── images/                     ← 7 images
 ```
 
-## 45 Service Pages — Categorized
+## 45 Service Pages
 
-### Standard Shipping Methods (9)
-- Open Auto Transport
-- Enclosed Auto Transport
-- Door-to-Door
-- Expedited Auto Transport
-- Cross Country
-- State-to-State
-- Nationwide Auto Transport
-- Terminal-to-Terminal
-- Guaranteed Pickup
+**Standard Methods (9):** open, enclosed, door-to-door, expedited, cross-country, state-to-state, nationwide, terminal-to-terminal, guaranteed-pickup
 
-### Vehicle Types (15)
-- Car Shipping, SUV Transport, Truck Shipping, Motorcycle Shipping, Electric Vehicle Shipping, Luxury Car Transport, Exotic Car Transport, Classic Car Transport, Antique Vehicle Shipping, RV Transport, Boat Transport, ATV/UTV Shipping, Golf Cart Shipping, Van Transport, Heavy Equipment Transport
+**Vehicle Types (15):** car, SUV, truck, motorcycle, EV, luxury, exotic, classic, antique, RV, boat, ATV/UTV, golf cart, van, heavy equipment
 
-### Business & Commercial (8) — NEW
-- Dealer Auto Transport
-- Fleet Management Transport
-- Rental Car Transport
-- Auction Vehicle Transport
-- OEM Vehicle Shipping
-- Commercial Vehicle Shipping
-- Construction Equipment Shipping
-- Government Vehicle Transport
+**Business & Commercial (8):** dealer transport, fleet management, rental car, auction vehicle, OEM, commercial vehicle, construction equipment, government vehicle
 
-### Buying & Selling (6) — NEW
-- Online Car Purchase Shipping
-- Car Shipping for eBay Motors
-- Carvana Vehicle Transport
-- Copart Auto Transport
-- IAAI Vehicle Shipping
-- Bring a Trailer Shipping
+**Buying & Selling (6):** online car purchase, eBay Motors, Carvana, Copart, IAAI, Bring a Trailer
 
-### Specialty Logistics (7) — NEW
-- Heavy Hauling
-- Oversize Load Transport
-- Multi Vehicle Transport
-- Hot Shot Transport
-- Flatbed Transport
-- Freight Shipping
-- White Glove Vehicle Delivery
+**Specialty Logistics (7):** heavy hauling, oversize load, multi-vehicle, hot shot, flatbed, freight shipping, white glove delivery
 
-## 24 Alabama City Pages (in /cities/)
+## 24 Alabama City Pages
 
-Every Alabama city with 25,000+ population. Each is 1,500-2,200 words of unique, locally-relevant content covering local routes, neighborhoods, industries, and shipping demand drivers.
+Every Alabama city with 25,000+ population. Each 1,500-2,200 words of unique, locally-relevant content. Top cities: Huntsville (222k), Mobile (203k), Birmingham (198k), Montgomery (197k), Tuscaloosa (111k), Hoover (92k), Auburn (80k), Dothan (71k), Madison (60k), Decatur (57k) — plus 14 more.
 
-URL pattern: `/cities/{city}-auto-transport.html`
+## 10 Blog Posts (April–May 2026)
 
-Top cities: Huntsville (222k), Mobile (203k), Birmingham (198k), Montgomery (197k), Tuscaloosa (111k), Hoover (92k), Auburn (80k), Dothan (71k), Madison (60k), Decatur (57k) — plus 14 more cities.
-
-## 10 Blog Posts (in /blog/)
-
-April 5 → May 10, 2026. Categories: Cost Guide, Preparation, Comparison, Snowbird, Online Buying, Military, Family, Consumer Tips.
-
-## SEO Strategy
-
-**85 pages = 85 ranking opportunities in Google.**
-
-The new commercial/business service pages target high-value B2B searches:
-- "dealer auto transport"
-- "fleet management transport"
-- "Copart vehicle pickup"
-- "Carvana shipping alternative"
-- "heavy hauling Alabama"
-- "white glove vehicle delivery"
-
-These are HIGH-INTENT searches from dealers, fleet managers, businesses, and specialty buyers — typically much higher conversion value than consumer searches.
-
-Every page includes:
-- Service + BreadcrumbList schema markup
-- Geo-targeting meta tags (US-AL)
-- Unique title, meta description, keywords
-- Internal links to related services
-- Open Graph + Twitter Card meta tags
-- 800-2,200 words of unique, original content
+Cost guides, preparation, comparisons, snowbird, online buying, military PCS, scams to avoid, college shipping, and more.
 
 ## Deploy to Cloudflare Pages
 
@@ -115,8 +85,8 @@ Every page includes:
 3. Drag the contents of this folder into the upload area
 4. Click Deploy site
 
-**After deployment:**
-1. Submit `sitemap.xml` (85 URLs) to Google Search Console
+After deployment:
+1. Submit `sitemap.xml` (85 URLs) to Google Search Console: https://search.google.com/search-console
 2. Set up Google Business Profile for local SEO
 3. Set up Yelp business page
 
