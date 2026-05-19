@@ -2919,7 +2919,33 @@ nav.main ul li a.active::after {
    CITY PAGE HERO WITH INSTANT QUOTE WIDGET
    ============================================================ */
 .page-hero-with-quote {
-  padding: 60px 0 70px;
+  padding: 70px 0 80px;
+  position: relative;
+  overflow: hidden;
+  background:
+    linear-gradient(135deg, rgba(122, 31, 43, 0.75) 0%, rgba(74, 15, 24, 0.85) 100%),
+    url('../images/hero-truck.jpg') center center / cover no-repeat;
+  background-attachment: scroll;
+}
+
+/* Subtle texture overlay to add depth */
+.page-hero-with-quote::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 30% 50%, rgba(244, 196, 48, 0.04) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.page-hero-with-quote .container {
+  position: relative;
+  z-index: 1;
+}
+
+/* Gold-accented city name in H1 (matches homepage style) */
+.page-hero-content h1 .city-accent {
+  color: #f4c430;
+  display: inline-block;
 }
 
 .page-hero-layout {
@@ -3002,5 +3028,94 @@ nav.main ul li a.active::after {
     width: 100%;
     text-align: center;
     justify-content: center;
+  }
+}
+
+
+/* ============================================================
+   CITY PAGE HERO FEATURE PILLS
+   ============================================================ */
+.page-hero-features {
+  display: flex;
+  gap: 28px;
+  margin: 28px 0 28px;
+  flex-wrap: wrap;
+}
+
+.phf-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #fff;
+}
+
+.phf-item .ico {
+  width: 28px;
+  height: 28px;
+  color: #f4c430;
+  flex-shrink: 0;
+}
+
+.phf-item strong {
+  display: block;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 2px;
+}
+
+.phf-item span {
+  display: block;
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 13px;
+}
+
+/* Improve button on hero */
+.page-hero-with-quote .btn-primary {
+  background: #f4c430;
+  color: #1a1a1a;
+  border: 0;
+  font-weight: 800;
+  padding: 14px 28px;
+}
+
+.page-hero-with-quote .btn-primary:hover {
+  background: #ffd344;
+  transform: translateY(-1px);
+}
+
+.page-hero-with-quote .btn-secondary {
+  background: transparent;
+  color: #fff;
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  padding: 12px 26px;
+  font-weight: 600;
+}
+
+.page-hero-with-quote .btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.7);
+  color: #fff;
+}
+
+@media (max-width: 880px) {
+  .page-hero-features {
+    gap: 18px;
+    margin: 24px 0 22px;
+  }
+  
+  .phf-item strong { font-size: 14px; }
+  .phf-item span { font-size: 12.5px; }
+  
+  .page-hero-with-quote {
+    padding: 50px 0 60px;
+  }
+}
+
+@media (max-width: 480px) {
+  .page-hero-features {
+    flex-direction: column;
+    gap: 14px;
   }
 }
