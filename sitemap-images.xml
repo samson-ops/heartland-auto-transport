@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+
+  <url>
+    <loc>https://heartlandautotransport.com/</loc>
+    <image:image>
+      <image:loc>https://heartlandautotransport.com/images/hero-truck.jpg</image:loc>
+      <image:title>Heartland Auto Transport truck delivering vehicles</image:title>
+      <image:caption>Alabama-based auto transport carrier on the road</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://heartlandautotransport.com/images/usa-map.jpg</image:loc>
+      <image:title>USA coverage map showing all 50 states</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://heartlandautotransport.com/images/logo.png</image:loc>
+      <image:title>Heartland Auto Transport company logo</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://heartlandautotransport.com/services/open-auto-transport</loc>
+    <image:image>
+      <image:loc>https://heartlandautotransport.com/images/service-open.jpg</image:loc>
+      <image:title>Open auto transport carrier loaded with vehicles</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://heartlandautotransport.com/services/enclosed-auto-transport</loc>
+    <image:image>
+      <image:loc>https://heartlandautotransport.com/images/service-enclosed.jpg</image:loc>
+      <image:title>Enclosed auto transport trailer for luxury vehicles</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://heartlandautotransport.com/services/nationwide-auto-transport</loc>
+    <image:image>
+      <image:loc>https://heartlandautotransport.com/images/service-nationwide.jpg</image:loc>
+      <image:title>Nationwide auto transport service to all 50 states</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://heartlandautotransport.com/services/expedited-auto-transport</loc>
+    <image:image>
+      <image:loc>https://heartlandautotransport.com/images/service-expedited.jpg</image:loc>
+      <image:title>Expedited auto transport for time-critical shipments</image:title>
+    </image:image>
+  </url>
+
+</urlset>

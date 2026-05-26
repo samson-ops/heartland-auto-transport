@@ -1,0 +1,18 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+    Founder, Chief Operations Officer: Heartland Auto Transport
+    Site: heartlandautotransport.com
+    Location: Alabama, USA
+
+# THANKS
+    Our customers across all 50 states
+    Our dispatcher team
+    Our network of FMCSA-licensed carriers
+
+# SITE
+    Last update: 2026-05-13
+    Standards: HTML5, CSS3, Schema.org
+    Components: Static HTML, custom CSS
+    Software: Custom-built for transparency and speed

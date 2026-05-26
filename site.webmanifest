@@ -1,0 +1,19 @@
+{
+  "name": "Heartland Auto Transport",
+  "short_name": "Heartland",
+  "description": "Alabama-based auto transport. Door-to-door car shipping to all 50 states.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#7a1f2b",
+  "icons": [
+    {
+      "src": "/images/logo.png",
+      "sizes": "465x135",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ],
+  "categories": ["business", "shopping", "travel"],
+  "lang": "en-US"
+}
