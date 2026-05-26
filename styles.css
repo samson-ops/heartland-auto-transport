@@ -533,11 +533,18 @@ section { padding: 80px 0; }
   text-align: center;
   box-shadow: 0 4px 16px rgba(0,0,0,0.06);
   transition: all 0.3s ease;
-  cursor: default;
+  cursor: pointer;
+  display: block;
+  text-decoration: none;
+  color: inherit;
 }
 .vehicle-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 12px 28px rgba(122,31,43,0.15);
+  box-shadow: 0 12px 28px rgba(122,31,43,0.18);
+  text-decoration: none;
+}
+.vehicle-card:hover .label {
+  color: var(--maroon);
 }
 .vehicle-card svg {
   width: 70px;
