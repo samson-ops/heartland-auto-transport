@@ -2782,10 +2782,6 @@ nav.main ul li a.active::after {
 .quote-widget-header {
   background: #ffffff;
   padding: 22px 26px 18px;
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: 16px;
   border-bottom: 1px solid #f0eef0;
 }
 
