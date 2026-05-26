@@ -130,7 +130,7 @@ nav.main a.active::after {
 .hero {
   position: relative;
   background-image:
-    linear-gradient(90deg, rgba(255,248,236,0.95) 0%, rgba(255,245,228,0.82) 22%, rgba(255,240,215,0.35) 40%, rgba(255,235,200,0.08) 58%, rgba(0,0,0,0) 75%),
+    linear-gradient(90deg, rgba(252,247,238,0.98) 0%, rgba(252,245,232,0.95) 30%, rgba(252,242,222,0.7) 48%, rgba(252,238,208,0.25) 62%, rgba(0,0,0,0) 78%),
     url('/images/hero-truck.jpg');
   background-size: cover;
   background-position: 70% center;
@@ -162,19 +162,23 @@ nav.main a.active::after {
   font-weight: 800;
   line-height: 1.05;
   margin-bottom: 20px;
-  color: #0d1b2a;
+  color: #0a1424;
   letter-spacing: -0.02em;
-  text-shadow: 0 1px 2px rgba(255,255,255,0.6);
+  text-shadow:
+    0 1px 0 rgba(255,255,255,0.8),
+    0 2px 14px rgba(255,255,255,0.55);
 }
 .hero h1 span { color: var(--maroon) !important; }
 .hero .lead {
   font-size: 17px;
-  color: #1a2332;
+  color: #15202e;
   margin-bottom: 28px;
   max-width: 480px;
   line-height: 1.55;
-  font-weight: 500;
-  text-shadow: 0 1px 2px rgba(255,255,255,0.5);
+  font-weight: 600;
+  text-shadow:
+    0 1px 0 rgba(255,255,255,0.7),
+    0 1px 8px rgba(255,255,255,0.5);
 }
 .btn-primary {
   display: inline-flex;
@@ -215,12 +219,15 @@ nav.main a.active::after {
   display: block;
   font-size: 14px;
   font-weight: 700;
-  color: #0d1b2a;
+  color: #0a1424;
   margin-bottom: 2px;
+  text-shadow: 0 1px 0 rgba(255,255,255,0.7);
 }
 .hero-feat span {
   font-size: 13px;
-  color: #4a5568;
+  color: #2d3748;
+  font-weight: 500;
+  text-shadow: 0 1px 0 rgba(255,255,255,0.6);
 }
 
 /* ============ TRUST BAR ============ */
@@ -2790,14 +2797,14 @@ nav.main ul li a.active::after {
 
 .quote-widget-body {
   padding: 8px 6px 4px;
-  min-height: 540px;
+  min-height: 460px;
   background: #fff;
   position: relative;
 }
 
 .quote-widget-body iframe {
   width: 100%;
-  height: 620px;
+  height: 480px;
   border: 0;
   display: block;
   background: transparent;
@@ -2897,11 +2904,11 @@ nav.main ul li a.active::after {
   
   .quote-widget-body {
     padding: 6px 4px 2px;
-    min-height: 580px;
+    min-height: 480px;
   }
   
   .quote-widget-body iframe {
-    height: 640px;
+    height: 500px;
   }
   
   .quote-widget-trust {
