@@ -1,30 +1,42 @@
 # Cloudflare Pages redirects file
-# Format: source destination status_code
-#
-# Cloudflare Pages automatically serves /about for /about.html when present.
-# These rules ensure any old .html URLs (from search engines, links, bookmarks)
-# 301-redirect to the clean URL versions, preserving SEO value.
+# Ensures clean URL serving and proper redirects to prevent GSC errors
 
-# Redirect old .html URLs to clean URLs (preserves SEO link equity)
-/about.html /about 301
-/how-it-works.html /how-it-works 301
-/faq.html /faq 301
-/contact.html /contact 301
-/blog.html /blog 301
-/index.html / 301
+# === 301 REDIRECTS: Old .html URLs → Clean URLs (preserves SEO link equity) ===
 
-# City pages
-/cities/*.html /cities/:splat 301
+# Top-level pages
+/index.html             /             301
+/about.html             /about        301
+/how-it-works.html      /how-it-works 301
+/faq.html               /faq          301
+/contact.html           /contact      301
+/blog.html              /blog         301
 
-# Service pages
+# Subfolder pages (wildcard)
+/cities/*.html   /cities/:splat   301
 /services/*.html /services/:splat 301
+/blog/*.html     /blog/:splat     301
 
-# Blog posts
-/blog/*.html /blog/:splat 301
+# === TRAILING SLASH NORMALIZATION ===
+# /about/ → /about (avoids duplicate URL issue)
+/about/        /about          301
+/how-it-works/ /how-it-works   301
+/faq/          /faq            301
+/contact/      /contact        301
+/cities/*/     /cities/:splat  301
+/services/*/   /services/:splat 301
 
-# Handle trailing slash variations
-/about/ /about 301
-/how-it-works/ /how-it-works 301
-/faq/ /faq 301
-/contact/ /contact 301
-/blog/ /blog 301
+# Blog trailing slash — special: /blog/ goes to /blog (the index)
+/blog/         /blog           301
+
+# === COMMON 404 PREVENTION ===
+# Old URL patterns that might exist in Google's index from before
+/auto-transport-services    /                            301
+/our-services               /                            301
+/locations                  /#service-areas              301
+/quote                      /#quote                      301
+/get-quote                  /#quote                      301
+/estimate                   /#quote                      301
+
+# Common typos / variations
+/sitemap   /sitemap.xml   301
+/robots    /robots.txt    301
