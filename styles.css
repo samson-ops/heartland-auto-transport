@@ -2764,7 +2764,7 @@ nav.main ul li a.active::after {
 #quote {
   display: block;
   width: 100%;
-  height: 580px;
+  height: 760px;          /* tall enough that no step needs an internal scrollbar */
   border: 0;
   background: transparent;
 }
@@ -2776,11 +2776,11 @@ nav.main ul li a.active::after {
     grid-template-columns: 1fr;
     gap: 36px;
   }
-  #quote { height: 600px; }
+  #quote { height: 860px; }
 }
 
 @media (max-width: 480px) {
-  #quote { height: 620px; }
+  #quote { height: 900px; }
 }
 
 /* ============================================================
