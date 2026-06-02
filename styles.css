@@ -141,14 +141,17 @@ nav.main a.active::after {
 .hero .container {
   position: relative;
   z-index: 2;
+  max-width: none;
+  padding: 0;
   min-height: 440px;
-  display: flex;
-  align-items: center;
+  display: block;
 }
 .hero-content {
   position: relative;
   z-index: 3;
   max-width: 600px;
+  min-width: 0;
+  justify-self: start;
   animation: heroFadeIn 1.2s ease-out;
 }
 @keyframes heroFadeIn {
@@ -2753,9 +2756,11 @@ nav.main ul li a.active::after {
    ============================================================ */
 .hero-layout {
   display: grid;
-  grid-template-columns: 1fr 560px;  /* widget column width — raise/lower this one number to resize the quote form */
-  gap: 50px;
+  grid-template-columns: 1fr 1fr;   /* left = text, right = quote widget; each fills half the hero */
+  gap: clamp(32px, 4vw, 64px);
   align-items: center;
+  min-height: 440px;
+  padding: 0 clamp(24px, 5vw, 72px);  /* even breathing room on the outer edges */
 }
 
 /* Instant-quote widget (iframe) — give it an explicit height so the full
@@ -2764,6 +2769,7 @@ nav.main ul li a.active::after {
 #quote {
   display: block;
   width: 100%;
+  min-width: 0;
   height: 760px;          /* tall enough that no step needs an internal scrollbar */
   border: 0;
   background: transparent;
@@ -2775,7 +2781,9 @@ nav.main ul li a.active::after {
   .hero-layout {
     grid-template-columns: 1fr;
     gap: 36px;
+    padding: 0 24px;
   }
+  .hero-content { max-width: 100%; }
   #quote { height: 860px; }
 }
 
