@@ -2758,6 +2758,31 @@ nav.main ul li a.active::after {
   align-items: center;
 }
 
+/* Instant-quote widget (iframe) — give it an explicit height so the full
+   multi-step form is visible instead of being clipped at the default ~150px.
+   Applies to every page that embeds the #quote widget. */
+#quote {
+  display: block;
+  width: 100%;
+  height: 580px;
+  border: 0;
+  background: transparent;
+}
+
+/* On smaller screens the homepage hero needs to stack so the widget doesn't
+   overflow its column (mirrors the city/service page hero behavior). */
+@media (max-width: 880px) {
+  .hero-layout {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+  #quote { height: 600px; }
+}
+
+@media (max-width: 480px) {
+  #quote { height: 620px; }
+}
+
 /* ============================================================
    CITY PAGE HERO WITH INSTANT QUOTE WIDGET
    ============================================================ */
