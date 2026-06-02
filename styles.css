@@ -2753,13 +2753,13 @@ nav.main ul li a.active::after {
    ============================================================ */
 .hero-layout {
   display: grid;
-  grid-template-columns: 60fr 40fr;
+  grid-template-columns: 56fr 44fr;
   gap: 50px;
   align-items: center;
 }
 @media (max-width: 1024px) {
   .hero-layout {
-    grid-template-columns: 58fr 42fr;
+    grid-template-columns: 54fr 46fr;
     gap: 36px;
   }
 }
@@ -2805,7 +2805,7 @@ nav.main ul li a.active::after {
 
 .page-hero-layout {
   display: grid;
-  grid-template-columns: 60fr 40fr;
+  grid-template-columns: 56fr 44fr;
   gap: 50px;
   align-items: center;
 }
@@ -2847,7 +2847,7 @@ nav.main ul li a.active::after {
 /* Responsive */
 @media (max-width: 1024px) {
   .page-hero-layout {
-    grid-template-columns: 58fr 42fr;
+    grid-template-columns: 54fr 46fr;
     gap: 36px;
   }
 }
