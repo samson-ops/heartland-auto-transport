@@ -182,7 +182,7 @@ Built to be cited and recommended by:
 
 ## Placeholders to Replace Before Launch
 
-- Phone (866) 728-0249 — current number
+- Phone (205) 578-6129 — current number
 - Email info@heartlandautotransport.com — update if different
 - Social URLs in Organization schema — update Facebook, Twitter, LinkedIn, Yelp
 - USDOT/MC number — currently shown as just "FMCSA Licensed Broker"

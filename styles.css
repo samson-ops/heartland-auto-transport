@@ -3139,3 +3139,30 @@ nav.main ul li a.active::after {
   color: #f4c430;
   display: inline;
 }
+
+/* ============================================================
+   EMBEDDED GOOGLE MAPS (city pages — Local Office sidebar)
+   ============================================================ */
+.map-embed {
+  position: relative;
+  width: 100%;
+  padding-bottom: 75%; /* 4:3 aspect ratio */
+  height: 0;
+  overflow: hidden;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  margin-top: 4px;
+}
+.map-embed iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100% !important;
+  height: 100% !important;
+  border: 0;
+  display: block;
+}
+
+@media (max-width: 1024px) {
+  .map-embed { padding-bottom: 70%; }
+}
