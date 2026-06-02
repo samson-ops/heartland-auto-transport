@@ -1189,7 +1189,7 @@ footer {
     radial-gradient(circle at 80% 70%, rgba(255,255,255,0.04) 0%, transparent 40%);
   pointer-events: none;
 }
-.page-hero .container { position: relative; z-index: 2; max-width: 900px; }
+.page-hero .container { position: relative; z-index: 2; max-width: 1200px; }
 .page-hero .eyebrow {
   font-size: 13px;
   font-weight: 700;
