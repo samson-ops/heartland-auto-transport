@@ -2753,7 +2753,7 @@ nav.main ul li a.active::after {
    ============================================================ */
 .hero-layout {
   display: grid;
-  grid-template-columns: 1fr 440px;
+  grid-template-columns: 1fr 560px;  /* widget column width — raise/lower this one number to resize the quote form */
   gap: 50px;
   align-items: center;
 }
@@ -2818,7 +2818,7 @@ nav.main ul li a.active::after {
 
 .page-hero-layout {
   display: grid;
-  grid-template-columns: 1fr 420px;
+  grid-template-columns: 1fr 560px;  /* widget column width on city/service pages */
   gap: 50px;
   align-items: center;
 }
@@ -2860,7 +2860,7 @@ nav.main ul li a.active::after {
 /* Responsive */
 @media (max-width: 1024px) {
   .page-hero-layout {
-    grid-template-columns: 1fr 380px;
+    grid-template-columns: 1fr 480px;
     gap: 36px;
   }
 }
