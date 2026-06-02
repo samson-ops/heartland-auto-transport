@@ -525,23 +525,5 @@
   });
 })();
 </script>
-
-<!-- quote-autofit: lets the cross-origin quote widget report its height so the iframe never needs an internal scrollbar -->
-<script>
-(function () {
-  var WIDGET_ORIGIN = 'https://widget.berocker.com';
-  var frame = document.getElementById('quote');
-  if (!frame) return;
-  window.addEventListener('message', function (e) {
-    if (e.origin !== WIDGET_ORIGIN) return;            // only trust the widget's own domain
-    var d = e.data, h = null;
-    if (typeof d === 'number') h = d;
-    else if (d && typeof d === 'object') h = d.height || d.frameHeight || d.iframeHeight || d.scrollHeight;
-    else if (typeof d === 'string' && /(height|resize)/i.test(d)) { var m = d.match(/([0-9]{3,4})/); if (m) h = m[1]; }
-    h = parseInt(h, 10);
-    if (h >= 300 && h <= 2000) frame.style.height = h + 'px';   // clamp to a sane range
-  });
-})();
-</script>
 </body>
 </html>
