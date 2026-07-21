@@ -3102,3 +3102,98 @@ nav.main ul li a.active::after {
     font-size: 23px;
   }
 }
+
+/* ============================================================
+   SEO CONTENT SECTION (homepage rich content)
+   ============================================================ */
+.seo-content {
+  padding: 80px 0;
+  background: #ffffff;
+}
+.seo-content .container {
+  max-width: 1000px;
+}
+.seo-content-head {
+  text-align: center;
+  margin-bottom: 50px;
+}
+.seo-content-head h2 {
+  font-size: clamp(28px, 3.5vw, 40px);
+  color: var(--maroon);
+  margin-bottom: 14px;
+  line-height: 1.15;
+}
+.seo-content-head p {
+  font-size: 17px;
+  color: var(--text-muted);
+  max-width: 720px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+.seo-article h2 {
+  font-size: clamp(22px, 2.6vw, 30px);
+  color: var(--maroon);
+  margin: 44px 0 16px;
+  line-height: 1.2;
+  padding-top: 10px;
+  border-top: 2px solid #f0e6e8;
+}
+.seo-article h2:first-child {
+  border-top: none;
+  padding-top: 0;
+  margin-top: 0;
+}
+.seo-article h3 {
+  font-size: 20px;
+  color: var(--text);
+  margin: 26px 0 10px;
+  font-weight: 700;
+}
+.seo-article p {
+  font-size: 16px;
+  line-height: 1.75;
+  color: #374151;
+  margin-bottom: 16px;
+}
+.seo-article strong {
+  color: var(--maroon);
+  font-weight: 700;
+}
+.seo-article ul {
+  margin: 0 0 20px 0;
+  padding-left: 24px;
+}
+.seo-article li {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #374151;
+  margin-bottom: 8px;
+}
+.seo-article a {
+  color: var(--maroon);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.seo-article a:hover {
+  color: var(--maroon-dark);
+}
+
+@media (max-width: 880px) {
+  .seo-content {
+    padding: 50px 0;
+  }
+  .seo-content-head {
+    margin-bottom: 34px;
+  }
+  .seo-article h2 {
+    font-size: 22px;
+    margin: 32px 0 12px;
+  }
+  .seo-article h3 {
+    font-size: 18px;
+  }
+  .seo-article p, .seo-article li {
+    font-size: 15.5px;
+  }
+}
