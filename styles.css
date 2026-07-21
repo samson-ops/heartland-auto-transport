@@ -1,3 +1,17 @@
+/* ============================================================
+   GLOBAL: Prevent horizontal overflow (mobile white-space fix)
+   ============================================================ */
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+img, iframe, video, svg, table {
+  max-width: 100%;
+}
+
 :root {
   --maroon: #7a1f2b;
   --maroon-dark: #5e1620;
