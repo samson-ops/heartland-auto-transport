@@ -3038,3 +3038,37 @@ nav.main ul li a.active::after {
   }
 }
 
+
+/* ============================================================
+   MOBILE: Show quote iframe right after the H1
+   (so customers see the quote form immediately)
+   ============================================================ */
+@media (max-width: 880px) {
+  /* Homepage hero */
+  .hero-layout {
+    display: flex;
+    flex-direction: column;
+  }
+  .hero-layout .hero-content {
+    display: contents;
+  }
+  .hero-layout .hero-content h1 { order: 1; }
+  .hero-layout #quote { order: 2; margin: 20px 0 24px; }
+  .hero-layout .hero-content .lead { order: 3; }
+  .hero-layout .hero-content .hero-features { order: 4; }
+
+  /* City / service page hero */
+  .page-hero-layout {
+    display: flex;
+    flex-direction: column;
+  }
+  .page-hero-layout .page-hero-content {
+    display: contents;
+  }
+  .page-hero-layout .page-hero-content .eyebrow { order: 1; }
+  .page-hero-layout .page-hero-content h1 { order: 2; }
+  .page-hero-layout #quote { order: 3; margin: 20px 0 24px; }
+  .page-hero-layout .page-hero-content .lead { order: 4; }
+  .page-hero-layout .page-hero-content .page-hero-features { order: 5; }
+  .page-hero-layout .page-hero-content .page-hero-cta { order: 6; }
+}
