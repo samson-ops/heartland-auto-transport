@@ -3103,97 +3103,247 @@ nav.main ul li a.active::after {
   }
 }
 
+
 /* ============================================================
-   SEO CONTENT SECTION (homepage rich content)
+   ALABAMA CONTENT SECTIONS (spread across homepage)
    ============================================================ */
-.seo-content {
-  padding: 80px 0;
-  background: #ffffff;
+
+/* ---- Shared section intro ---- */
+.al-section { padding: 80px 0; }
+.al-section.tint { background: var(--bg-soft); }
+.al-section.maroon-bg {
+  background: linear-gradient(135deg, var(--maroon) 0%, var(--maroon-dark) 100%);
+  color: #fff;
 }
-.seo-content .container {
-  max-width: 1000px;
-}
-.seo-content-head {
-  text-align: center;
-  margin-bottom: 50px;
-}
-.seo-content-head h2 {
-  font-size: clamp(28px, 3.5vw, 40px);
-  color: var(--maroon);
-  margin-bottom: 14px;
-  line-height: 1.15;
-}
-.seo-content-head p {
-  font-size: 17px;
-  color: var(--text-muted);
-  max-width: 720px;
-  margin: 0 auto;
-  line-height: 1.6;
-}
-.seo-article h2 {
-  font-size: clamp(22px, 2.6vw, 30px);
-  color: var(--maroon);
-  margin: 44px 0 16px;
-  line-height: 1.2;
-  padding-top: 10px;
-  border-top: 2px solid #f0e6e8;
-}
-.seo-article h2:first-child {
-  border-top: none;
-  padding-top: 0;
-  margin-top: 0;
-}
-.seo-article h3 {
-  font-size: 20px;
-  color: var(--text);
-  margin: 26px 0 10px;
+.al-eyebrow {
+  display: inline-block;
+  font-size: 13px;
   font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--maroon);
+  margin-bottom: 12px;
 }
-.seo-article p {
-  font-size: 16px;
-  line-height: 1.75;
+.maroon-bg .al-eyebrow { color: var(--gold); }
+.al-section h2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: clamp(26px, 3.2vw, 38px);
+  line-height: 1.15;
+  color: var(--maroon);
+  margin-bottom: 18px;
+}
+.maroon-bg h2 { color: #fff; }
+.al-section p { font-size: 16px; line-height: 1.75; color: #374151; margin-bottom: 15px; }
+.maroon-bg p { color: rgba(255,255,255,0.9); }
+
+/* ---- Split: image + text ---- */
+.al-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+.al-split.reverse .al-split-media { order: 2; }
+.al-split-media img {
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+  box-shadow: var(--shadow-lg);
+  display: block;
+}
+.al-split-text h2 { margin-bottom: 20px; }
+
+/* ---- Service type cards (4 image cards) ---- */
+.al-types-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+  margin-top: 44px;
+}
+.al-type-card {
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.al-type-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg); }
+.al-type-card-img {
+  height: 200px;
+  overflow: hidden;
+}
+.al-type-card-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.al-type-card-body { padding: 24px 26px 28px; }
+.al-type-card-body h3 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 21px;
+  color: var(--maroon);
+  margin-bottom: 10px;
+}
+.al-type-card-body p { font-size: 15px; line-height: 1.65; margin: 0; color: #4b5563; }
+
+/* ---- Cost/pricing table ---- */
+.al-cost-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 36px;
+  background: #fff;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+.al-cost-table thead {
+  background: linear-gradient(135deg, var(--maroon) 0%, var(--maroon-dark) 100%);
+  color: #fff;
+}
+.al-cost-table th {
+  padding: 16px 20px;
+  text-align: left;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+.al-cost-table td {
+  padding: 15px 20px;
+  border-bottom: 1px solid var(--border);
+  font-size: 15px;
   color: #374151;
+}
+.al-cost-table tbody tr:last-child td { border-bottom: none; }
+.al-cost-table tbody tr:nth-child(even) { background: var(--bg-soft); }
+.al-cost-table td:first-child { font-weight: 600; color: var(--maroon); }
+
+/* ---- Cost factors list ---- */
+.al-factors {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+  margin-top: 30px;
+}
+.al-factor {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  background: #fff;
+  padding: 20px 22px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--gold);
+}
+.al-factor-num {
+  font-family: 'Poppins', sans-serif;
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--gold);
+  line-height: 1;
+  flex-shrink: 0;
+}
+.al-factor h4 { font-size: 16px; color: var(--maroon); margin-bottom: 5px; font-family: 'Poppins', sans-serif; }
+.al-factor p { font-size: 14px; line-height: 1.55; margin: 0; color: #4b5563; }
+
+/* ---- Why choose: feature grid ---- */
+.al-why-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 26px;
+  margin-top: 44px;
+}
+.al-why-card {
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 14px;
+  padding: 28px 26px;
+  backdrop-filter: blur(4px);
+}
+.al-why-card .ico {
+  width: 44px; height: 44px;
+  color: var(--gold);
   margin-bottom: 16px;
 }
-.seo-article strong {
+.al-why-card h3 { font-family: 'Poppins', sans-serif; font-size: 19px; color: #fff; margin-bottom: 10px; }
+.al-why-card p { font-size: 14.5px; line-height: 1.6; color: rgba(255,255,255,0.85); margin: 0; }
+
+/* ---- Comparison: open vs enclosed ---- */
+.al-compare {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+  margin-top: 40px;
+}
+.al-compare-col {
+  background: #fff;
+  border-radius: 16px;
+  padding: 32px 30px;
+  box-shadow: var(--shadow);
+  border-top: 5px solid var(--maroon);
+}
+.al-compare-col.featured { border-top-color: var(--gold); }
+.al-compare-col h3 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 23px;
   color: var(--maroon);
-  font-weight: 700;
-}
-.seo-article ul {
-  margin: 0 0 20px 0;
-  padding-left: 24px;
-}
-.seo-article li {
-  font-size: 16px;
-  line-height: 1.7;
-  color: #374151;
   margin-bottom: 8px;
 }
-.seo-article a {
-  color: var(--maroon);
-  font-weight: 600;
-  text-decoration: underline;
-  text-underline-offset: 2px;
+.al-compare-tag {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 4px 12px;
+  border-radius: 20px;
+  margin-bottom: 16px;
 }
-.seo-article a:hover {
-  color: var(--maroon-dark);
-}
+.al-compare-col .al-compare-tag { background: #fdeef0; color: var(--maroon); }
+.al-compare-col.featured .al-compare-tag { background: #fff6da; color: #9a7b10; }
+.al-compare-col p { font-size: 15px; line-height: 1.65; }
 
-@media (max-width: 880px) {
-  .seo-content {
-    padding: 50px 0;
-  }
-  .seo-content-head {
-    margin-bottom: 34px;
-  }
-  .seo-article h2 {
-    font-size: 22px;
-    margin: 32px 0 12px;
-  }
-  .seo-article h3 {
-    font-size: 18px;
-  }
-  .seo-article p, .seo-article li {
-    font-size: 15.5px;
-  }
+/* ---- Prep checklist ---- */
+.al-checklist {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px 32px;
+  margin-top: 36px;
+  list-style: none;
+  padding: 0;
+}
+.al-checklist li {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  font-size: 15.5px;
+  line-height: 1.6;
+  color: #374151;
+}
+.al-checklist li svg {
+  width: 24px; height: 24px;
+  color: var(--success);
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+.al-checklist li strong { color: var(--maroon); display: block; margin-bottom: 2px; }
+
+/* ---- Two-column text (timing / insurance) ---- */
+.al-textcols {
+  columns: 2;
+  column-gap: 50px;
+  margin-top: 20px;
+}
+.al-textcols p { break-inside: avoid; }
+
+/* ---- Responsive ---- */
+@media (max-width: 900px) {
+  .al-section { padding: 50px 0; }
+  .al-split { grid-template-columns: 1fr; gap: 32px; }
+  .al-split.reverse .al-split-media { order: 0; }
+  .al-types-grid { grid-template-columns: 1fr; gap: 20px; }
+  .al-factors { grid-template-columns: 1fr; }
+  .al-why-grid { grid-template-columns: 1fr; gap: 18px; }
+  .al-compare { grid-template-columns: 1fr; }
+  .al-checklist { grid-template-columns: 1fr; }
+  .al-textcols { columns: 1; }
+  .al-cost-table { font-size: 13px; }
+  .al-cost-table th, .al-cost-table td { padding: 12px 14px; }
 }
