@@ -3072,3 +3072,19 @@ nav.main ul li a.active::after {
   .page-hero-layout .page-hero-content .page-hero-features { order: 5; }
   .page-hero-layout .page-hero-content .page-hero-cta { order: 6; }
 }
+
+/* ============================================================
+   MOBILE: Smaller homepage H1 headline
+   ============================================================ */
+@media (max-width: 880px) {
+  .hero h1 {
+    font-size: 26px;
+    line-height: 1.15;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 23px;
+  }
+}
