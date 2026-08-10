@@ -31,7 +31,9 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="/styles.css" />
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/styles.css?v=20260810g" />
+<link rel="stylesheet" href="/home.css?v=20260810g" />
 
 <script type="application/ld+json">
 {
@@ -135,46 +137,9 @@
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "How much does it cost to ship a car from Birmingham, Alabama?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Cost depends on destination and vehicle type. Short routes from Birmingham run $350-$700, mid-distance moves $700-$1,300, and cross-country shipments $1,100-$1,800 on open transport."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How long does auto transport from Birmingham take?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Total time runs 5-15 days. Pickup happens 1-5 days after booking. Transit time depends on distance: 1-3 days short routes, 3-5 days mid-distance, 7-10 days cross-country."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Do you offer door-to-door service in Birmingham?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes. We pick up at your Birmingham address and deliver to your destination address. For locations carriers can't physically reach, we coordinate a meeting point nearby."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Is my vehicle insured during transport?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes. Every carrier maintains FMCSA-required cargo insurance with standard limits of $100,000-$250,000 per vehicle."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Can I ship a non-running vehicle from Birmingham?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes. Inoperable vehicles require a winch-equipped carrier and typically incur a $100-$200 surcharge."
-      }
-    }
+    {"@type":"Question","name":"How fast can a carrier pick up in Birmingham?","acceptedAnswer":{"@type":"Answer","text":"Faster than anywhere else in Alabama. Because I-20, I-59, I-65, and I-22 all pass through the metro, carriers are constantly routing through Birmingham. On popular lanes like Atlanta, Nashville, or Dallas, pickup within 1–2 business days is typical outside peak season."}},
+    {"@type":"Question","name":"Where do carriers usually load in Birmingham?","acceptedAnswer":{"@type":"Answer","text":"For downtown and Southside addresses, drivers often arrange a meeting point at Uptown or a large lot off US-280 or Lakeshore Drive, since tight urban streets are hard on a 75-foot rig. Suburban driveways in most neighborhoods work fine for door-to-door service."}},
+    {"@type":"Question","name":"How much does it cost to ship a car from Birmingham to Atlanta?","acceptedAnswer":{"@type":"Answer","text":"The Birmingham–Atlanta lane is about 150 miles down I-20 and is one of the cheapest routes we run — typically $350–$500 for a standard sedan on an open carrier, with 1–2 day delivery."}}
   ]
 }</script>
 
@@ -285,36 +250,22 @@
   </div>
 </header>
 
-<nav class="breadcrumb" aria-label="Breadcrumb">
-  <div class="container">
-    <a href="/">Home</a>
-    <span class="sep">›</span>
-    <a href="/#service-areas">Service Areas</a>
-    <span class="sep">›</span>
-    <span class="current">Birmingham, AL</span>
-  </div>
-</nav>
+<main class="hx-main">
 
-<section class="page-hero page-hero-with-quote">
-  <div class="container">
-    <div class="page-hero-layout">
-      <div class="page-hero-content">
-        <div class="eyebrow">BIRMINGHAM • JEFFERSON CO</div>
-        <h1>Auto Transport in <span class="city-accent">Birmingham</span>, Alabama</h1>
-        <p class="lead">Door-to-door car shipping from Birmingham to all 50 states. Alabama-based dispatchers, transparent pricing, FMCSA-licensed carriers, and real people you can talk to. Serving Birmingham and the surrounding Jefferson County area.</p>
-        <div class="page-hero-features">
-          <div class="phf-item">
-            <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-            <div><strong>Major I-65 Hub</strong><span>4 interstate crossroads</span></div>
-          </div>
-          <div class="phf-item">
-            <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-            <div><strong>On-Time Delivery</strong><span>We deliver when promised</span></div>
-          </div>
-        </div>
-        <div class="page-hero-cta">
-          <a href="#quote" class="btn-primary" id="instant-pricing-btn">Get a Free Quote →</a>
-          <a href="tel:2055743169" class="btn-secondary">Call (205) 574-3169</a>
+<!-- ===== HERO ===== -->
+<section class="hx-hero hx-hero--service">
+  <div class="hx-wrap">
+    <div class="hx-hero-inner">
+      <div class="hx-hero-copy">
+        <span class="hx-hero-badge">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Jefferson County &middot; Local Service
+        </span>
+        <h1>Auto Transport in <span class="accent">Birmingham</span>, Alabama</h1>
+        <p class="hx-hero-sub">Alabama's biggest metro sits at the junction of four interstates — which means more carriers, faster pickups, and the best rates in the state.</p>
+        <div class="hx-hero-chips">
+          <span class="hx-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>Fully Insured</span>
+          <span class="hx-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg><a href="tel:2055743169" style="color:inherit;text-decoration:none;">(205) 574-3169</a></span>
         </div>
       </div>
 
@@ -326,172 +277,107 @@
   </div>
 </section>
 
-<section class="page-content">
-  <div class="container">
-    <div class="content-grid">
-      <article class="article-body">
-<p><strong>Birmingham auto transport</strong> services from Heartland deliver reliable, door-to-door car shipping from Birmingham, Alabama to all 50 states — and from anywhere in the country to Birmingham. As Alabama's 3rd largest city with a population of 198,173, Birmingham is Alabama's traditional economic capital, the Magic City, home to UAB, Regions Bank headquarters, Birmingham-Southern, and a metro area of over 1.1 million people. Our Alabama-based dispatchers know Birmingham and the surrounding Jefferson County area, the local routes, and the unique shipping needs of Birmingham residents and businesses. Whether you're moving across town, across the state, or across the country, we make car shipping in Birmingham straightforward, transparent, and stress-free.</p>
-
-<p>Located in the central Alabama, the Birmingham metro area, Birmingham sits along I-20, I-65, I-59, I-22, and the I-459 beltway, providing carriers efficient access to and from every direction. This means competitive pricing on routes to major destinations and reliable pickup windows for Birmingham customers. We service every Birmingham neighborhood — from downtown Birmingham, Five Points South, Highland Park, Forest Park, Mountain Brook (adjacent), Homewood (adjacent), Vestavia Hills (adjacent), Crestwood, Avondale, Southside, Eastwood, and Roebuck — and the surrounding communities in Jefferson County.</p>
-
-<h2>Why Birmingham Residents Choose Heartland for Auto Transport</h2>
-<p>Birmingham is at the crossroads of four major interstates, making it one of the easiest cities in Alabama for auto transport. UAB Hospital recruits medical professionals from across the country — doctors, residents, nurses, and researchers — all needing vehicles shipped. The corporate presence (Regions, Vulcan Materials, Energen, ProAssurance, AmSouth heritage banks) generates constant executive relocation. Samford University, Birmingham-Southern, and UAB pull students from every state and send them home with cars in May. We've shipped vehicles for Birmingham customers in every situation imaginable — corporate relocations, military PCS orders, college students heading to and from campus, snowbirds migrating seasonally, retirees with second homes, families purchasing vehicles from out-of-state dealers, and businesses moving fleet vehicles.</p>
-
-<p>The Birmingham economy is anchored by healthcare (UAB Health System is one of the largest employers in the South), banking and finance, steel and manufacturing, biotech, insurance, all of which generate consistent demand for professional auto transport. When Birmingham businesses transfer employees nationwide, when families move to new opportunities, or when individuals buy vehicles from sellers in distant states, our service handles the logistics so you don't have to drive long distances or coordinate complicated multi-leg trips.</p>
-
-<h2>Auto Transport Services Available in Birmingham</h2>
-<p>Heartland offers the full range of auto transport services for Birmingham customers. Every shipment is fully insured, handled by FMCSA-licensed carriers, and includes transparent door-to-door pricing — no fuel surcharges, no rate increases at delivery, no surprise fees.</p>
-
-<h3>Open Auto Transport from Birmingham</h3>
-<p>Open transport is the most common and cost-effective option for Birmingham customers shipping standard passenger vehicles. Your car ships on a multi-deck open carrier — the same type that delivers new vehicles to Birmingham-area dealerships every day. Open transport is appropriate for daily-driver sedans, SUVs, pickups, family vehicles, and most used cars purchased online. It's the industry standard for over 90% of shipments and saves significantly compared to enclosed transport.</p>
-
-<h3>Enclosed Auto Transport from Birmingham</h3>
-<p>For luxury vehicles, classic cars, exotics, antiques, or any high-value vehicle, enclosed transport provides protection inside a fully enclosed trailer. Enclosed shipping shields your vehicle from weather, road debris, and the elements during transit. Birmingham customers with Mercedes, Porsche, Ferrari, restored classics, show cars, or vehicles with custom paint typically choose enclosed transport. Expect to pay 60-80% more than open transport, but the protection is worth it for vehicles in this category.</p>
-
-<h3>Door-to-Door Service Throughout Birmingham</h3>
-<p>We pick up at your Birmingham address — home, business, dealership, friend's house — and deliver to your specified destination address. No need to drive to a distant terminal. For carriers that can't navigate narrow residential streets or apartment parking decks, we coordinate a meet-up at a nearby commercial location (typically a shopping center, gas station, or wide intersection within a mile of your address). This is industry-standard practice.</p>
-
-<h3>Expedited Auto Transport</h3>
-<p>If you need faster-than-standard pickup or delivery, our expedited service prioritizes your shipment. Expedited transport costs 20-40% more than standard but compresses pickup windows from 3-5 days to 24-48 hours and shaves 1-3 days off transit time. This option is popular with Birmingham customers facing tight relocation deadlines, immediate vehicle purchase coordination, or time-sensitive moves.</p>
-
-<h2>Popular Auto Transport Routes from Birmingham</h2>
-<p>Here are real 2026 pricing ranges for common auto transport routes from Birmingham on standard open carriers. Enclosed transport runs 60-80% more for the same routes:</p>
-
-<ul class="routes-list">
-  <li><strong>Birmingham to Atlanta</strong> — $400-$600</li>
-  <li><strong>Birmingham to Nashville</strong> — $450-$650</li>
-  <li><strong>Birmingham to Houston</strong> — $700-$900</li>
-  <li><strong>Birmingham to Chicago</strong> — $750-$1,000</li>
-  <li><strong>Birmingham to New York City</strong> — $900-$1,200</li>
-  <li><strong>Birmingham to Los Angeles</strong> — $1,200-$1,600</li>
-  <li><strong>Birmingham to Miami</strong> — $850-$1,100</li>
-  <li><strong>Birmingham to Dallas</strong> — $700-$900</li>
-  <li><strong>Birmingham to Denver</strong> — $1,100-$1,400</li>
-  <li><strong>Birmingham to Boston</strong> — $1,100-$1,400</li>
-</ul>
-
-<p>Pricing varies based on vehicle size, time of year, fuel costs, and carrier availability. The quotes above reflect typical ranges for standard passenger vehicles. Larger vehicles (full-size SUVs, lifted trucks, dually pickups) add 15-25%. Summer months (May through September) run 10-20% higher than winter rates. Inoperable vehicles requiring a winch add $100-$200.</p>
-
-<h2>How Auto Transport from Birmingham Works</h2>
-
-<h3>Step 1 — Get a Free Quote</h3>
-<p>Call (205) 574-3169 or use our online quote tool. Tell us your pickup address in Birmingham, your delivery address, vehicle details (year, make, model), and your preferred pickup window. You'll receive a transparent, all-in quote in minutes — no email gatekeeping, no high-pressure sales tactics, no hidden fees revealed at delivery.</p>
-
-<h3>Step 2 — Book Your Shipment</h3>
-<p>When you accept the quote, we book the shipment with a small deposit (typically $100-$200, no more). The balance is paid at delivery to the driver in cashier's check or cash. We assign your vehicle to a dedicated dispatcher who handles everything from Birmingham pickup through final delivery.</p>
-
-<h3>Step 3 — Pickup at Your Birmingham Address</h3>
-<p>The carrier contacts you 24 hours before pickup to confirm a specific arrival window. A driver arrives at your Birmingham address with the proper carrier, inspects your vehicle alongside you, and completes the Bill of Lading documenting condition at pickup. Both parties sign. The vehicle is loaded and your shipment begins.</p>
-
-<h3>Step 4 — In-Transit Updates</h3>
-<p>Your dispatcher keeps you informed throughout the journey. You'll have a direct phone number and can call anytime for updates. Transit times depend on distance: short regional routes from Birmingham take 1-3 days, mid-distance moves take 3-5 days, and cross-country shipments take 7-10 days.</p>
-
-<h3>Step 5 — Delivery</h3>
-<p>The driver contacts you before arrival at your destination. You (or a designated 18+ representative) meet the carrier, inspect the vehicle thoroughly, compare condition against the pickup documentation, and sign the delivery Bill of Lading. The balance is paid at this point. Your shipment is complete.</p>
-
-<h2>Auto Transport Cost from Birmingham</h2>
-<p>Auto transport pricing from Birmingham depends on six main factors: distance, vehicle size, route popularity, time of year, pickup flexibility, and vehicle condition. Birmingham is well-served by I-20, I-65, I-59, I-22, and the I-459 beltway, which keeps carrier availability strong and pricing competitive on most major routes.</p>
-
-<p>Realistic price expectations for shipments from Birmingham:</p>
-
-<ul>
-  <li><strong>Short routes (under 500 miles):</strong> $350-$700 for standard vehicles</li>
-  <li><strong>Mid-distance (500-1,500 miles):</strong> $700-$1,300</li>
-  <li><strong>Cross-country (over 1,500 miles):</strong> $1,100-$1,800 for standard vehicles, $2,000+ for enclosed</li>
-</ul>
-
-<p>The cheapest months to ship from Birmingham are January and February, when carrier capacity is highest and demand lowest. The most expensive months are May through September, when summer relocations, college moves, and family migrations all spike. Booking 4-6 weeks in advance typically yields the best pricing — last-minute shipments (within 10 days of pickup) often cost 25-40% more.</p>
-
-<h2>Auto Transport Coverage Throughout Birmingham and Jefferson County</h2>
-<p>We provide door-to-door auto transport service throughout Birmingham and the surrounding Jefferson County area. Common pickup and delivery neighborhoods include downtown Birmingham, Five Points South, Highland Park, Forest Park, Mountain Brook (adjacent), Homewood (adjacent), Vestavia Hills (adjacent), Crestwood, Avondale, Southside, Eastwood, and Roebuck. We also serve Birmingham's surrounding communities and routinely coordinate pickup or delivery at Vulcan Park, Birmingham Botanical Gardens, Railroad Park, Sloss Furnaces, the Birmingham Civil Rights Institute, Regions Field, Legion Field.</p>
-
-<p>From Birmingham we ship to and from all 50 states. Most popular destinations include Atlanta, Nashville, Houston, Dallas, Charlotte, Tampa, Naples, Phoenix, Denver, Chicago, Detroit, Washington D.C., New York City, Boston, Los Angeles, San Francisco, Seattle, and Portland. Less common destinations (rural areas, small towns off major interstates) are also available but may add $100-$300 due to limited carrier coverage.</p>
-
-<h2>Frequently Asked Questions — Birmingham Auto Transport</h2>
-
-<h3>How much does it cost to ship a car from Birmingham, Alabama?</h3>
-<p>Cost depends on destination and vehicle type. Short routes from Birmingham run $350-$700, mid-distance moves $700-$1,300, and cross-country shipments $1,100-$1,800 on open transport. Enclosed transport runs 60-80% more. See the route pricing list above for specific Birmingham destinations.</p>
-
-<h3>How long does auto transport from Birmingham take?</h3>
-<p>Total time from booking to delivery typically runs 5-15 days for most shipments. Pickup happens 1-5 days after booking. Transit time depends on distance: 1-3 days for short routes (in-state, neighboring states), 3-5 days for mid-distance (Texas, Florida, Carolinas), and 7-10 days for cross-country shipments from Birmingham to the West Coast or Pacific Northwest.</p>
-
-<h3>Do you offer door-to-door service in Birmingham?</h3>
-<p>Yes. We pick up at your specific Birmingham address and deliver to your specified destination address. For locations carriers can't physically reach (narrow streets, low-clearance parking, gated communities with size restrictions), we coordinate a meeting point at a nearby commercial location — typically within a mile of your address.</p>
-
-<h3>Is my vehicle insured during transport?</h3>
-<p>Yes. Every carrier in our network maintains active FMCSA-required cargo insurance, with coverage limits typically $100,000-$250,000 per vehicle for standard transport (higher coverage available for luxury and exotic vehicles in our enclosed transport network). Insurance covers damage that occurs during transit — pickup-to-delivery. Pre-existing damage documented on the Bill of Lading is not covered.</p>
-
-<h3>Can I ship a non-running vehicle from Birmingham?</h3>
-<p>Yes. Inoperable vehicles require a carrier equipped with a winch and typically incur a $100-$200 surcharge. Let our dispatcher know at booking that your vehicle is non-running so we can assign the appropriate carrier. Common reasons Birmingham customers ship non-running vehicles: project cars, recent purchases that need work, vehicles awaiting parts, and inheritance vehicles being moved between family members.</p>
-
-<h3>How far in advance should I book auto transport from Birmingham?</h3>
-<p>Book 4-6 weeks in advance for the best pricing and reliable scheduling. Last-minute shipments (within 10 days of desired pickup) often cost 25-40% more because carriers know you have limited flexibility. Summer months (May-September) and holiday weeks (Thanksgiving, Christmas, New Year) require even earlier booking due to high demand.</p>
-
-<h3>What should I do to prepare my vehicle for shipping?</h3>
-<p>Wash the vehicle thoroughly, take detailed photos of every angle, reduce fuel to a quarter tank, remove all personal items above the window line, disable any aftermarket alarm systems, and provide two sets of keys to the driver. See our preparation guide for the complete 10-step checklist.</p>
-
-<h2>Get a Free Quote for Auto Transport from Birmingham</h2>
-<p>Heartland Auto Transport is Alabama-based, FMCSA-licensed, and trusted by thousands of Birmingham-area customers. We don't lowball quotes. We don't bait and switch. The price you accept is the price you pay — no fuel surcharges, no rate increases at delivery, no hidden fees. Whether you're shipping one vehicle to a single destination or coordinating multiple shipments for a family move, business relocation, or fleet transfer, we make Birmingham auto transport straightforward.</p>
-
-<p>Call our Alabama-based dispatchers at (205) 574-3169 — real people, no call centers, no overseas outsourcing. Or get a transparent online quote in under 60 seconds. Available 24/7 for urgent shipments. Local Alabama service, nationwide network, honest pricing.</p>
-      </article>
-
-      <aside class="sidebar">
-        <div class="sidebar-card">
-          <h3>Get a Free Quote</h3>
-          <p>Transparent pricing in under 60 seconds. No spam. No obligation.</p>
-          <a href="/#quote" class="btn-primary btn-block" id="instant-pricing-btn-2">Get Instant Pricing →</a>
-        </div>
-        
-                <div class="sidebar-card">
-          <h3>Local Office</h3>
-          <div style="font-size: 14.5px; line-height: 1.6;">
-            <p style="margin: 0 0 8px;"><strong>📍 Address</strong><br/>
-              1820 3rd Ave N #370<br/>
-              Birmingham, AL 35203
-            </p>
-            <p style="margin: 0 0 14px;"><strong>📞 Phone</strong><br/>
-              <a href="tel:2055743169" style="color: var(--maroon); font-weight: 700;">(205) 574-3169</a>
-            </p>
-            <div class="map-embed">
-              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5652.371627837701!2d-86.80901759999999!3d33.51560109999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88891b151a54601d%3A0x1ad7da52b3fcad96!2sHeartland%20Auto%20Transports!5e1!3m2!1sen!2sus!4v1780338675519!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Heartland Auto Transport - Birmingham office map"></iframe>
-            </div>
-          </div>
-        </div>
-
-        <div class="sidebar-card">
-          <h3>Birmingham Quick Facts</h3>
-          <ul style="list-style: none; padding: 0; margin: 0; font-size: 14px; line-height: 1.7;">
-            <li>📍 <strong>County:</strong> Jefferson County</li>
-            <li>👥 <strong>Population:</strong> 198,173</li>
-            <li>🛣️ <strong>Major Routes:</strong> I-20, I-65, I-59, I-22, and the I-459 beltway</li>
-            <li>🏛️ <strong>State Rank:</strong> 3rd largest in Alabama</li>
-          </ul>
-        </div>
-
-        <div class="sidebar-card">
-          <h3>Related Services</h3>
-          <ul class="related-services">
-            <li><a href="/services/open-auto-transport">Open Auto Transport</a></li>
-            <li><a href="/services/enclosed-auto-transport">Enclosed Auto Transport</a></li>
-            <li><a href="/services/door-to-door-auto-transport">Door-to-Door Service</a></li>
-            <li><a href="/services/expedited-auto-transport">Expedited Transport</a></li>
-            <li><a href="/services/cross-country-car-shipping">Cross Country</a></li>
-            <li><a href="/services/nationwide-auto-transport">Nationwide</a></li>
-          </ul>
-        </div>
-      </aside>
+<!-- ===== INTRO ===== -->
+<section class="hx-section hx-section--tight">
+  <div class="hx-wrap">
+    <div class="hx-prose center">
+      <p>Birmingham is the easiest place in Alabama to ship a car from. I-20, I-59, I-65, and I-22 all converge here, and I-459 loops the metro, so nearly every carrier crossing the Southeast passes through. That density means shorter pickup windows — often 1–2 business days — and more competitive bids on your route. From UAB medical staff relocating between residencies to families moving out of Crestwood and Avondale, we move vehicles out of Birmingham every single week.</p>
     </div>
   </div>
 </section>
 
-<section class="final-cta">
-  <div class="container">
-    <h2>Ready to Ship Your Vehicle from Birmingham?</h2>
-    <p>Get a free, no-obligation quote in under 60 seconds. Alabama-based, nationwide service. We answer the phone.</p>
-    <a href="/#quote" class="btn-white" id="instant-pricing-btn-3">Get Instant Pricing →</a>
+<!-- ===== LOCAL LOGISTICS ===== -->
+<section class="hx-section hx-section--cream">
+  <div class="hx-wrap-narrow">
+    <div class="hx-head hx-head--center">
+      <span class="hx-eyebrow">Local Know-How</span>
+      <h2>Pickup Across the Birmingham Metro</h2>
+      <p>Downtown loading is workable on wider streets like 20th Street South, but most drivers prefer meeting near Uptown, the Summit, or a big-box lot off US-280 where a 75-foot rig can maneuver. Over-the-mountain pickups in Homewood, Vestavia, and Mountain Brook usually stage at Highway 31 shopping centers. If you're near the airport or in Irondale, the Grants Mill Road corridor is a favorite carrier meeting point.</p>
+    </div>
+    <ul class="hx-bullets" style="margin-left:auto;margin-right:auto;">
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg><span>Four interstates plus I-459 mean Birmingham has the highest carrier volume in Alabama</span></li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg><span>UAB and regional hospital systems drive steady medical-relocation shipping demand</span></li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg><span>Same-week pickup is common — often 1–2 business days on major routes</span></li>
+    </ul>
   </div>
 </section>
+
+<!-- ===== ROUTES ===== -->
+<section class="hx-section">
+  <div class="hx-wrap-narrow">
+    <div class="hx-head hx-head--center">
+      <span class="hx-eyebrow">Where Birmingham Ships</span>
+      <h2>Popular Routes from Birmingham</h2>
+      <p>Typical open-carrier pricing for operable standard vehicles. Your exact quote depends on vehicle size, season, and pickup timing.</p>
+    </div>
+    <div class="hx-price-card">
+      <table class="hx-price-table">
+        <thead>
+          <tr><th>Route</th><th>Distance</th><th>Typical Price</th><th>Transit</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Birmingham &rarr; Atlanta, GA</td><td>~150 mi</td><td>$350&ndash;$525</td><td>1&ndash;2 days</td></tr>
+          <tr><td>Birmingham &rarr; Nashville, TN</td><td>~190 mi</td><td>$350&ndash;$525</td><td>1&ndash;2 days</td></tr>
+          <tr><td>Birmingham &rarr; Dallas, TX</td><td>~640 mi</td><td>$600&ndash;$850</td><td>3&ndash;4 days</td></tr>
+          <tr><td>Birmingham &rarr; Tampa, FL</td><td>~460 mi</td><td>$450&ndash;$650</td><td>2&ndash;3 days</td></tr>
+          <tr><td>Birmingham &rarr; Chicago, IL</td><td>~660 mi</td><td>$600&ndash;$850</td><td>3&ndash;4 days</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div style="text-align:center;margin-top:30px;">
+      <a href="#quote" class="hx-btn hx-btn--maroon">Get My Exact Birmingham Quote &rarr;</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== AREAS ===== -->
+<section class="hx-section hx-section--cream hx-section--tight">
+  <div class="hx-wrap-narrow" style="text-align:center;">
+    <div class="hx-head hx-head--center">
+      <span class="hx-eyebrow">Neighborhood Coverage</span>
+      <h2>Where We Pick Up Around Birmingham</h2>
+    </div>
+    <p class="hx-lead" style="margin-top:18px;">Downtown, Southside, Avondale, Crestwood, Highland Park, Forest Park, East Lake, Roebuck, Ensley, West End, Five Points South, Titusville, Norwood, and the airport corridor.</p>
+  </div>
+</section>
+
+<!-- ===== FAQ ===== -->
+<section class="hx-section">
+  <div class="hx-wrap">
+    <div class="hx-head hx-head--center">
+      <span class="hx-eyebrow">Local Questions</span>
+      <h2>Birmingham Auto Transport FAQs</h2>
+    </div>
+    <div class="hx-faq-list">
+      <details class="hx-faq-item" open>
+        <summary>How fast can a carrier pick up in Birmingham?</summary>
+        <div class="hx-faq-a">Faster than anywhere else in Alabama. Because I-20, I-59, I-65, and I-22 all pass through the metro, carriers are constantly routing through Birmingham. On popular lanes like Atlanta, Nashville, or Dallas, pickup within 1–2 business days is typical outside peak season.</div>
+      </details>
+      <details class="hx-faq-item">
+        <summary>Where do carriers usually load in Birmingham?</summary>
+        <div class="hx-faq-a">For downtown and Southside addresses, drivers often arrange a meeting point at Uptown or a large lot off US-280 or Lakeshore Drive, since tight urban streets are hard on a 75-foot rig. Suburban driveways in most neighborhoods work fine for door-to-door service.</div>
+      </details>
+      <details class="hx-faq-item">
+        <summary>How much does it cost to ship a car from Birmingham to Atlanta?</summary>
+        <div class="hx-faq-a">The Birmingham–Atlanta lane is about 150 miles down I-20 and is one of the cheapest routes we run — typically $350–$500 for a standard sedan on an open carrier, with 1–2 day delivery.</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CTA ===== -->
+<section class="hx-section hx-cta">
+  <div class="hx-wrap-narrow">
+    <h2>Ship Your Vehicle from Birmingham</h2>
+    <p>Free quote in under a minute &mdash; transparent pricing, licensed carriers, and a local number that answers.</p>
+    <div class="hx-cta-actions">
+      <a href="#quote" class="hx-btn hx-btn--gold">Get Your Free Quote &rarr;</a>
+      <a href="tel:2055743169" class="hx-cta-phone"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg> (205) 574-3169</a>
+    </div>
+  </div>
+</section>
+
+</main>
 
 <footer>
   <div class="container">
@@ -545,8 +431,8 @@
     <div class="foot-bottom">
       <div>© 2026 Heartland Auto Transport. All rights reserved.</div>
       <div class="legal">
-        <a href="#">Privacy Policy</a>
-        <a href="#">Terms of Service</a>
+        <a href="/privacy-policy">Privacy Policy</a>
+        <a href="/terms-of-service">Terms of Service</a>
         <a href="#">Sitemap</a>
       </div>
     </div>
