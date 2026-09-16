@@ -548,4 +548,10 @@
   </url>
   <url><loc>https://heartlandautotransport.com/privacy-policy</loc></url>
   <url><loc>https://heartlandautotransport.com/terms-of-service</loc></url>
+  <url>
+    <loc>https://heartlandautotransport.com/locations</loc>
+    <lastmod>2026-09-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>

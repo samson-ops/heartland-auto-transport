@@ -219,7 +219,8 @@
 /* Quote widget — bare iframe, no wrapper */
 #quote {
   width: 100%;
-  height: 590px;
+  height: 560px;
+  transition: height .25s ease;
   border: 0;
   display: block;
   border-radius: var(--hx-radius);
@@ -636,7 +637,7 @@
   .hx-hero-badge { order: 1; }
   .hx-hero h1 { order: 2; font-size: 42px;
   font-size: clamp(30px, 8vw, 42px); margin-bottom: 0; }
-  #quote { order: 3; max-width: 460px; margin: 0 auto; width: 100%; height: 590px; }
+  #quote { order: 3; max-width: 460px; margin: 0 auto; width: 100%; height: 560px; }
   .hx-hero-sub { order: 4; margin-bottom: 0; }
   .hx-hero-chips { order: 5; margin-bottom: 0; }
   .hx-hero-cta { order: 6; }
@@ -659,7 +660,7 @@
 
 @media (max-width: 480px) {
   .hx-wrap, .hx-wrap-narrow { padding: 0 18px; }
-  #quote { height: 590px; }
+  #quote { height: 560px; }
   .hx-ship-grid { grid-template-columns: repeat(2, 1fr); }
   .hx-price-table th:nth-child(2), .hx-price-table td:nth-child(2) { display: none; }
 }
