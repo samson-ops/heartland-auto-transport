@@ -32,8 +32,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="/styles.css?v=20260810g" />
-<link rel="stylesheet" href="/home.css?v=20260810h" />
+<link rel="stylesheet" href="/styles.css?v=20260811a" />
+<link rel="stylesheet" href="/home.css?v=20260811a" />
 
 <script type="application/ld+json">
 {
@@ -278,7 +278,7 @@
   <div class="hx-wrap">
     <div class="hx-prose center">
       <p>Birmingham is the best-connected city in Alabama for car shipping. Four interstates meet here: I-20, I-59, I-65, and I-22, plus the I-459 loop around the city. Car carriers cross Birmingham every day heading to Atlanta, Nashville, Dallas, Florida, and beyond. All those trucks compete for your business, which keeps prices down and pickup times short. Most Birmingham pickups happen within 1 to 2 business days.</p>
-      <p>The process is simple. Get your free quote with the form above or give us a call. We assign a licensed, insured carrier to your route. On pickup day, the driver meets you, walks around the car with you, and writes down its condition. Your car rides safely on the truck while you get updates. At delivery you check the car, sign the form, and you're done. Clear pricing, no hidden fees, and real people who answer the phone.</p>
+      <p>The Heartland Auto Transport process is simple. Get your free quote with the form above or give us a call. We assign a licensed, insured carrier to your route. On pickup day, the driver meets you, walks around the car with you, and writes down its condition. Your car rides safely on the truck while you get updates. At delivery you check the car, sign the form, and you're done. Clear pricing, no hidden fees, and real people who answer the phone.</p>
     </div>
   </div>
 </section>
@@ -305,7 +305,7 @@
     <div class="hx-head hx-head--center">
       <span class="hx-eyebrow">Where Birmingham Ships</span>
       <h2>Popular Routes from Birmingham</h2>
-      <p>Typical open-carrier pricing for cars that run and drive. Your exact quote depends on vehicle size, season, and pickup timing.</p>
+      <p>Heartland Auto Transport's typical open-carrier pricing for cars that run and drive. Your exact quote depends on vehicle size, season, and pickup timing.</p>
     </div>
     <div class="hx-price-card">
       <table class="hx-price-table">
@@ -359,7 +359,7 @@
       <h2>Where We Pick Up Around Birmingham</h2>
     </div>
     <p class="hx-lead" style="margin-top:18px;">Downtown, Southside, Avondale, Crestwood, Highland Park, Forest Park, East Lake, Roebuck, Ensley, West End, Five Points South, and the airport corridor.</p>
-    <p class="hx-lead" style="margin-top:16px;">We cover all of Jefferson County at the same metro price — including Hoover, Homewood, Vestavia Hills, Trussville, and Bessemer. The suburbs don't cost extra. Wherever you are, the driver will confirm a meeting spot that works for your street before pickup day.</p>
+    <p class="hx-lead" style="margin-top:16px;">We cover all of Jefferson County at the same metro price — including Hoover, Homewood, Vestavia Hills, Trussville, and Bessemer. The suburbs don't cost extra. Wherever you are, the driver will confirm a meeting spot that works for your street before pickup day. From any of these neighborhoods, Heartland Auto Transport provides the same insured, door-to-door service at the same local price.</p>
   </div>
 </section>
 
@@ -431,7 +431,7 @@
 <section class="hx-section hx-cta">
   <div class="hx-wrap-narrow">
     <h2>Ship Your Vehicle from Birmingham</h2>
-    <p>Free quote in under a minute &mdash; clear pricing, licensed carriers, and a local number that answers.</p>
+    <p>Get your free Heartland Auto Transport quote in under a minute &mdash; clear pricing, licensed carriers, and a local number that answers.</p>
     <div class="hx-cta-actions">
       <a href="#quote" class="hx-btn hx-btn--gold">Get Your Free Quote &rarr;</a>
       <a href="tel:2055743169" class="hx-cta-phone"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg> (205) 574-3169</a>
@@ -508,6 +508,7 @@
   if (!ham || !navList) return;
   ham.addEventListener('click', function() {
     var open = navList.classList.toggle('mobile-open');
+    if (navList.closest) { var nv = navList.closest('nav'); if (nv) nv.classList.toggle('menu-open', open); }
     ham.setAttribute('aria-expanded', open);
     ham.classList.toggle('is-open', open);
   });
@@ -515,6 +516,7 @@
   navList.querySelectorAll('a').forEach(function(a) {
     a.addEventListener('click', function() {
       navList.classList.remove('mobile-open');
+      if (navList.closest) { var nv2 = navList.closest('nav'); if (nv2) nv2.classList.remove('menu-open'); }
       ham.classList.remove('is-open');
       ham.setAttribute('aria-expanded', 'false');
     });

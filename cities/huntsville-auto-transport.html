@@ -32,8 +32,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="/styles.css?v=20260810g" />
-<link rel="stylesheet" href="/home.css?v=20260810h" />
+<link rel="stylesheet" href="/styles.css?v=20260811a" />
+<link rel="stylesheet" href="/home.css?v=20260811a" />
 
 <script type="application/ld+json">
 {
@@ -278,7 +278,7 @@
   <div class="hx-wrap">
     <div class="hx-prose center">
       <p>Huntsville is one of the easiest cities in Alabama to ship a car from. Trucks pass through every day on I-565 and I-65, so a carrier is almost always nearby. That means fast pickups and good prices. Many of our Huntsville customers are moving here for jobs at Redstone Arsenal, NASA, the FBI campus, or one of the defense companies in Research Park. Others are military families moving to a new base, or workers hired at the Mazda Toyota plant.</p>
-      <p>Here is how it works. You get a free quote using the form above or by phone. We match your car with a licensed, insured carrier. The driver picks up your car, checks it over with you, and writes down its condition. Then your car rides on the truck to its new home. You inspect it at delivery and sign off. That's it. No stress, no surprises, and you always know where your car is.</p>
+      <p>Here is how it works with Heartland Auto Transport. You get a free quote using the form above or by phone. We match your car with a licensed, insured carrier. The driver picks up your car, checks it over with you, and writes down its condition. Then your car rides on the truck to its new home. You inspect it at delivery and sign off. That's it. No stress, no surprises, and you always know where your car is.</p>
     </div>
   </div>
 </section>
@@ -305,7 +305,7 @@
     <div class="hx-head hx-head--center">
       <span class="hx-eyebrow">Where Huntsville Ships</span>
       <h2>Popular Routes from Huntsville</h2>
-      <p>Typical open-carrier pricing for cars that run and drive. Your exact quote depends on vehicle size, season, and pickup timing.</p>
+      <p>Heartland Auto Transport's typical open-carrier pricing for cars that run and drive. Your exact quote depends on vehicle size, season, and pickup timing.</p>
     </div>
     <div class="hx-price-card">
       <table class="hx-price-table">
@@ -359,7 +359,7 @@
       <h2>Where We Pick Up Around Huntsville</h2>
     </div>
     <p class="hx-lead" style="margin-top:18px;">Downtown, Five Points, Blossomwood, Jones Valley, Hampton Cove, South Huntsville, Research Park, Providence, Monrovia, Harvest, and Meridianville.</p>
-    <p class="hx-lead" style="margin-top:16px;">We pick up all over Madison County at the same price. If your street is too narrow for the truck, the driver will suggest a big parking lot nearby, usually 5 to 10 minutes from your door. The fast-growing areas north and west of town, like Harvest and Meridianville, are covered too.</p>
+    <p class="hx-lead" style="margin-top:16px;">We pick up all over Madison County at the same price. If your street is too narrow for the truck, the driver will suggest a big parking lot nearby, usually 5 to 10 minutes from your door. The fast-growing areas north and west of town, like Harvest and Meridianville, are covered too. From any of these neighborhoods, Heartland Auto Transport provides the same insured, door-to-door service at the same local price.</p>
   </div>
 </section>
 
@@ -427,7 +427,7 @@
 <section class="hx-section hx-cta">
   <div class="hx-wrap-narrow">
     <h2>Ship Your Vehicle from Huntsville</h2>
-    <p>Free quote in under a minute &mdash; clear pricing, licensed carriers, and a local number that answers.</p>
+    <p>Get your free Heartland Auto Transport quote in under a minute &mdash; clear pricing, licensed carriers, and a local number that answers.</p>
     <div class="hx-cta-actions">
       <a href="#quote" class="hx-btn hx-btn--gold">Get Your Free Quote &rarr;</a>
       <a href="tel:2565215544" class="hx-cta-phone"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg> (256) 521-5544</a>
@@ -504,6 +504,7 @@
   if (!ham || !navList) return;
   ham.addEventListener('click', function() {
     var open = navList.classList.toggle('mobile-open');
+    if (navList.closest) { var nv = navList.closest('nav'); if (nv) nv.classList.toggle('menu-open', open); }
     ham.setAttribute('aria-expanded', open);
     ham.classList.toggle('is-open', open);
   });
@@ -511,6 +512,7 @@
   navList.querySelectorAll('a').forEach(function(a) {
     a.addEventListener('click', function() {
       navList.classList.remove('mobile-open');
+      if (navList.closest) { var nv2 = navList.closest('nav'); if (nv2) nv2.classList.remove('menu-open'); }
       ham.classList.remove('is-open');
       ham.setAttribute('aria-expanded', 'false');
     });
