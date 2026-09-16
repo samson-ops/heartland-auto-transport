@@ -32,8 +32,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="/styles.css?v=20260811a" />
-<link rel="stylesheet" href="/home.css?v=20260811a" />
+<link rel="stylesheet" href="/styles.css?v=20260811b" />
+<link rel="stylesheet" href="/home.css?v=20260811b" />
 
 <script type="application/ld+json">
 {
@@ -503,6 +503,24 @@
       ham.classList.remove('is-open');
       ham.setAttribute('aria-expanded', 'false');
     });
+  });
+})();
+</script>
+<script>
+(function(){
+  var q=document.getElementById('quote'); if(!q) return;
+  function apply(h){ h=parseInt(h,10); if(h>=460&&h<=820){ q.style.height=h+'px'; } }
+  window.addEventListener('message',function(e){
+    if(!/berocker\.com|shipguy\.com/.test(e.origin)) return;
+    var d=e.data;
+    try{ if(typeof d==='string'&&d.charAt(0)==='{') d=JSON.parse(d); }catch(_){}
+    if(typeof d==='number') return apply(d);
+    if(typeof d==='string'){ var m=d.match(/(?:height|:)(\d{3})/); if(m) return apply(m[1]); return; }
+    if(d&&typeof d==='object'){
+      if(d.height) return apply(d.height);
+      if(d.payload&&d.payload.height) return apply(d.payload.height);
+      if(d.data&&d.data.height) return apply(d.data.height);
+    }
   });
 })();
 </script>

@@ -212,7 +212,7 @@
   ]
 }</script>
 
-<link rel="stylesheet" href="/styles.css?v=20260811a" />
+<link rel="stylesheet" href="/styles.css?v=20260811b" />
 </head>
 <body>
 
@@ -541,6 +541,24 @@
       ham.classList.remove('is-open');
       ham.setAttribute('aria-expanded', 'false');
     });
+  });
+})();
+</script>
+<script>
+(function(){
+  var q=document.getElementById('quote'); if(!q) return;
+  function apply(h){ h=parseInt(h,10); if(h>=460&&h<=820){ q.style.height=h+'px'; } }
+  window.addEventListener('message',function(e){
+    if(!/berocker\.com|shipguy\.com/.test(e.origin)) return;
+    var d=e.data;
+    try{ if(typeof d==='string'&&d.charAt(0)==='{') d=JSON.parse(d); }catch(_){}
+    if(typeof d==='number') return apply(d);
+    if(typeof d==='string'){ var m=d.match(/(?:height|:)(\d{3})/); if(m) return apply(m[1]); return; }
+    if(d&&typeof d==='object'){
+      if(d.height) return apply(d.height);
+      if(d.payload&&d.payload.height) return apply(d.payload.height);
+      if(d.data&&d.data.height) return apply(d.data.height);
+    }
   });
 })();
 </script>
