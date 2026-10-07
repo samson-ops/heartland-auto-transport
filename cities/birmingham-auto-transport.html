@@ -17,15 +17,24 @@
 <meta property="og:url" content="https://heartlandautotransport.com/cities/birmingham-auto-transport">
 <meta property="og:title" content="Birmingham Auto Transport | Car Shipping Birmingham, AL">
 <meta property="og:description" content="Birmingham auto transport at the junction of I-65, I-20, I-59, and I-22. Door-to-door car shipping, insured carriers, no deposit. Get a free instant quote.">
-<meta property="og:image" content="https://heartlandautotransport.com/images/hero-truck.jpg">
+<meta property="og:image" content="https://heartlandautotransport.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Birmingham Auto Transport | Car Shipping Birmingham, AL">
 <meta name="twitter:description" content="Birmingham auto transport at the junction of I-65, I-20, I-59, and I-22. Door-to-door car shipping, insured carriers, no deposit. Get a free instant quote.">
-<meta name="twitter:image" content="https://heartlandautotransport.com/images/hero-truck.jpg">
+<meta name="twitter:image" content="https://heartlandautotransport.com/og-image.png">
 
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<!--fonts: loaded without blocking the first paint-->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700;800&amp;display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700;800&amp;display=swap" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700;800&amp;display=swap"></noscript>
+<!--/fonts-->
 
 <style>
 /* ------------------------------------------------------------------
@@ -37,7 +46,7 @@
 :root{
   --brand:#0b34c0; --brand-deep:#0429a3; --brand-press:#082a9c; --brand-tint:#eef2fe;
   --navy:#101a3d; --ink:#1d2350; --ink-2:#414a6b; --muted:#6b7488;
-  --line:#e7eaf2; --bg-soft:#f6f8fc; --star:#f5a623; --ring:rgba(11,52,192,.26);
+  --line:#e7eaf2; --bg-soft:#f6f8fc; --text-muted:#59627a; --star:#f5a623; --ring:rgba(11,52,192,.26);
   --maxw:1200px; --header-h:76px;
   --font-display:"Plus Jakarta Sans", system-ui, sans-serif;
   --font-body:"Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
@@ -80,13 +89,13 @@ button{font:inherit}
 a:hover>.more .ico,.more:hover .ico{transform:translateX(3px)}
 
 /* ---------- header ---------- */
-.site-header{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.96);backdrop-filter:saturate(1.4) blur(10px);border-bottom:1px solid var(--line)}
+.site-header{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.96);-webkit-backdrop-filter:saturate(1.4) blur(10px);backdrop-filter:saturate(1.4) blur(10px);border-bottom:1px solid var(--line)}
 .site-header__in{display:flex;align-items:center;gap:22px;height:var(--header-h)}
 .brand{display:inline-flex;align-items:center;gap:11px;flex:0 0 auto}
 .brand__mark{width:40px;height:40px;flex:0 0 auto}
 .brand__name{display:flex;flex-direction:column;font-family:var(--font-display);font-weight:800;font-size:20px;line-height:1.05;letter-spacing:-.02em;color:var(--navy)}
-.brand__name small{font-family:var(--font-body);font-weight:600;font-size:11.5px;letter-spacing:.02em;color:var(--muted);margin-top:3px}
-.brand__tag{display:none;white-space:nowrap;font-size:12px;line-height:1.35;color:var(--muted);padding-left:20px;border-left:1px solid var(--line)}
+.brand__name small{font-family:var(--font-body);font-weight:600;font-size:11.5px;letter-spacing:.02em;color:var(--text-muted);margin-top:3px}
+.brand__tag{display:none;white-space:nowrap;font-size:12px;line-height:1.35;color:var(--text-muted);padding-left:20px;border-left:1px solid var(--line)}
 .nav{display:flex;align-items:center;gap:26px;margin-left:auto}
 .nav__link{display:inline-flex;align-items:center;gap:5px;white-space:nowrap;padding:8px 0;background:none;border:0;cursor:pointer;font-size:14.5px;font-weight:600;color:var(--ink-2);transition:color .15s ease}
 .nav__link:hover,.nav__link[aria-current="page"]{color:var(--brand)}
@@ -148,7 +157,7 @@ a:hover>.more .ico,.more:hover .ico{transform:translateX(3px)}
 .stars{display:inline-flex;gap:2px;color:var(--star)}
 .stars .ico{width:17px;height:17px}
 .hero__points{list-style:none;margin:36px 0 0;padding:30px 0 0;border-top:1px solid var(--line);display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-.hero__points li{display:flex;flex-direction:column;gap:3px;font-size:13.5px;line-height:1.45;color:var(--muted)}
+.hero__points li{display:flex;flex-direction:column;gap:3px;font-size:13.5px;line-height:1.45;color:var(--text-muted)}
 .hero__points .ico{width:24px;height:24px;color:var(--brand);margin-bottom:8px}
 .hero__points strong{font-family:var(--font-display);font-weight:700;font-size:15.5px;color:var(--navy)}
 @media (max-width:1180px){
@@ -161,15 +170,25 @@ a:hover>.more .ico,.more:hover .ico{transform:translateX(3px)}
   .hero__points{margin:0 auto;padding:0;border:0;max-width:720px;width:100%;text-align:center}
   .hero__points li{align-items:center}
 }
-@media (max-width:600px){
-  .hero__grid{padding-top:30px;padding-bottom:44px;row-gap:26px}
-  .hero__badge{margin-bottom:16px;font-size:12.5px}
-  .hero__sub{font-size:16.5px;margin-top:14px}
-  .hero__rating{margin-top:16px}
-  .hero__quote{padding:0;background:none;border-radius:0}
-  .hero__points{grid-template-columns:1fr;gap:14px;text-align:left}
+/* Phones: headline, then the quote tool straight away, on a solid brand-blue band so the white card stands out.
+   The supporting text, trust points and breadcrumbs follow below the tool. Also used on phones held sideways. */
+@media (max-width:600px), (max-width:960px) and (max-height:520px){
+  .hero{background:var(--bg-soft)}
+  .hero__grid{--g:20px;display:flex;flex-direction:column;gap:0;padding-top:0;padding-bottom:34px}
+  .hero__head{display:contents}
+  .hero .hero__grid .hero__title{order:1;margin:0 calc(-1 * var(--g));padding:18px var(--g) 0;background:var(--brand);font-size:29px;line-height:1.1;color:#fff;text-align:center}
+  .hero__rating{order:2;justify-content:center;margin:-1px calc(-1 * var(--g)) 0;padding:11px var(--g) 0;background:var(--brand);font-size:14px;color:#fff}
+  .hero__rating b{color:#fff}
+  .hero__quote{order:3;width:auto;max-width:none;align-self:stretch;margin:-1px calc(-1 * var(--g)) 0;padding:17px var(--g) 0;border-radius:0;
+    background:linear-gradient(180deg,var(--brand) 0,var(--brand-deep) calc(100% - 120px),var(--bg-soft) calc(100% - 120px));
+    --ph:#7a849c;--field:#bfc7dc;--line:#d8ddea}
+  .hero__quote .pquote{border-color:transparent;box-shadow:0 28px 56px -22px rgba(3,14,60,.62),0 6px 16px -8px rgba(3,14,60,.3)}
+  .hero__sub{order:4;margin:26px 0 0;font-size:16px;text-align:center}
+  .hero__badge{order:5;align-self:center;margin:18px 0 0;font-size:12.5px}
+  .hero__points{order:6;margin:24px 0 0;grid-template-columns:1fr;gap:14px;text-align:left}
   .hero__points li{display:grid;grid-template-columns:24px 1fr;column-gap:13px;align-items:start}
   .hero__points .ico{grid-row:span 2;margin:1px 0 0}
+  .hero__head>nav{order:7;margin-top:14px}
 }
 
 /* ---------- stats strip ---------- */
@@ -177,9 +196,10 @@ a:hover>.more .ico,.more:hover .ico{transform:translateX(3px)}
 .stats__item{padding:30px 16px;text-align:center;border-left:1px solid var(--line)}
 .stats__item:first-child{border-left:0}
 .stats__num{display:block;font-family:var(--font-display);font-weight:800;font-size:30px;line-height:1.1;letter-spacing:-.02em;color:var(--navy)}
-.stats__label{display:block;margin-top:5px;font-size:14px;color:var(--muted)}
+.stats__label{display:block;margin-top:5px;font-size:14px;color:var(--text-muted)}
 @media (max-width:760px){
-  .stats{grid-template-columns:1fr 1fr}
+  .stats{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .stats__num{overflow-wrap:anywhere}
   .stats__item{padding:22px 10px}
   .stats__item:nth-child(3){border-left:0}
   .stats__item:nth-child(n+3){border-top:1px solid var(--line)}
@@ -193,7 +213,7 @@ a:hover>.more .ico,.more:hover .ico{transform:translateX(3px)}
 .reviews{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
 .review{display:flex;flex-direction:column;margin:0;padding:28px;background:#fff;border:1px solid var(--line);border-radius:18px}
 .review blockquote{margin:16px 0 24px;font-size:16px;line-height:1.65;color:var(--ink)}
-.review figcaption{display:flex;align-items:center;gap:12px;margin-top:auto;font-size:13.5px;color:var(--muted)}
+.review figcaption{display:flex;align-items:center;gap:12px;margin-top:auto;font-size:13.5px;color:var(--text-muted)}
 .review figcaption b{display:block;font-size:15px;color:var(--navy)}
 .avatar{width:42px;height:42px;border-radius:50%;background:var(--brand-tint);color:var(--brand);display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-weight:800;font-size:14px;flex:0 0 auto}
 @media (max-width:960px){.reviews{grid-template-columns:1fr}}
@@ -264,7 +284,7 @@ a:hover>.more .ico,.more:hover .ico{transform:translateX(3px)}
 .facts div:nth-child(odd){padding-right:20px}
 .facts div:nth-child(even){padding-left:24px;border-left:1px solid var(--line)}
 .facts b{display:block;font-family:var(--font-display);font-weight:800;font-size:28px;line-height:1.1;letter-spacing:-.02em;color:var(--navy)}
-.facts span{font-size:14px;color:var(--muted)}
+.facts span{font-size:14px;color:var(--text-muted)}
 .cities{padding:34px;background:var(--bg-soft);border:1px solid var(--line);border-radius:22px}
 .cities h3{font-family:var(--font-display);font-weight:700;font-size:20px;color:var(--navy);margin:0 0 6px}
 .cities>p{margin:0 0 22px;font-size:14.5px}
@@ -274,8 +294,8 @@ a:hover>.more .ico,.more:hover .ico{transform:translateX(3px)}
 .cities li .ico{width:14px;height:14px;color:var(--brand)}
 .cities .cities__foot{margin:22px 0 0;font-size:14.5px}
 .cities__foot a{font-weight:700;color:var(--brand)}
-@media (max-width:1020px){.cover{grid-template-columns:1fr;gap:44px}}
-@media (max-width:560px){.cities{padding:24px 20px}.cities ul{grid-template-columns:1fr 1fr}}
+@media (max-width:1020px){.cover{grid-template-columns:minmax(0,1fr);gap:44px}}
+@media (max-width:560px){.cities{padding:24px 20px}.cities ul{grid-template-columns:repeat(2,minmax(0,1fr))}.cities li a{min-width:0;overflow-wrap:anywhere}}
 
 /* ---------- why heartland ---------- */
 .why{display:grid;grid-template-columns:repeat(3,1fr);gap:44px 48px}
@@ -289,14 +309,15 @@ a:hover>.more .ico,.more:hover .ico{transform:translateX(3px)}
 
 /* ---------- pricing ---------- */
 .price{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:64px;align-items:center}
-.price__note{margin:18px 0 28px;font-size:14px;color:var(--muted)}
+.price__note{margin:18px 0 28px;font-size:14px;color:var(--text-muted)}
 .ptable{width:100%;border-collapse:separate;border-spacing:0;background:#fff;border:1px solid var(--line);border-radius:20px;overflow:hidden;font-size:15px}
 .ptable th,.ptable td{padding:18px 22px;text-align:left;border-bottom:1px solid var(--line)}
-.ptable thead th{background:var(--bg-soft);font-weight:600;font-size:13.5px;color:var(--muted)}
+.ptable thead th{background:var(--bg-soft);font-weight:600;font-size:13.5px;color:var(--text-muted)}
+.ptable thead td{background:var(--bg-soft)}
 .ptable tbody th{font-family:var(--font-display);font-weight:700;color:var(--navy)}
 .ptable tbody tr:last-child th,.ptable tbody tr:last-child td{border-bottom:0}
 .ptable .ptable__price{font-family:var(--font-display);font-weight:700;color:var(--brand);white-space:nowrap}
-@media (max-width:1020px){.price{grid-template-columns:1fr;gap:36px}}
+@media (max-width:1020px){.price{grid-template-columns:minmax(0,1fr);gap:36px}}
 @media (max-width:640px){
   .ptable,.ptable tbody,.ptable tr,.ptable th,.ptable td{display:block}
   .ptable thead{display:none}
@@ -305,7 +326,7 @@ a:hover>.more .ico,.more:hover .ico{transform:translateX(3px)}
   .ptable th,.ptable td{padding:0;border:0}
   .ptable tbody th{font-size:17px;margin-bottom:8px}
   .ptable td{display:flex;justify-content:space-between;gap:16px;padding:3px 0;font-size:14.5px}
-  .ptable td::before{content:attr(data-label);font-family:var(--font-body);font-weight:400;color:var(--muted)}
+  .ptable td::before{content:attr(data-label);font-family:var(--font-body);font-weight:400;color:var(--text-muted)}
 }
 
 /* ---------- faq ---------- */
@@ -319,7 +340,7 @@ a:hover>.more .ico,.more:hover .ico{transform:translateX(3px)}
 .faq__item summary .ico{width:20px;height:20px;color:var(--brand);transition:transform .2s ease}
 .faq__item[open] summary .ico{transform:rotate(180deg)}
 .faq__item p{margin:0;padding:0 44px 24px 0;font-size:15.5px;line-height:1.7}
-@media (max-width:1020px){.faq{grid-template-columns:1fr;gap:32px}}
+@media (max-width:1020px){.faq{grid-template-columns:minmax(0,1fr);gap:32px}}
 
 /* ---------- final call to action ---------- */
 .final{position:relative;overflow:hidden;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:40px;align-items:center;padding:60px 64px;border-radius:28px;color:#fff;
@@ -353,6 +374,55 @@ a:hover>.more .ico,.more:hover .ico{transform:translateX(3px)}
 @media (max-width:1020px){.foot{grid-template-columns:repeat(3,minmax(0,1fr))}.foot__about,.foot__touch{grid-column:1 / -1}}
 @media (max-width:600px){.foot{grid-template-columns:repeat(2,minmax(0,1fr));gap:36px 24px}.site-footer{padding-top:56px}.foot__bar{margin-top:44px}}
 
+@media (max-width:600px){
+  .foot li{margin-bottom:0}
+  .foot li>a{display:inline-block;padding:10px 0}
+  .foot__contact li{padding:2px 0}
+  .foot__bar nav{flex-wrap:wrap;gap:4px 22px}
+  .foot__bar nav a{display:inline-block;padding:11px 0}
+  .chip{min-height:42px;padding:10px 16px}
+  .cities li a{min-height:44px}
+  .brand{min-height:44px}
+  .brand__name small{font-size:12px}
+  .card__tag{font-size:12px}
+  .more{padding:10px 0}
+  .cta-row a:not(.button){display:inline-block;padding:10px 0}
+  .stats__num{font-size:22px}
+}
+/* ---------- phone-only quote and call bar ---------- */
+.mcta{display:none}
+@media (max-width:760px){
+  .mcta{position:fixed;left:0;right:0;bottom:0;z-index:90;display:flex;gap:10px;padding:10px 14px calc(10px + env(safe-area-inset-bottom,0px));background:rgba(255,255,255,.97);border-top:1px solid var(--line);box-shadow:0 -12px 30px -18px rgba(13,26,80,.5);transform:translateY(115%);transition:transform .25s ease;visibility:hidden}
+  .mcta.is-on{transform:none;visibility:visible}
+  .mcta a{display:flex;align-items:center;justify-content:center;gap:8px;min-height:50px;border-radius:12px;font-family:var(--font-display);font-weight:700;font-size:15.5px}
+  .mcta__call{flex:0 0 32%;border:1.6px solid var(--brand);color:var(--brand);background:#fff}
+  .mcta__call .ico{width:18px;height:18px}
+  .mcta__quote{flex:1;background:var(--brand);color:#fff;box-shadow:0 10px 22px -12px rgba(11,52,192,.9)}
+  .site-footer{padding-bottom:78px}
+}
+@media (min-width:601px) and (max-width:960px) and (max-height:520px){
+  .hero__grid{--g:24px}
+  .hero__points{grid-template-columns:repeat(3,1fr);text-align:left}
+  .hero__sub{max-width:60ch;align-self:center}
+}
+@media (max-width:360px){
+  .wrap{padding:0 16px}
+  .hero__grid{--g:16px}
+  .hero .hero__grid .hero__title{font-size:26px}
+  .hero__rating{flex-wrap:nowrap;gap:8px;font-size:13px}
+  .hero__rating .stars .ico{width:15px;height:15px}
+  .site-header__in{gap:8px}
+  .brand{gap:8px}
+  .brand__mark{width:34px;height:34px}
+  .brand__name{font-size:16.5px}
+  .nav-toggle{flex:0 0 42px;width:42px;height:42px}
+}
+/* Below-the-fold sections are laid out only as they approach the screen (faster first load).
+   The reserved heights are deliberately generous so unrendered content never overlaps what follows.
+   Long single-column sections (articles, legal text, the FAQ list, the office directory) render normally. */
+main>section:not(.hero):not(#article):not(#document):not(#questions):not(#offices){content-visibility:auto;contain-intrinsic-size:auto 1700px}
+@media (max-width:1180px){main>section:not(.hero):not(#article):not(#document):not(#questions):not(#offices){contain-intrinsic-size:auto 2500px}}
+@media (max-width:760px){main>section:not(.hero):not(#article):not(#document):not(#questions):not(#offices){contain-intrinsic-size:auto 3600px}}
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
   *,*::before,*::after{transition:none!important}
@@ -360,7 +430,7 @@ a:hover>.more .ico,.more:hover .ico{transform:translateX(3px)}
 
 /* ---------- city pages ---------- */
 .hero--city .hero__title{font-size:clamp(34px,4.1vw,52px)}
-.crumbs{display:flex;flex-wrap:wrap;align-items:center;gap:6px;list-style:none;margin:0 0 20px;padding:0;font-size:13.5px;color:var(--muted)}
+.crumbs{display:flex;flex-wrap:wrap;align-items:center;gap:6px;list-style:none;margin:0 0 20px;padding:0;font-size:13.5px;color:var(--text-muted)}
 .crumbs li{display:inline-flex;align-items:center;gap:6px}
 .crumbs a{font-weight:500}
 .crumbs a:hover{color:var(--brand)}
@@ -372,11 +442,11 @@ a:hover>.more .ico,.more:hover .ico{transform:translateX(3px)}
 .nap__item{display:flex;gap:14px;align-items:flex-start;padding:28px 24px;border-left:1px solid var(--line)}
 .nap__item:first-child{border-left:0;padding-left:0}
 .nap__item>.ico{width:22px;height:22px;color:var(--brand);margin-top:3px}
-.nap__label{display:block;font-size:13px;color:var(--muted)}
+.nap__label{display:block;font-size:13px;color:var(--text-muted)}
 .nap__value{display:block;font-family:var(--font-display);font-weight:700;font-size:16px;line-height:1.4;color:var(--navy);font-style:normal}
 a.nap__value:hover{color:var(--brand)}
 @media (max-width:960px){
-  .nap{grid-template-columns:1fr 1fr}
+  .nap{grid-template-columns:repeat(2,minmax(0,1fr))}
   .nap__item{padding:22px 16px}
   .nap__item:nth-child(odd){border-left:0;padding-left:0}
   .nap__item:nth-child(n+3){border-top:1px solid var(--line)}
@@ -401,9 +471,9 @@ a.nap__value:hover{color:var(--brand)}
 .glance h3{font-family:var(--font-display);font-weight:700;font-size:19px;color:var(--navy);margin:0 0 16px}
 .glance dl{margin:0}
 .glance dl div{padding:14px 0;border-top:1px solid var(--line)}
-.glance dt{font-size:13px;color:var(--muted)}
+.glance dt{font-size:13px;color:var(--text-muted)}
 .glance dd{margin:2px 0 0;font-family:var(--font-display);font-weight:700;font-size:15.5px;line-height:1.45;color:var(--navy)}
-.table-note{margin:14px 4px 0;font-size:13.5px;color:var(--muted)}
+.table-note{margin:14px 4px 0;font-size:13.5px;color:var(--text-muted)}
 .cards--4{grid-template-columns:repeat(4,1fr)}
 .cards--4 .card{padding:28px 24px 24px}
 .why--2{grid-template-columns:1fr 1fr;gap:40px 64px;max-width:1040px;margin:0 auto}
@@ -435,139 +505,20 @@ a.nap__value:hover{color:var(--brand)}
 .others ul{display:flex;flex-wrap:wrap;justify-content:center;gap:9px;list-style:none;margin:0;padding:0}
 @media (max-width:1100px){.cards--4{grid-template-columns:1fr 1fr}}
 @media (max-width:1020px){
-  .split,.split--even,.split--guide{grid-template-columns:1fr;gap:40px}
-  .office{grid-template-columns:1fr}
+  .split,.split--even,.split--guide{grid-template-columns:minmax(0,1fr);gap:40px}
+  .office{grid-template-columns:minmax(0,1fr)}
   .office__map,.office__map iframe{min-height:340px}
 }
 @media (max-width:760px){.why--2{grid-template-columns:1fr;gap:28px}}
+@media (max-width:600px){
+  .crumbs a,.crumbs [aria-current]{display:inline-flex;align-items:center;min-height:40px}
+  .crumbs{margin-bottom:0}
+  a.nap__value{padding:9px 0}
+  .office__list a{display:inline-block;padding:9px 0}
+  .stats--facts .stats__num{font-size:20px}
+}
 @media (max-width:640px){.cards--4{grid-template-columns:1fr}.office__card{padding:30px 22px}.glance{padding:24px 22px 8px}.served{padding:26px 22px}}
 </style>
-</head>
-<body>
-<a class="skip" href="#main">Skip to content</a>
-
-<!-- icon sprite -->
-<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
-  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l7 3v5c0 5-3.5 8.5-7 10-3.5-1.5-7-5-7-10V6l7-3Z"/><path d="m9 12 2 2 4-4"/></symbol>
-  <symbol id="i-wallet" viewBox="0 0 24 24"><path d="M19 7V5a2 2 0 0 0-2-2H5a2 2 0 0 0 0 4h14a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5"/><path d="M16.5 13.5h.01"/></symbol>
-  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.2 2"/></symbol>
-  <symbol id="i-star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></symbol>
-  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></symbol>
-  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></symbol>
-  <symbol id="i-chev-down" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></symbol>
-  <symbol id="i-chev-right" viewBox="0 0 24 24"><path d="m9 6 6 6-6 6"/></symbol>
-  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
-  <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></symbol>
-  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></symbol>
-  <symbol id="i-truck" viewBox="0 0 24 24"><path d="M14 17V6a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h2"/><path d="M9 17h6"/><path d="M14 9h3.6a1 1 0 0 1 .8.4l3.4 4.3a1 1 0 0 1 .2.6V16a1 1 0 0 1-1 1h-2"/><circle cx="7" cy="17" r="2"/><circle cx="17" cy="17" r="2"/></symbol>
-  <symbol id="i-enclosed" viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="11" rx="2"/><path d="M12 5v11M2 10.5h20"/><circle cx="7" cy="18" r="2"/><circle cx="17" cy="18" r="2"/></symbol>
-  <symbol id="i-zap" viewBox="0 0 24 24"><path d="M13 2 4.5 13.5H11l-1 8.5L19.5 10H13l1-8Z"/></symbol>
-  <symbol id="i-home" viewBox="0 0 24 24"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V20a1 1 0 0 0 1 1h4v-6h4v6h4a1 1 0 0 0 1-1V9.5"/></symbol>
-  <symbol id="i-route" viewBox="0 0 24 24"><circle cx="6" cy="19" r="3"/><path d="M9 19h8.5a3.5 3.5 0 0 0 0-7h-11a3.5 3.5 0 0 1 0-7H15"/><circle cx="18" cy="5" r="3"/></symbol>
-  <symbol id="i-swap" viewBox="0 0 24 24"><path d="M4 8h15l-4-4"/><path d="M20 16H5l4 4"/></symbol>
-  <symbol id="i-car" viewBox="0 0 24 24"><path d="M5 13l1.5-4.5A2 2 0 0 1 8.4 7h7.2a2 2 0 0 1 1.9 1.5L19 13"/><path d="M5 13h14v4a1 1 0 0 1-1 1h-1a1 1 0 0 1-1-1v-1H8v1a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1v-4Z"/><circle cx="7.5" cy="15.5" r=".6"/><circle cx="16.5" cy="15.5" r=".6"/></symbol>
-  <symbol id="i-gem" viewBox="0 0 24 24"><path d="M6 3h12l4 6-10 12L2 9l4-6Z"/><path d="M2 9h20"/><path d="m10 3-2 6 4 12 4-12-2-6"/></symbol>
-  <symbol id="i-award" viewBox="0 0 24 24"><circle cx="12" cy="9" r="6"/><path d="m8.5 14-1.5 8 5-3 5 3-1.5-8"/></symbol>
-  <symbol id="i-moto" viewBox="0 0 24 24"><circle cx="5.5" cy="16.5" r="3.5"/><circle cx="18.5" cy="16.5" r="3.5"/><path d="M5.5 16.5 9 10.5h5.5l4 6"/><path d="M14.5 10.5 13 7h-2.5"/><path d="M9 10.5H6.5"/></symbol>
-  <symbol id="i-plug" viewBox="0 0 24 24"><path d="M12 22v-5"/><path d="M9 8V2M15 8V2"/><path d="M18 8v5a4 4 0 0 1-4 4h-4a4 4 0 0 1-4-4V8h12Z"/></symbol>
-  <symbol id="i-tag" viewBox="0 0 24 24"><path d="M12.6 2.6A2 2 0 0 0 11.2 2H4a2 2 0 0 0-2 2v7.2a2 2 0 0 0 .6 1.4l8.7 8.7a2.4 2.4 0 0 0 3.4 0l6.6-6.6a2.4 2.4 0 0 0 0-3.4l-8.7-8.7Z"/><circle cx="7.5" cy="7.5" r=".6"/></symbol>
-  <symbol id="i-headset" viewBox="0 0 24 24"><path d="M3 14v-2a9 9 0 0 1 18 0v2"/><path d="M3 13h3a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1H5a2 2 0 0 1-2-2v-4Z"/><path d="M21 13h-3a1 1 0 0 0-1 1v4a1 1 0 0 0 1 1h1a2 2 0 0 0 2-2v-4Z"/></symbol>
-  <symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/><path d="m9 16 2 2 4-4"/></symbol>
-</svg>
-
-<header class="site-header" id="top">
-  <div class="wrap site-header__in">
-    <!-- LOGO: to use your logo image instead of this wordmark, replace the <svg> and <span> below with
-         <img src="/images/logo.png" alt="Heartland Auto Transport" height="44"> -->
-    <a class="brand" href="/" aria-label="Heartland Auto Transport, home">
-      <svg class="brand__mark" viewBox="0 0 40 40" aria-hidden="true"><rect width="40" height="40" rx="10" fill="#0b34c0"/><rect x="10" y="9" width="5.2" height="22" rx="1.4" fill="#fff"/><rect x="24.8" y="9" width="5.2" height="22" rx="1.4" fill="#fff"/><rect x="16.1" y="18.3" width="3.3" height="3.4" rx=".8" fill="#fff"/><rect x="20.6" y="18.3" width="3.3" height="3.4" rx=".8" fill="#fff"/></svg>
-      <span class="brand__name">Heartland<small>Auto Transport</small></span>
-    </a>
-    <span class="brand__tag">Trusted. Reliable.<br>On the road with care.</span>
-
-    <nav class="nav" id="site-nav" aria-label="Primary">
-      <a class="nav__link" href="/">Home</a>
-      <div class="mega">
-        <button class="nav__link" type="button" aria-expanded="false" aria-controls="mega-services">Services <svg class="ico"><use href="#i-chev-down"/></svg></button>
-        <div class="mega__panel" id="mega-services">
-          <div class="mega__in">
-            <div>
-              <p class="mega__h">Shipping methods</p>
-              <a href="/services/open-auto-transport">Open Auto Transport</a>
-              <a href="/services/enclosed-auto-transport">Enclosed Auto Transport</a>
-              <a href="/services/door-to-door-auto-transport">Door-to-Door Transport</a>
-              <a href="/services/expedited-auto-transport">Expedited Auto Transport</a>
-              <a href="/services/cross-country-car-shipping">Cross Country Shipping</a>
-              <a href="/services/state-to-state-car-shipping">State-to-State Shipping</a>
-              <a href="/services/nationwide-auto-transport">Nationwide Auto Transport</a>
-              <a href="/services/terminal-to-terminal-shipping">Terminal-to-Terminal</a>
-              <a href="/services/guaranteed-pickup-services">Guaranteed Pickup</a>
-            </div>
-            <div>
-              <p class="mega__h">Vehicle types</p>
-              <a href="/services/car-shipping">Car Shipping</a>
-              <a href="/services/suv-transport">SUV Transport</a>
-              <a href="/services/truck-shipping">Truck Shipping</a>
-              <a href="/services/motorcycle-shipping">Motorcycle Shipping</a>
-              <a href="/services/electric-vehicle-shipping">EV Shipping</a>
-              <a href="/services/luxury-car-transport">Luxury Car Transport</a>
-              <a href="/services/exotic-car-transport">Exotic Car Transport</a>
-              <a href="/services/classic-car-transport">Classic Car Transport</a>
-              <a href="/services/antique-vehicle-shipping">Antique Vehicle Shipping</a>
-            </div>
-            <div>
-              <p class="mega__h">Specialty</p>
-              <a href="/services/rv-transport">RV Transport</a>
-              <a href="/services/boat-transport">Boat Transport</a>
-              <a href="/services/atv-utv-shipping">ATV / UTV Shipping</a>
-              <a href="/services/golf-cart-shipping">Golf Cart Shipping</a>
-              <a href="/services/van-transport">Van Transport</a>
-              <a href="/services/heavy-equipment-transport">Heavy Equipment</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <a class="nav__link" href="/how-it-works">How It Works</a>
-      <a class="nav__link" href="/about">About Us</a>
-      <a class="nav__link" href="/faq">FAQ</a>
-      <a class="nav__link" href="/blog">Blog</a>
-      <a class="nav__link" href="/contact">Contact</a>
-    </nav>
-
-    <a class="btn-call" href="tel:+12055743169"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-phone"/></svg><span class="num-full">Call (205)&nbsp;574-3169</span><span class="num-short">Call</span></a>
-    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Menu">
-      <svg class="ico ico--open"><use href="#i-menu"/></svg><svg class="ico ico--close"><use href="#i-close"/></svg>
-    </button>
-  </div>
-</header>
-
-<main id="main">
-
-<!-- ======================= HERO + PRICING TOOL ======================= -->
-<section class="hero hero--city">
-  <div class="wrap hero__grid">
-    <div class="hero__head">
-      <nav aria-label="Breadcrumb"><ol class="crumbs">
-        <li><a href="/">Home</a><svg class="ico"><use href="#i-chev-right"/></svg></li>
-        <li><a href="/locations/">Alabama Locations</a><svg class="ico"><use href="#i-chev-right"/></svg></li>
-        <li aria-current="page">Birmingham</li>
-      </ol></nav>
-      <h1 class="hero__title">Birmingham Auto Transport</h1>
-      <p class="hero__sub">Door-to-door car shipping to and from Birmingham, Alabama. Four interstates, fast carrier availability, and a free quote in under 60 seconds.</p>
-      <p class="hero__rating"><span class="stars" aria-hidden="true"><svg class="ico ico--fill"><use href="#i-star"/></svg><svg class="ico ico--fill"><use href="#i-star"/></svg><svg class="ico ico--fill"><use href="#i-star"/></svg><svg class="ico ico--fill"><use href="#i-star"/></svg><svg class="ico ico--fill"><use href="#i-star"/></svg></span><span><b>4.9 out of 5</b> customer rating</span></p>
-    </div>
-
-    <div class="hero__quote" id="quote">
-<!-- ============================================================
-     SHIP GUY PRICING TOOL — PLUG AND PLAY EMBED (one block, paste where the widget should appear)
-     1) Paste this entire block into the page body where the quote widget goes (max width 440px; it fills its container).
-     2) Edit the PQ_CONFIG values near the bottom (phone, brand, Google Maps key, optional site code).
-     3) Put functions/api/quote/[[path]].js in the site root with THIS site's BeRocker Lead Source key.
-     One widget per page (it uses fixed element ids).
-     ============================================================ -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
 <style>
 :root{
   --brand:#0b34c0;        
@@ -809,9 +760,132 @@ select.inp{appearance:none;-webkit-appearance:none;padding-right:38px;cursor:poi
 .pqs-opt.active{background:#eef2fe;color:var(--brand);font-weight:600}
 .pqs-none{padding:14px;text-align:center;color:#9aa3b8;font-size:14px}
 </style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<!-- icon sprite -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l7 3v5c0 5-3.5 8.5-7 10-3.5-1.5-7-5-7-10V6l7-3Z"/><path d="m9 12 2 2 4-4"/></symbol>
+  <symbol id="i-wallet" viewBox="0 0 24 24"><path d="M19 7V5a2 2 0 0 0-2-2H5a2 2 0 0 0 0 4h14a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5"/><path d="M16.5 13.5h.01"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.2 2"/></symbol>
+  <symbol id="i-star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></symbol>
+  <symbol id="i-chev-down" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></symbol>
+  <symbol id="i-chev-right" viewBox="0 0 24 24"><path d="m9 6 6 6-6 6"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></symbol>
+  <symbol id="i-truck" viewBox="0 0 24 24"><path d="M14 17V6a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h2"/><path d="M9 17h6"/><path d="M14 9h3.6a1 1 0 0 1 .8.4l3.4 4.3a1 1 0 0 1 .2.6V16a1 1 0 0 1-1 1h-2"/><circle cx="7" cy="17" r="2"/><circle cx="17" cy="17" r="2"/></symbol>
+  <symbol id="i-enclosed" viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="11" rx="2"/><path d="M12 5v11M2 10.5h20"/><circle cx="7" cy="18" r="2"/><circle cx="17" cy="18" r="2"/></symbol>
+  <symbol id="i-zap" viewBox="0 0 24 24"><path d="M13 2 4.5 13.5H11l-1 8.5L19.5 10H13l1-8Z"/></symbol>
+  <symbol id="i-home" viewBox="0 0 24 24"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V20a1 1 0 0 0 1 1h4v-6h4v6h4a1 1 0 0 0 1-1V9.5"/></symbol>
+  <symbol id="i-route" viewBox="0 0 24 24"><circle cx="6" cy="19" r="3"/><path d="M9 19h8.5a3.5 3.5 0 0 0 0-7h-11a3.5 3.5 0 0 1 0-7H15"/><circle cx="18" cy="5" r="3"/></symbol>
+  <symbol id="i-swap" viewBox="0 0 24 24"><path d="M4 8h15l-4-4"/><path d="M20 16H5l4 4"/></symbol>
+  <symbol id="i-car" viewBox="0 0 24 24"><path d="M5 13l1.5-4.5A2 2 0 0 1 8.4 7h7.2a2 2 0 0 1 1.9 1.5L19 13"/><path d="M5 13h14v4a1 1 0 0 1-1 1h-1a1 1 0 0 1-1-1v-1H8v1a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1v-4Z"/><circle cx="7.5" cy="15.5" r=".6"/><circle cx="16.5" cy="15.5" r=".6"/></symbol>
+  <symbol id="i-gem" viewBox="0 0 24 24"><path d="M6 3h12l4 6-10 12L2 9l4-6Z"/><path d="M2 9h20"/><path d="m10 3-2 6 4 12 4-12-2-6"/></symbol>
+  <symbol id="i-award" viewBox="0 0 24 24"><circle cx="12" cy="9" r="6"/><path d="m8.5 14-1.5 8 5-3 5 3-1.5-8"/></symbol>
+  <symbol id="i-moto" viewBox="0 0 24 24"><circle cx="5.5" cy="16.5" r="3.5"/><circle cx="18.5" cy="16.5" r="3.5"/><path d="M5.5 16.5 9 10.5h5.5l4 6"/><path d="M14.5 10.5 13 7h-2.5"/><path d="M9 10.5H6.5"/></symbol>
+  <symbol id="i-plug" viewBox="0 0 24 24"><path d="M12 22v-5"/><path d="M9 8V2M15 8V2"/><path d="M18 8v5a4 4 0 0 1-4 4h-4a4 4 0 0 1-4-4V8h12Z"/></symbol>
+  <symbol id="i-tag" viewBox="0 0 24 24"><path d="M12.6 2.6A2 2 0 0 0 11.2 2H4a2 2 0 0 0-2 2v7.2a2 2 0 0 0 .6 1.4l8.7 8.7a2.4 2.4 0 0 0 3.4 0l6.6-6.6a2.4 2.4 0 0 0 0-3.4l-8.7-8.7Z"/><circle cx="7.5" cy="7.5" r=".6"/></symbol>
+  <symbol id="i-headset" viewBox="0 0 24 24"><path d="M3 14v-2a9 9 0 0 1 18 0v2"/><path d="M3 13h3a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1H5a2 2 0 0 1-2-2v-4Z"/><path d="M21 13h-3a1 1 0 0 0-1 1v4a1 1 0 0 0 1 1h1a2 2 0 0 0 2-2v-4Z"/></symbol>
+  <symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/><path d="m9 16 2 2 4-4"/></symbol>
+</svg>
+
+<header class="site-header" id="top">
+  <div class="wrap site-header__in">
+    <!-- LOGO: to use your logo image instead of this wordmark, replace the <svg> and <span> below with
+         <img src="/images/logo.png" alt="Heartland Auto Transport" height="44"> -->
+    <a class="brand" href="/">
+      <svg class="brand__mark" viewBox="0 0 40 40" aria-hidden="true"><rect width="40" height="40" rx="10" fill="#0b34c0"/><rect x="10" y="9" width="5.2" height="22" rx="1.4" fill="#fff"/><rect x="24.8" y="9" width="5.2" height="22" rx="1.4" fill="#fff"/><rect x="16.1" y="18.3" width="3.3" height="3.4" rx=".8" fill="#fff"/><rect x="20.6" y="18.3" width="3.3" height="3.4" rx=".8" fill="#fff"/></svg>
+      <span class="brand__name">Heartland <small>Auto Transport</small></span>
+    </a>
+    <span class="brand__tag">Trusted. Reliable.<br>On the road with care.</span>
+
+    <nav class="nav" id="site-nav" aria-label="Primary">
+      <a class="nav__link" href="/">Home</a>
+      <div class="mega">
+        <button class="nav__link" type="button" aria-expanded="false" aria-controls="mega-services">Services <svg aria-hidden="true" class="ico"><use href="#i-chev-down"/></svg></button>
+        <div class="mega__panel" id="mega-services">
+          <div class="mega__in">
+            <div>
+              <p class="mega__h">Shipping methods</p>
+              <a href="/services/open-auto-transport">Open Auto Transport</a>
+              <a href="/services/enclosed-auto-transport">Enclosed Auto Transport</a>
+              <a href="/services/door-to-door-auto-transport">Door-to-Door Transport</a>
+              <a href="/services/expedited-auto-transport">Expedited Auto Transport</a>
+              <a href="/services/cross-country-car-shipping">Cross Country Shipping</a>
+              <a href="/services/state-to-state-car-shipping">State-to-State Shipping</a>
+              <a href="/services/nationwide-auto-transport">Nationwide Auto Transport</a>
+              <a href="/services/terminal-to-terminal-shipping">Terminal-to-Terminal</a>
+              <a href="/services/guaranteed-pickup-services">Guaranteed Pickup</a>
+            </div>
+            <div>
+              <p class="mega__h">Vehicle types</p>
+              <a href="/services/car-shipping">Car Shipping</a>
+              <a href="/services/suv-transport">SUV Transport</a>
+              <a href="/services/truck-shipping">Truck Shipping</a>
+              <a href="/services/motorcycle-shipping">Motorcycle Shipping</a>
+              <a href="/services/electric-vehicle-shipping">EV Shipping</a>
+              <a href="/services/luxury-car-transport">Luxury Car Transport</a>
+              <a href="/services/exotic-car-transport">Exotic Car Transport</a>
+              <a href="/services/classic-car-transport">Classic Car Transport</a>
+              <a href="/services/antique-vehicle-shipping">Antique Vehicle Shipping</a>
+            </div>
+            <div>
+              <p class="mega__h">Specialty</p>
+              <a href="/services/rv-transport">RV Transport</a>
+              <a href="/services/boat-transport">Boat Transport</a>
+              <a href="/services/atv-utv-shipping">ATV / UTV Shipping</a>
+              <a href="/services/golf-cart-shipping">Golf Cart Shipping</a>
+              <a href="/services/van-transport">Van Transport</a>
+              <a href="/services/heavy-equipment-transport">Heavy Equipment</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a class="nav__link" href="/how-it-works">How It Works</a>
+      <a class="nav__link" href="/about">About Us</a>
+      <a class="nav__link" href="/faq">FAQ</a>
+      <a class="nav__link" href="/blog">Blog</a>
+      <a class="nav__link" href="/contact">Contact</a>
+    </nav>
+
+    <a class="btn-call" href="tel:+12055743169"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-phone"/></svg><span class="num-full">Call (205)&nbsp;574-3169</span><span class="num-short">Call</span></a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Menu">
+      <svg aria-hidden="true" class="ico ico--open"><use href="#i-menu"/></svg><svg aria-hidden="true" class="ico ico--close"><use href="#i-close"/></svg>
+    </button>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- ======================= HERO + PRICING TOOL ======================= -->
+<section class="hero hero--city">
+  <div class="wrap hero__grid">
+    <div class="hero__head">
+      <nav aria-label="Breadcrumb"><ol class="crumbs">
+        <li><a href="/">Home</a><svg aria-hidden="true" class="ico"><use href="#i-chev-right"/></svg></li>
+        <li><a href="/locations">Alabama Locations</a><svg aria-hidden="true" class="ico"><use href="#i-chev-right"/></svg></li>
+        <li aria-current="page">Birmingham</li>
+      </ol></nav>
+      <h1 class="hero__title">Birmingham Auto Transport</h1>
+      <p class="hero__sub">Door-to-door car shipping to and from Birmingham, Alabama. Four interstates, fast carrier availability, and a free quote in under 60 seconds.</p>
+      <p class="hero__rating"><span class="stars" aria-hidden="true"><svg aria-hidden="true" class="ico ico--fill"><use href="#i-star"/></svg><svg aria-hidden="true" class="ico ico--fill"><use href="#i-star"/></svg><svg aria-hidden="true" class="ico ico--fill"><use href="#i-star"/></svg><svg aria-hidden="true" class="ico ico--fill"><use href="#i-star"/></svg><svg aria-hidden="true" class="ico ico--fill"><use href="#i-star"/></svg></span><span><b>4.9 out of 5</b> customer rating</span></p>
+    </div>
+
+    <div class="hero__quote" id="quote">
+<!-- ============================================================
+     SHIP GUY PRICING TOOL — PLUG AND PLAY EMBED (one block, paste where the widget should appear)
+     1) Paste this entire block into the page body where the quote widget goes (max width 440px; it fills its container).
+     2) Edit the PQ_CONFIG values near the bottom (phone, brand, Google Maps key, optional site code).
+     3) Put functions/api/quote/[[path]].js in the site root with THIS site's BeRocker Lead Source key.
+     One widget per page (it uses fixed element ids).
+     ============================================================ -->
 
 <div class="pquote" id="pquote">
-      <div class="pq-head-row"><span class="pq-lightning"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M13 2 4.5 13.5H11l-1 8.5L19.5 10H13l1-8Z"/></svg></span><div><h3 class="pq-title">Get Your Instant Quote</h3><p class="pq-sub">Fast, secure pricing in 30 seconds.</p></div></div>
+      <div class="pq-head-row"><span class="pq-lightning"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M13 2 4.5 13.5H11l-1 8.5L19.5 10H13l1-8Z"/></svg></span><div><h2 class="pq-title">Get Your Instant Quote</h2><p class="pq-sub">Fast, secure pricing in 30 seconds.</p></div></div>
       <div class="pq-progress" id="pqProgress">
         <div class="pq-progress-top"><span id="pqStepName">Route</span><span id="pqStepCount">Free &middot; No obligation</span></div>
         <div class="pq-progress-track"><div class="pq-progress-fill" id="pqProgressFill"></div></div>
@@ -1176,9 +1250,9 @@ window.PQ_CONFIG = {
     </div>
 
     <ul class="hero__points">
-      <li><svg class="ico"><use href="#i-shield"/></svg><strong>Fully insured</strong>Your vehicle is covered from pickup to delivery.</li>
-      <li><svg class="ico"><use href="#i-wallet"/></svg><strong>No upfront deposit</strong>Pay when your vehicle is delivered.</li>
-      <li><svg class="ico"><use href="#i-phone"/></svg><strong>Birmingham dispatch</strong>Call (205)&nbsp;574-3169, day or night.</li>
+      <li><svg aria-hidden="true" class="ico"><use href="#i-shield"/></svg><strong>Fully insured</strong>Your vehicle is covered from pickup to delivery.</li>
+      <li><svg aria-hidden="true" class="ico"><use href="#i-wallet"/></svg><strong>No upfront deposit</strong>Pay when your vehicle is delivered.</li>
+      <li><svg aria-hidden="true" class="ico"><use href="#i-phone"/></svg><strong>Birmingham dispatch</strong>Call (205)&nbsp;574-3169, day or night.</li>
     </ul>
   </div>
 </section>
@@ -1187,10 +1261,10 @@ window.PQ_CONFIG = {
 <section class="band band--tight" aria-label="Birmingham office details">
   <div class="wrap">
     <div class="nap">
-      <div class="nap__item"><svg class="ico"><use href="#i-pin"/></svg><div><span class="nap__label">Birmingham office</span><address class="nap__value">1820 3rd Ave N #370<br>Birmingham, AL 35203</address></div></div>
-      <div class="nap__item"><svg class="ico"><use href="#i-phone"/></svg><div><span class="nap__label">Call us</span><a class="nap__value" href="tel:+12055743169">(205)&nbsp;574-3169</a></div></div>
-      <div class="nap__item"><svg class="ico"><use href="#i-clock"/></svg><div><span class="nap__label">Dispatch hours</span><span class="nap__value">Open 24/7</span></div></div>
-      <div class="nap__item"><svg class="ico"><use href="#i-route"/></svg><div><span class="nap__label">Service area</span><span class="nap__value">Jefferson County and Greater Birmingham</span></div></div>
+      <div class="nap__item"><svg aria-hidden="true" class="ico"><use href="#i-pin"/></svg><div><span class="nap__label">Birmingham office</span><address class="nap__value">1820 3rd Ave N #370<br>Birmingham, AL 35203</address></div></div>
+      <div class="nap__item"><svg aria-hidden="true" class="ico"><use href="#i-phone"/></svg><div><span class="nap__label">Call us</span><a class="nap__value" href="tel:+12055743169">(205)&nbsp;574-3169</a></div></div>
+      <div class="nap__item"><svg aria-hidden="true" class="ico"><use href="#i-clock"/></svg><div><span class="nap__label">Dispatch hours</span><span class="nap__value">Open 24/7</span></div></div>
+      <div class="nap__item"><svg aria-hidden="true" class="ico"><use href="#i-route"/></svg><div><span class="nap__label">Service area</span><span class="nap__value">Jefferson County and Greater Birmingham</span></div></div>
     </div>
   </div>
 </section>
@@ -1255,28 +1329,28 @@ window.PQ_CONFIG = {
     </div>
     <div class="cards cards--4">
       <a class="card" href="/services/open-auto-transport">
-        <span class="card__ico"><svg class="ico"><use href="#i-truck"/></svg></span>
+        <span class="card__ico"><svg aria-hidden="true" class="ico"><use href="#i-truck"/></svg></span>
         <h3>Open Transport</h3>
         <p>The most popular and affordable choice. With four interstates feeding the city, open carriers are available almost any day of the week.</p>
-        <span class="more">Learn more <svg class="ico"><use href="#i-chev-right"/></svg></span>
+        <span class="more">Learn more <svg aria-hidden="true" class="ico"><use href="#i-chev-right"/></svg></span>
       </a>
       <a class="card" href="/services/enclosed-auto-transport">
-        <span class="card__ico"><svg class="ico"><use href="#i-enclosed"/></svg></span>
+        <span class="card__ico"><svg aria-hidden="true" class="ico"><use href="#i-enclosed"/></svg></span>
         <h3>Enclosed Transport</h3>
         <p>Covered trailers for exotics, classics, and race cars. A common choice for owners in Mountain Brook and for visitors to Barber.</p>
-        <span class="more">Learn more <svg class="ico"><use href="#i-chev-right"/></svg></span>
+        <span class="more">Learn more <svg aria-hidden="true" class="ico"><use href="#i-chev-right"/></svg></span>
       </a>
       <a class="card" href="/services/expedited-auto-transport">
-        <span class="card__ico"><svg class="ico"><use href="#i-zap"/></svg></span>
+        <span class="card__ico"><svg aria-hidden="true" class="ico"><use href="#i-zap"/></svg></span>
         <h3>Expedited Shipping</h3>
         <p>When a start date or closing date will not move, priority dispatch gets your vehicle on a truck sooner.</p>
-        <span class="more">Learn more <svg class="ico"><use href="#i-chev-right"/></svg></span>
+        <span class="more">Learn more <svg aria-hidden="true" class="ico"><use href="#i-chev-right"/></svg></span>
       </a>
       <a class="card" href="/services/motorcycle-shipping">
-        <span class="card__ico"><svg class="ico"><use href="#i-moto"/></svg></span>
+        <span class="card__ico"><svg aria-hidden="true" class="ico"><use href="#i-moto"/></svg></span>
         <h3>Motorcycle Shipping</h3>
         <p>Properly secured transport for sport bikes, cruisers, and vintage machines, to and from the home of the Barber Vintage Motorsports Museum.</p>
-        <span class="more">Learn more <svg class="ico"><use href="#i-chev-right"/></svg></span>
+        <span class="more">Learn more <svg aria-hidden="true" class="ico"><use href="#i-chev-right"/></svg></span>
       </a>
     </div>
   </div>
@@ -1290,12 +1364,12 @@ window.PQ_CONFIG = {
       <p class="lede">Medicine, manufacturing, motorsports, and a few steep hills.</p>
     </div>
     <div class="why">
-      <div class="why__item"><span class="why__ico"><svg class="ico"><use href="#i-award"/></svg></span><div><h3>UAB and medical moves</h3><p>UAB is the largest employer in Alabama, and each summer a new class of residents and fellows arrives for a July 1 start. June is the busiest month for medical relocations nationwide. If you matched in Birmingham, book your vehicle by mid-May to hold your price and your dates.</p></div></div>
-      <div class="why__item"><span class="why__ico"><svg class="ico"><use href="#i-car"/></svg></span><div><h3>Corporate relocations</h3><p>Banking, insurance, healthcare, and engineering firms keep a steady flow of professionals moving in and out. If your employer covers vehicle transport, ask your dispatcher for a receipt you can submit with your expenses.</p></div></div>
-      <div class="why__item"><span class="why__ico"><svg class="ico"><use href="#i-gem"/></svg></span><div><h3>Barber and the collector scene</h3><p>Barber Motorsports Park in Leeds draws race fans in the spring and vintage motorcycle enthusiasts every fall. Carriers get busy around those events, so reserve early if you are bringing a car or bike to the track.</p></div></div>
-      <div class="why__item"><span class="why__ico"><svg class="ico"><use href="#i-truck"/></svg></span><div><h3>Automotive plant transfers</h3><p>The Mercedes-Benz plant in Vance and the Honda plant in Lincoln are each less than an hour away. We can deliver to either area as well as to Tuscaloosa, Pell City, and the suburbs where many plant employees live.</p></div></div>
-      <div class="why__item"><span class="why__ico"><svg class="ico"><use href="#i-pin"/></svg></span><div><h3>Hills and historic streets</h3><p>Highland Park, Forest Park, Southside, and the neighborhoods on Red Mountain have narrow, sloping streets with cars parked on both sides. Downtown has one-way streets and parking decks. In these areas the driver usually meets you at a nearby open lot.</p></div></div>
-      <div class="why__item"><span class="why__ico"><svg class="ico"><use href="#i-clock"/></svg></span><div><h3>Traffic and timing</h3><p>The downtown interchange and US-280 back up at rush hour, so drivers prefer mid-morning or early afternoon appointments. On the rare day that ice reaches the hills, pickups pause until roads are safe.</p></div></div>
+      <div class="why__item"><span class="why__ico"><svg aria-hidden="true" class="ico"><use href="#i-award"/></svg></span><div><h3>UAB and medical moves</h3><p>UAB is the largest employer in Alabama, and each summer a new class of residents and fellows arrives for a July 1 start. June is the busiest month for medical relocations nationwide. If you matched in Birmingham, book your vehicle by mid-May to hold your price and your dates.</p></div></div>
+      <div class="why__item"><span class="why__ico"><svg aria-hidden="true" class="ico"><use href="#i-car"/></svg></span><div><h3>Corporate relocations</h3><p>Banking, insurance, healthcare, and engineering firms keep a steady flow of professionals moving in and out. If your employer covers vehicle transport, ask your dispatcher for a receipt you can submit with your expenses.</p></div></div>
+      <div class="why__item"><span class="why__ico"><svg aria-hidden="true" class="ico"><use href="#i-gem"/></svg></span><div><h3>Barber and the collector scene</h3><p>Barber Motorsports Park in Leeds draws race fans in the spring and vintage motorcycle enthusiasts every fall. Carriers get busy around those events, so reserve early if you are bringing a car or bike to the track.</p></div></div>
+      <div class="why__item"><span class="why__ico"><svg aria-hidden="true" class="ico"><use href="#i-truck"/></svg></span><div><h3>Automotive plant transfers</h3><p>The Mercedes-Benz plant in Vance and the Honda plant in Lincoln are each less than an hour away. We can deliver to either area as well as to Tuscaloosa, Pell City, and the suburbs where many plant employees live.</p></div></div>
+      <div class="why__item"><span class="why__ico"><svg aria-hidden="true" class="ico"><use href="#i-pin"/></svg></span><div><h3>Hills and historic streets</h3><p>Highland Park, Forest Park, Southside, and the neighborhoods on Red Mountain have narrow, sloping streets with cars parked on both sides. Downtown has one-way streets and parking decks. In these areas the driver usually meets you at a nearby open lot.</p></div></div>
+      <div class="why__item"><span class="why__ico"><svg aria-hidden="true" class="ico"><use href="#i-clock"/></svg></span><div><h3>Traffic and timing</h3><p>The downtown interchange and US-280 back up at rush hour, so drivers prefer mid-morning or early afternoon appointments. On the rare day that ice reaches the hills, pickups pause until roads are safe.</p></div></div>
     </div>
   </div>
 </section>
@@ -1348,9 +1422,9 @@ window.PQ_CONFIG = {
         <h2 class="title">Our Birmingham Office</h2>
         <p>Our Birmingham office is downtown on 3rd Avenue North. There is no need to bring your vehicle to us or to visit in person. Carriers come to your address, and our dispatchers are available by phone day and night.</p>
         <ul class="office__list">
-          <li><svg class="ico"><use href="#i-pin"/></svg><address>Heartland Auto Transport<br>1820 3rd Ave N #370<br>Birmingham, AL 35203</address></li>
-          <li><svg class="ico"><use href="#i-phone"/></svg><a href="tel:+12055743169">(205)&nbsp;574-3169</a></li>
-          <li><svg class="ico"><use href="#i-clock"/></svg><span>Dispatch and support, 24 hours a day, 7 days a week</span></li>
+          <li><svg aria-hidden="true" class="ico"><use href="#i-pin"/></svg><address>Heartland Auto Transport<br>1820 3rd Ave N #370<br>Birmingham, AL 35203</address></li>
+          <li><svg aria-hidden="true" class="ico"><use href="#i-phone"/></svg><a href="tel:+12055743169">(205)&nbsp;574-3169</a></li>
+          <li><svg aria-hidden="true" class="ico"><use href="#i-clock"/></svg><span>Dispatch and support, 24 hours a day, 7 days a week</span></li>
         </ul>
         <a class="button" href="#quote">Get a Birmingham Quote</a>
       </div>
@@ -1366,31 +1440,31 @@ window.PQ_CONFIG = {
     </div>
     <div class="faq--wide">
       <details class="faq__item" open>
-        <summary>How much does it cost to ship a car from Birmingham, AL?<svg class="ico"><use href="#i-chev-down"/></svg></summary>
+        <summary>How much does it cost to ship a car from Birmingham, AL?<svg aria-hidden="true" class="ico"><use href="#i-chev-down"/></svg></summary>
         <p>On an open carrier, regional routes such as Atlanta, Nashville, Memphis, and New Orleans usually cost $350 to $700. Mid-distance shipments to Texas, Florida, Chicago, or the Northeast run about $700 to $1,300, and cross-country moves cost $1,100 to $1,800. Enclosed transport adds 60 to 80 percent.</p>
       </details>
       <details class="faq__item">
-        <summary>How quickly can you pick up in Birmingham?<svg class="ico"><use href="#i-chev-down"/></svg></summary>
+        <summary>How quickly can you pick up in Birmingham?<svg aria-hidden="true" class="ico"><use href="#i-chev-down"/></svg></summary>
         <p>Often within a few days, because so many carriers pass through. Booking 7 to 14 days ahead still gives you the best price and the widest choice of dates. If you need the vehicle gone tomorrow, ask about expedited service.</p>
       </details>
       <details class="faq__item">
-        <summary>Is Heartland a broker or a carrier?<svg class="ico"><use href="#i-chev-down"/></svg></summary>
+        <summary>Is Heartland a broker or a carrier?<svg aria-hidden="true" class="ico"><use href="#i-chev-down"/></svg></summary>
         <p>We are a licensed broker. That means we do not own the trucks. We choose a carrier for your route, verify its license and cargo insurance, schedule the shipment, and stay involved until delivery. You get one point of contact and access to far more trucks than any single carrier operates.</p>
       </details>
       <details class="faq__item">
-        <summary>I live in a downtown loft with a parking deck. How does pickup work?<svg class="ico"><use href="#i-chev-down"/></svg></summary>
+        <summary>I live in a downtown loft with a parking deck. How does pickup work?<svg aria-hidden="true" class="ico"><use href="#i-chev-down"/></svg></summary>
         <p>Car haulers cannot enter parking decks or stop on most downtown streets. Your driver will suggest a nearby surface lot or wide side street, and you bring the car there at the agreed time. It usually takes about twenty minutes.</p>
       </details>
       <details class="faq__item">
-        <summary>I am starting a residency at UAB. When should I book?<svg class="ico"><use href="#i-chev-down"/></svg></summary>
+        <summary>I am starting a residency at UAB. When should I book?<svg aria-hidden="true" class="ico"><use href="#i-chev-down"/></svg></summary>
         <p>As soon as your move date is set, and ideally by mid-May. Tell us the earliest day the car can be picked up and the day you arrive in Birmingham, and we will plan the delivery window around your orientation schedule.</p>
       </details>
       <details class="faq__item">
-        <summary>Do you ship motorcycles to Barber Motorsports Park?<svg class="ico"><use href="#i-chev-down"/></svg></summary>
+        <summary>Do you ship motorcycles to Barber Motorsports Park?<svg aria-hidden="true" class="ico"><use href="#i-chev-down"/></svg></summary>
         <p>Yes. We arrange <a href="/services/motorcycle-shipping">motorcycle transport</a> to the Birmingham area for track days, the vintage festival, and private sales. Let us know the make and whether the bike runs.</p>
       </details>
       <details class="faq__item">
-        <summary>Do I pay a deposit to reserve a carrier?<svg class="ico"><use href="#i-chev-down"/></svg></summary>
+        <summary>Do I pay a deposit to reserve a carrier?<svg aria-hidden="true" class="ico"><use href="#i-chev-down"/></svg></summary>
         <p>No. Heartland does not charge anything up front. Payment is due when your vehicle is delivered.</p>
       </details>
     </div>
@@ -1407,7 +1481,7 @@ window.PQ_CONFIG = {
       </div>
       <div class="final__actions">
         <a class="button button--light" href="#quote">Get Your Free Quote</a>
-        <a class="button button--onblue" href="tel:+12055743169"><svg class="ico"><use href="#i-phone"/></svg>(205)&nbsp;574-3169</a>
+        <a class="button button--onblue" href="tel:+12055743169"><svg aria-hidden="true" class="ico"><use href="#i-phone"/></svg>(205)&nbsp;574-3169</a>
       </div>
     </div>
     <div class="others">
@@ -1423,13 +1497,13 @@ window.PQ_CONFIG = {
   <div class="wrap">
     <div class="foot">
       <div class="foot__about">
-        <a class="brand" href="/" aria-label="Heartland Auto Transport, home">
+        <a class="brand" href="/">
           <svg class="brand__mark" viewBox="0 0 40 40" aria-hidden="true"><rect width="40" height="40" rx="10" fill="#fff"/><rect x="10" y="9" width="5.2" height="22" rx="1.4" fill="#0b34c0"/><rect x="24.8" y="9" width="5.2" height="22" rx="1.4" fill="#0b34c0"/><rect x="16.1" y="18.3" width="3.3" height="3.4" rx=".8" fill="#0b34c0"/><rect x="20.6" y="18.3" width="3.3" height="3.4" rx=".8" fill="#0b34c0"/></svg>
-          <span class="brand__name">Heartland<small>Auto Transport</small></span>
+          <span class="brand__name">Heartland <small>Auto Transport</small></span>
         </a>
         <p>Trusted. Reliable. On the road with care. Alabama-based auto transport shipping cars, trucks, motorcycles, RVs, boats, and heavy equipment to all 50 states.</p>
         <!-- Add your MC and USDOT numbers after "FMCSA Licensed Broker" if you want them displayed. -->
-        <span class="foot__lic"><svg class="ico"><use href="#i-shield"/></svg>FMCSA Licensed Broker</span>
+        <span class="foot__lic"><svg aria-hidden="true" class="ico"><use href="#i-shield"/></svg>FMCSA Licensed Broker</span>
       </div>
       <div>
         <h3>Services</h3>
@@ -1466,7 +1540,7 @@ window.PQ_CONFIG = {
           <li><a href="/how-it-works">How It Works</a></li>
           <li><a href="/faq">FAQ</a></li>
           <li><a href="/blog">Blog</a></li>
-          <li><a href="/locations/">Locations</a></li>
+          <li><a href="/locations">Locations</a></li>
           <li><a href="/contact">Contact</a></li>
         </ul>
         <h3 style="margin-top:28px">Alabama Cities</h3>
@@ -1481,20 +1555,24 @@ window.PQ_CONFIG = {
         <h3>Get in Touch</h3>
         <ul class="foot__contact">
           <li><a class="foot__phone" href="tel:+12055743169">(205)&nbsp;574-3169</a></li>
-          <li><svg class="ico"><use href="#i-mail"/></svg><a href="mailto:info@heartlandautotransport.com">info@heartlandautotransport.com</a></li>
-          <li><svg class="ico"><use href="#i-clock"/></svg>Mon–Sun, 24/7 support</li>
+          <li><svg aria-hidden="true" class="ico"><use href="#i-mail"/></svg><a href="mailto:info@heartlandautotransport.com">info@heartlandautotransport.com</a></li>
+          <li><svg aria-hidden="true" class="ico"><use href="#i-clock"/></svg>Mon–Sun, 24/7 support</li>
         </ul>
       </div>
     </div>
     <div class="foot__bar">
       <span>&copy; 2026 Heartland Auto Transport. All rights reserved.</span>
-      <nav aria-label="Legal"><a href="/privacy-policy">Privacy Policy</a><a href="/terms-of-service">Terms of Service</a></nav>
+      <nav aria-label="Legal"><a href="/privacy-policy">Privacy Policy</a><a href="/terms-of-service">Terms of Service</a><a href="/sitemap.xml">Sitemap</a></nav>
     </div>
+  </div>
+  <div class="mcta" id="mcta">
+    <a class="mcta__call" href="tel:+12055743169"><svg aria-hidden="true" class="ico"><use href="#i-phone"/></svg>Call</a>
+    <a class="mcta__quote" href="#quote">Get My Free Quote</a>
   </div>
 </footer>
 
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "LocalBusiness", "@id": "https://heartlandautotransport.com/cities/birmingham-auto-transport#office", "name": "Heartland Auto Transport", "description": "Birmingham auto transport at the junction of I-65, I-20, I-59, and I-22. Door-to-door car shipping, insured carriers, no deposit. Get a free instant quote.", "url": "https://heartlandautotransport.com/cities/birmingham-auto-transport", "telephone": "+12055743169", "image": "https://heartlandautotransport.com/images/hero-truck.jpg", "priceRange": "$$", "address": {"@type": "PostalAddress", "streetAddress": "1820 3rd Ave N #370", "addressLocality": "Birmingham", "addressRegion": "AL", "postalCode": "35203", "addressCountry": "US"}, "openingHoursSpecification": {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"], "opens": "00:00", "closes": "23:59"}, "areaServed": [{"@type": "City", "name": "Birmingham, Alabama"}, {"@type": "State", "name": "Alabama"}], "parentOrganization": {"@type": "Organization", "name": "Heartland Auto Transport", "url": "https://heartlandautotransport.com/"}, "geo": {"@type": "GeoCoordinates", "latitude": 33.5156011, "longitude": -86.8090176}}</script>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://heartlandautotransport.com/"}, {"@type": "ListItem", "position": 2, "name": "Alabama Locations", "item": "https://heartlandautotransport.com/locations/"}, {"@type": "ListItem", "position": 3, "name": "Birmingham Auto Transport", "item": "https://heartlandautotransport.com/cities/birmingham-auto-transport"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "LocalBusiness", "@id": "https://heartlandautotransport.com/cities/birmingham-auto-transport#office", "name": "Heartland Auto Transport", "description": "Birmingham auto transport at the junction of I-65, I-20, I-59, and I-22. Door-to-door car shipping, insured carriers, no deposit. Get a free instant quote.", "url": "https://heartlandautotransport.com/cities/birmingham-auto-transport", "telephone": "+12055743169", "image": "https://heartlandautotransport.com/og-image.png", "priceRange": "$$", "address": {"@type": "PostalAddress", "streetAddress": "1820 3rd Ave N #370", "addressLocality": "Birmingham", "addressRegion": "AL", "postalCode": "35203", "addressCountry": "US"}, "openingHoursSpecification": {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"], "opens": "00:00", "closes": "23:59"}, "areaServed": [{"@type": "City", "name": "Birmingham, Alabama"}, {"@type": "State", "name": "Alabama"}], "parentOrganization": {"@type": "Organization", "name": "Heartland Auto Transport", "url": "https://heartlandautotransport.com/"}, "geo": {"@type": "GeoCoordinates", "latitude": 33.5156011, "longitude": -86.8090176}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://heartlandautotransport.com/"}, {"@type": "ListItem", "position": 2, "name": "Alabama Locations", "item": "https://heartlandautotransport.com/locations"}, {"@type": "ListItem", "position": 3, "name": "Birmingham Auto Transport", "item": "https://heartlandautotransport.com/cities/birmingham-auto-transport"}]}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How much does it cost to ship a car from Birmingham, AL?", "acceptedAnswer": {"@type": "Answer", "text": "On an open carrier, regional routes such as Atlanta, Nashville, Memphis, and New Orleans usually cost $350 to $700. Mid-distance shipments to Texas, Florida, Chicago, or the Northeast run about $700 to $1,300, and cross-country moves cost $1,100 to $1,800. Enclosed transport adds 60 to 80 percent."}}, {"@type": "Question", "name": "How quickly can you pick up in Birmingham?", "acceptedAnswer": {"@type": "Answer", "text": "Often within a few days, because so many carriers pass through. Booking 7 to 14 days ahead still gives you the best price and the widest choice of dates. If you need the vehicle gone tomorrow, ask about expedited service."}}, {"@type": "Question", "name": "Is Heartland a broker or a carrier?", "acceptedAnswer": {"@type": "Answer", "text": "We are a licensed broker. That means we do not own the trucks. We choose a carrier for your route, verify its license and cargo insurance, schedule the shipment, and stay involved until delivery. You get one point of contact and access to far more trucks than any single carrier operates."}}, {"@type": "Question", "name": "I live in a downtown loft with a parking deck. How does pickup work?", "acceptedAnswer": {"@type": "Answer", "text": "Car haulers cannot enter parking decks or stop on most downtown streets. Your driver will suggest a nearby surface lot or wide side street, and you bring the car there at the agreed time. It usually takes about twenty minutes."}}, {"@type": "Question", "name": "I am starting a residency at UAB. When should I book?", "acceptedAnswer": {"@type": "Answer", "text": "As soon as your move date is set, and ideally by mid-May. Tell us the earliest day the car can be picked up and the day you arrive in Birmingham, and we will plan the delivery window around your orientation schedule."}}, {"@type": "Question", "name": "Do you ship motorcycles to Barber Motorsports Park?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. We arrange motorcycle transport to the Birmingham area for track days, the vintage festival, and private sales. Let us know the make and whether the bike runs."}}, {"@type": "Question", "name": "Do I pay a deposit to reserve a carrier?", "acceptedAnswer": {"@type": "Answer", "text": "No. Heartland does not charge anything up front. Payment is due when your vehicle is delivered."}}]}</script>
 
 <script>
@@ -1509,6 +1587,11 @@ window.PQ_CONFIG = {
   document.addEventListener('click',function(e){ if(mega&&!mega.contains(e.target)) setMega(false); });
   document.addEventListener('keydown',function(e){ if(e.key==='Escape'){ setMega(false); setMenu(false); } });
   window.addEventListener('resize',function(){ if(window.innerWidth>=1100) setMenu(false); });
+  /* phone quote-and-call bar: shown once the quote tool has scrolled out of view */
+  var bar=document.getElementById('mcta'), tool=document.getElementById('quote');
+  if(bar&&tool&&'IntersectionObserver' in window){
+    new IntersectionObserver(function(en){ bar.classList.toggle('is-on', !en[0].isIntersecting); },{threshold:0}).observe(tool);
+  }
 })();
 </script>
 </body>
